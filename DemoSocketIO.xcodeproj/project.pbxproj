@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		462030149A206055EEBA15FF /* Pods_DemoSocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DFD79A0B17744EA2A50E6D /* Pods_DemoSocketIO.framework */; };
+		807A419F1DB87CCF00E31900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A419E1DB87CCF00E31900 /* AppDelegate.swift */; };
+		807A41A11DB87CCF00E31900 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A41A01DB87CCF00E31900 /* ViewController.swift */; };
+		807A41A41DB87CCF00E31900 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A41A21DB87CCF00E31900 /* Main.storyboard */; };
+		807A41A61DB87CCF00E31900 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807A41A51DB87CCF00E31900 /* Assets.xcassets */; };
+		807A41A91DB87CCF00E31900 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A41A71DB87CCF00E31900 /* LaunchScreen.storyboard */; };
+		80965E8B1DB893190055E7AE /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80965E8A1DB893190055E7AE /* SocketIOManager.swift */; };
+		80B1143B1DB9FD8300417B6D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80B114251DB9FD8300417B6D /* Info.plist */; };
+		80B1143C1DB9FD8300417B6D /* ValidationRuleComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114271DB9FD8300417B6D /* ValidationRuleComparison.swift */; };
+		80B1143D1DB9FD8300417B6D /* ValidationRuleCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114281DB9FD8300417B6D /* ValidationRuleCondition.swift */; };
+		80B1143E1DB9FD8300417B6D /* ValidationRuleContains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114291DB9FD8300417B6D /* ValidationRuleContains.swift */; };
+		80B1143F1DB9FD8300417B6D /* ValidationRuleEquality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1142A1DB9FD8300417B6D /* ValidationRuleEquality.swift */; };
+		80B114401DB9FD8300417B6D /* ValidationRuleLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1142B1DB9FD8300417B6D /* ValidationRuleLength.swift */; };
+		80B114411DB9FD8300417B6D /* ValidationRulePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1142C1DB9FD8300417B6D /* ValidationRulePattern.swift */; };
+		80B114421DB9FD8300417B6D /* ValidationRulePaymentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1142D1DB9FD8300417B6D /* ValidationRulePaymentCard.swift */; };
+		80B114431DB9FD8300417B6D /* ValidationRuleRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1142E1DB9FD8300417B6D /* ValidationRuleRequired.swift */; };
+		80B114441DB9FD8300417B6D /* ValidationRuleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1142F1DB9FD8300417B6D /* ValidationRuleURL.swift */; };
+		80B114451DB9FD8300417B6D /* UISlider+Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114311DB9FD8300417B6D /* UISlider+Validator.swift */; };
+		80B114461DB9FD8300417B6D /* UITextField+Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114321DB9FD8300417B6D /* UITextField+Validator.swift */; };
+		80B114471DB9FD8300417B6D /* ValidatableInterfaceElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114331DB9FD8300417B6D /* ValidatableInterfaceElement.swift */; };
+		80B114481DB9FD8300417B6D /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114341DB9FD8300417B6D /* Validatable.swift */; };
+		80B114491DB9FD8300417B6D /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114351DB9FD8300417B6D /* ValidationError.swift */; };
+		80B1144A1DB9FD8300417B6D /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114361DB9FD8300417B6D /* ValidationResult.swift */; };
+		80B1144B1DB9FD8300417B6D /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114371DB9FD8300417B6D /* ValidationRule.swift */; };
+		80B1144C1DB9FD8300417B6D /* ValidationRuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114381DB9FD8300417B6D /* ValidationRuleSet.swift */; };
+		80B1144D1DB9FD8300417B6D /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1143A1DB9FD8300417B6D /* Validator.swift */; };
+		80E8F23C1DB9C1ED001CA1FB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8F23B1DB9C1ED001CA1FB /* BaseViewController.swift */; };
+		80E8F2401DB9C69D001CA1FB /* iHBorderColorBackgroundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8F23F1DB9C69D001CA1FB /* iHBorderColorBackgroundTextField.swift */; };
+		80E8F2421DB9DF37001CA1FB /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8F2411DB9DF37001CA1FB /* TextFieldsEffects.swift */; };
+		80E8F2441DB9E003001CA1FB /* iHBorderColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8F2431DB9E003001CA1FB /* iHBorderColorTextField.swift */; };
+		80E8F2461DB9E345001CA1FB /* iHUnderLineColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8F2451DB9E345001CA1FB /* iHUnderLineColorTextField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4E2787E9B8C58C4005966F4F /* Pods-DemoSocketIO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSocketIO.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSocketIO/Pods-DemoSocketIO.release.xcconfig"; sourceTree = "<group>"; };
+		56DFD79A0B17744EA2A50E6D /* Pods_DemoSocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		807A419B1DB87CCF00E31900 /* DemoSocketIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoSocketIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		807A419E1DB87CCF00E31900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		807A41A01DB87CCF00E31900 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		807A41A31DB87CCF00E31900 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		807A41A51DB87CCF00E31900 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		807A41A81DB87CCF00E31900 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		807A41AA1DB87CCF00E31900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80965E8A1DB893190055E7AE /* SocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
+		80B114251DB9FD8300417B6D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80B114271DB9FD8300417B6D /* ValidationRuleComparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleComparison.swift; sourceTree = "<group>"; };
+		80B114281DB9FD8300417B6D /* ValidationRuleCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleCondition.swift; sourceTree = "<group>"; };
+		80B114291DB9FD8300417B6D /* ValidationRuleContains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleContains.swift; sourceTree = "<group>"; };
+		80B1142A1DB9FD8300417B6D /* ValidationRuleEquality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleEquality.swift; sourceTree = "<group>"; };
+		80B1142B1DB9FD8300417B6D /* ValidationRuleLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleLength.swift; sourceTree = "<group>"; };
+		80B1142C1DB9FD8300417B6D /* ValidationRulePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRulePattern.swift; sourceTree = "<group>"; };
+		80B1142D1DB9FD8300417B6D /* ValidationRulePaymentCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRulePaymentCard.swift; sourceTree = "<group>"; };
+		80B1142E1DB9FD8300417B6D /* ValidationRuleRequired.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleRequired.swift; sourceTree = "<group>"; };
+		80B1142F1DB9FD8300417B6D /* ValidationRuleURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleURL.swift; sourceTree = "<group>"; };
+		80B114311DB9FD8300417B6D /* UISlider+Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISlider+Validator.swift"; sourceTree = "<group>"; };
+		80B114321DB9FD8300417B6D /* UITextField+Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Validator.swift"; sourceTree = "<group>"; };
+		80B114331DB9FD8300417B6D /* ValidatableInterfaceElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatableInterfaceElement.swift; sourceTree = "<group>"; };
+		80B114341DB9FD8300417B6D /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
+		80B114351DB9FD8300417B6D /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		80B114361DB9FD8300417B6D /* ValidationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
+		80B114371DB9FD8300417B6D /* ValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
+		80B114381DB9FD8300417B6D /* ValidationRuleSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleSet.swift; sourceTree = "<group>"; };
+		80B114391DB9FD8300417B6D /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
+		80B1143A1DB9FD8300417B6D /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		80E8F23B1DB9C1ED001CA1FB /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ../BaseViewController.swift; sourceTree = "<group>"; };
+		80E8F23F1DB9C69D001CA1FB /* iHBorderColorBackgroundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHBorderColorBackgroundTextField.swift; sourceTree = "<group>"; };
+		80E8F2411DB9DF37001CA1FB /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsEffects.swift; sourceTree = "<group>"; };
+		80E8F2431DB9E003001CA1FB /* iHBorderColorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHBorderColorTextField.swift; sourceTree = "<group>"; };
+		80E8F2451DB9E345001CA1FB /* iHUnderLineColorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHUnderLineColorTextField.swift; sourceTree = "<group>"; };
+		A497DAF8D43D310E44227EBB /* Pods-DemoSocketIO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSocketIO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSocketIO/Pods-DemoSocketIO.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		807A41981DB87CCF00E31900 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462030149A206055EEBA15FF /* Pods_DemoSocketIO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FA57F499CF3B810E91D7176 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56DFD79A0B17744EA2A50E6D /* Pods_DemoSocketIO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B61983C98EF4981B8F36F90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A497DAF8D43D310E44227EBB /* Pods-DemoSocketIO.debug.xcconfig */,
+				4E2787E9B8C58C4005966F4F /* Pods-DemoSocketIO.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		807A41921DB87CCF00E31900 = {
+			isa = PBXGroup;
+			children = (
+				807A419D1DB87CCF00E31900 /* DemoSocketIO */,
+				807A419C1DB87CCF00E31900 /* Products */,
+				5B61983C98EF4981B8F36F90 /* Pods */,
+				0FA57F499CF3B810E91D7176 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		807A419C1DB87CCF00E31900 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				807A419B1DB87CCF00E31900 /* DemoSocketIO.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		807A419D1DB87CCF00E31900 /* DemoSocketIO */ = {
+			isa = PBXGroup;
+			children = (
+				807A419E1DB87CCF00E31900 /* AppDelegate.swift */,
+				807A41A21DB87CCF00E31900 /* Main.storyboard */,
+				807A41A51DB87CCF00E31900 /* Assets.xcassets */,
+				807A41A71DB87CCF00E31900 /* LaunchScreen.storyboard */,
+				807A41AA1DB87CCF00E31900 /* Info.plist */,
+				80965E8A1DB893190055E7AE /* SocketIOManager.swift */,
+				80E8F23E1DB9C66E001CA1FB /* Utils */,
+				80E8F23D1DB9C205001CA1FB /* Classes */,
+			);
+			path = DemoSocketIO;
+			sourceTree = "<group>";
+		};
+		80B114241DB9FD8300417B6D /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				80B114251DB9FD8300417B6D /* Info.plist */,
+				80B114261DB9FD8300417B6D /* Rules */,
+				80B114301DB9FD8300417B6D /* UIKit+Validator */,
+				80B114341DB9FD8300417B6D /* Validatable.swift */,
+				80B114351DB9FD8300417B6D /* ValidationError.swift */,
+				80B114361DB9FD8300417B6D /* ValidationResult.swift */,
+				80B114371DB9FD8300417B6D /* ValidationRule.swift */,
+				80B114381DB9FD8300417B6D /* ValidationRuleSet.swift */,
+				80B114391DB9FD8300417B6D /* Validator.h */,
+				80B1143A1DB9FD8300417B6D /* Validator.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
+		80B114261DB9FD8300417B6D /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				80B114271DB9FD8300417B6D /* ValidationRuleComparison.swift */,
+				80B114281DB9FD8300417B6D /* ValidationRuleCondition.swift */,
+				80B114291DB9FD8300417B6D /* ValidationRuleContains.swift */,
+				80B1142A1DB9FD8300417B6D /* ValidationRuleEquality.swift */,
+				80B1142B1DB9FD8300417B6D /* ValidationRuleLength.swift */,
+				80B1142C1DB9FD8300417B6D /* ValidationRulePattern.swift */,
+				80B1142D1DB9FD8300417B6D /* ValidationRulePaymentCard.swift */,
+				80B1142E1DB9FD8300417B6D /* ValidationRuleRequired.swift */,
+				80B1142F1DB9FD8300417B6D /* ValidationRuleURL.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		80B114301DB9FD8300417B6D /* UIKit+Validator */ = {
+			isa = PBXGroup;
+			children = (
+				80B114311DB9FD8300417B6D /* UISlider+Validator.swift */,
+				80B114321DB9FD8300417B6D /* UITextField+Validator.swift */,
+				80B114331DB9FD8300417B6D /* ValidatableInterfaceElement.swift */,
+			);
+			path = "UIKit+Validator";
+			sourceTree = "<group>";
+		};
+		80E8F23D1DB9C205001CA1FB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				807A41A01DB87CCF00E31900 /* ViewController.swift */,
+				80E8F23B1DB9C1ED001CA1FB /* BaseViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		80E8F23E1DB9C66E001CA1FB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				80B114241DB9FD8300417B6D /* Validator */,
+				80E8F23F1DB9C69D001CA1FB /* iHBorderColorBackgroundTextField.swift */,
+				80E8F2411DB9DF37001CA1FB /* TextFieldsEffects.swift */,
+				80E8F2431DB9E003001CA1FB /* iHBorderColorTextField.swift */,
+				80E8F2451DB9E345001CA1FB /* iHUnderLineColorTextField.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		807A419A1DB87CCF00E31900 /* DemoSocketIO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 807A41AD1DB87CCF00E31900 /* Build configuration list for PBXNativeTarget "DemoSocketIO" */;
+			buildPhases = (
+				C7AF6C15EDBB5D10541470E9 /* [CP] Check Pods Manifest.lock */,
+				807A41971DB87CCF00E31900 /* Sources */,
+				807A41981DB87CCF00E31900 /* Frameworks */,
+				807A41991DB87CCF00E31900 /* Resources */,
+				68E3AA68650D7D3D9C78EEED /* [CP] Embed Pods Frameworks */,
+				69DB6FF6C9A2493D3DD7DD14 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DemoSocketIO;
+			productName = DemoSocketIO;
+			productReference = 807A419B1DB87CCF00E31900 /* DemoSocketIO.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		807A41931DB87CCF00E31900 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Loc Dinh Xuan";
+				TargetAttributes = {
+					807A419A1DB87CCF00E31900 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = NV594KKX35;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 807A41961DB87CCF00E31900 /* Build configuration list for PBXProject "DemoSocketIO" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 807A41921DB87CCF00E31900;
+			productRefGroup = 807A419C1DB87CCF00E31900 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				807A419A1DB87CCF00E31900 /* DemoSocketIO */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		807A41991DB87CCF00E31900 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B1143B1DB9FD8300417B6D /* Info.plist in Resources */,
+				807A41A91DB87CCF00E31900 /* LaunchScreen.storyboard in Resources */,
+				807A41A61DB87CCF00E31900 /* Assets.xcassets in Resources */,
+				807A41A41DB87CCF00E31900 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68E3AA68650D7D3D9C78EEED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoSocketIO/Pods-DemoSocketIO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69DB6FF6C9A2493D3DD7DD14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoSocketIO/Pods-DemoSocketIO-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7AF6C15EDBB5D10541470E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		807A41971DB87CCF00E31900 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B1143F1DB9FD8300417B6D /* ValidationRuleEquality.swift in Sources */,
+				80B114401DB9FD8300417B6D /* ValidationRuleLength.swift in Sources */,
+				807A41A11DB87CCF00E31900 /* ViewController.swift in Sources */,
+				80E8F2461DB9E345001CA1FB /* iHUnderLineColorTextField.swift in Sources */,
+				80B1144D1DB9FD8300417B6D /* Validator.swift in Sources */,
+				80B1143D1DB9FD8300417B6D /* ValidationRuleCondition.swift in Sources */,
+				80B114441DB9FD8300417B6D /* ValidationRuleURL.swift in Sources */,
+				80B1143E1DB9FD8300417B6D /* ValidationRuleContains.swift in Sources */,
+				80B1144A1DB9FD8300417B6D /* ValidationResult.swift in Sources */,
+				80B114491DB9FD8300417B6D /* ValidationError.swift in Sources */,
+				80B1143C1DB9FD8300417B6D /* ValidationRuleComparison.swift in Sources */,
+				80E8F2401DB9C69D001CA1FB /* iHBorderColorBackgroundTextField.swift in Sources */,
+				80E8F23C1DB9C1ED001CA1FB /* BaseViewController.swift in Sources */,
+				80965E8B1DB893190055E7AE /* SocketIOManager.swift in Sources */,
+				80E8F2421DB9DF37001CA1FB /* TextFieldsEffects.swift in Sources */,
+				80B114431DB9FD8300417B6D /* ValidationRuleRequired.swift in Sources */,
+				80B114481DB9FD8300417B6D /* Validatable.swift in Sources */,
+				80E8F2441DB9E003001CA1FB /* iHBorderColorTextField.swift in Sources */,
+				80B114461DB9FD8300417B6D /* UITextField+Validator.swift in Sources */,
+				80B1144C1DB9FD8300417B6D /* ValidationRuleSet.swift in Sources */,
+				80B1144B1DB9FD8300417B6D /* ValidationRule.swift in Sources */,
+				807A419F1DB87CCF00E31900 /* AppDelegate.swift in Sources */,
+				80B114471DB9FD8300417B6D /* ValidatableInterfaceElement.swift in Sources */,
+				80B114411DB9FD8300417B6D /* ValidationRulePattern.swift in Sources */,
+				80B114421DB9FD8300417B6D /* ValidationRulePaymentCard.swift in Sources */,
+				80B114451DB9FD8300417B6D /* UISlider+Validator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		807A41A21DB87CCF00E31900 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807A41A31DB87CCF00E31900 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		807A41A71DB87CCF00E31900 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				807A41A81DB87CCF00E31900 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		807A41AB1DB87CCF00E31900 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		807A41AC1DB87CCF00E31900 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		807A41AE1DB87CCF00E31900 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A497DAF8D43D310E44227EBB /* Pods-DemoSocketIO.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NV594KKX35;
+				INFOPLIST_FILE = DemoSocketIO/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dxloc.DemoSocketIO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		807A41AF1DB87CCF00E31900 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E2787E9B8C58C4005966F4F /* Pods-DemoSocketIO.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NV594KKX35;
+				INFOPLIST_FILE = DemoSocketIO/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dxloc.DemoSocketIO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		807A41961DB87CCF00E31900 /* Build configuration list for PBXProject "DemoSocketIO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807A41AB1DB87CCF00E31900 /* Debug */,
+				807A41AC1DB87CCF00E31900 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		807A41AD1DB87CCF00E31900 /* Build configuration list for PBXNativeTarget "DemoSocketIO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807A41AE1DB87CCF00E31900 /* Debug */,
+				807A41AF1DB87CCF00E31900 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 807A41931DB87CCF00E31900 /* Project object */;
+}
