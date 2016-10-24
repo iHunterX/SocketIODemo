@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		462030149A206055EEBA15FF /* Pods_DemoSocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DFD79A0B17744EA2A50E6D /* Pods_DemoSocketIO.framework */; };
+		5388F31B1DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3151DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift */; };
+		5388F31C1DBDDCC000B80A2B /* iHBorderColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3161DBDDCC000B80A2B /* iHBorderColorTextField.swift */; };
+		5388F31D1DBDDCC000B80A2B /* iHUnderLineColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3171DBDDCC000B80A2B /* iHUnderLineColorTextField.swift */; };
+		5388F31E1DBDDCC000B80A2B /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3181DBDDCC000B80A2B /* TextFieldsEffects.swift */; };
+		5388F31F1DBDDCC000B80A2B /* MyConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F31A1DBDDCC000B80A2B /* MyConstant.swift */; };
 		807A419F1DB87CCF00E31900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A419E1DB87CCF00E31900 /* AppDelegate.swift */; };
 		807A41A11DB87CCF00E31900 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A41A01DB87CCF00E31900 /* ViewController.swift */; };
 		807A41A41DB87CCF00E31900 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A41A21DB87CCF00E31900 /* Main.storyboard */; };
@@ -34,14 +39,15 @@
 		80B1144C1DB9FD8300417B6D /* ValidationRuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114381DB9FD8300417B6D /* ValidationRuleSet.swift */; };
 		80B1144D1DB9FD8300417B6D /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1143A1DB9FD8300417B6D /* Validator.swift */; };
 		80E8F23C1DB9C1ED001CA1FB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8F23B1DB9C1ED001CA1FB /* BaseViewController.swift */; };
-		80E8F2401DB9C69D001CA1FB /* iHBorderColorBackgroundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8F23F1DB9C69D001CA1FB /* iHBorderColorBackgroundTextField.swift */; };
-		80E8F2421DB9DF37001CA1FB /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8F2411DB9DF37001CA1FB /* TextFieldsEffects.swift */; };
-		80E8F2441DB9E003001CA1FB /* iHBorderColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8F2431DB9E003001CA1FB /* iHBorderColorTextField.swift */; };
-		80E8F2461DB9E345001CA1FB /* iHUnderLineColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8F2451DB9E345001CA1FB /* iHUnderLineColorTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E2787E9B8C58C4005966F4F /* Pods-DemoSocketIO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSocketIO.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSocketIO/Pods-DemoSocketIO.release.xcconfig"; sourceTree = "<group>"; };
+		5388F3151DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHBorderColorBackgroundTextField.swift; sourceTree = "<group>"; };
+		5388F3161DBDDCC000B80A2B /* iHBorderColorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHBorderColorTextField.swift; sourceTree = "<group>"; };
+		5388F3171DBDDCC000B80A2B /* iHUnderLineColorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHUnderLineColorTextField.swift; sourceTree = "<group>"; };
+		5388F3181DBDDCC000B80A2B /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsEffects.swift; sourceTree = "<group>"; };
+		5388F31A1DBDDCC000B80A2B /* MyConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConstant.swift; sourceTree = "<group>"; };
 		56DFD79A0B17744EA2A50E6D /* Pods_DemoSocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		807A419B1DB87CCF00E31900 /* DemoSocketIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoSocketIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807A419E1DB87CCF00E31900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,10 +78,6 @@
 		80B114391DB9FD8300417B6D /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
 		80B1143A1DB9FD8300417B6D /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		80E8F23B1DB9C1ED001CA1FB /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ../BaseViewController.swift; sourceTree = "<group>"; };
-		80E8F23F1DB9C69D001CA1FB /* iHBorderColorBackgroundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHBorderColorBackgroundTextField.swift; sourceTree = "<group>"; };
-		80E8F2411DB9DF37001CA1FB /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsEffects.swift; sourceTree = "<group>"; };
-		80E8F2431DB9E003001CA1FB /* iHBorderColorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHBorderColorTextField.swift; sourceTree = "<group>"; };
-		80E8F2451DB9E345001CA1FB /* iHUnderLineColorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHUnderLineColorTextField.swift; sourceTree = "<group>"; };
 		A497DAF8D43D310E44227EBB /* Pods-DemoSocketIO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSocketIO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSocketIO/Pods-DemoSocketIO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,25 @@
 				56DFD79A0B17744EA2A50E6D /* Pods_DemoSocketIO.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5388F3141DBDDCC000B80A2B /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				5388F3151DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift */,
+				5388F3161DBDDCC000B80A2B /* iHBorderColorTextField.swift */,
+				5388F3171DBDDCC000B80A2B /* iHUnderLineColorTextField.swift */,
+				5388F3181DBDDCC000B80A2B /* TextFieldsEffects.swift */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		5388F3191DBDDCC000B80A2B /* MyConstant */ = {
+			isa = PBXGroup;
+			children = (
+				5388F31A1DBDDCC000B80A2B /* MyConstant.swift */,
+			);
+			path = MyConstant;
 			sourceTree = "<group>";
 		};
 		5B61983C98EF4981B8F36F90 /* Pods */ = {
@@ -196,11 +217,9 @@
 		80E8F23E1DB9C66E001CA1FB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5388F3141DBDDCC000B80A2B /* CustomTextField */,
+				5388F3191DBDDCC000B80A2B /* MyConstant */,
 				80B114241DB9FD8300417B6D /* Validator */,
-				80E8F23F1DB9C69D001CA1FB /* iHBorderColorBackgroundTextField.swift */,
-				80E8F2411DB9DF37001CA1FB /* TextFieldsEffects.swift */,
-				80E8F2431DB9E003001CA1FB /* iHBorderColorTextField.swift */,
-				80E8F2451DB9E345001CA1FB /* iHUnderLineColorTextField.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -333,29 +352,30 @@
 				80B1143F1DB9FD8300417B6D /* ValidationRuleEquality.swift in Sources */,
 				80B114401DB9FD8300417B6D /* ValidationRuleLength.swift in Sources */,
 				807A41A11DB87CCF00E31900 /* ViewController.swift in Sources */,
-				80E8F2461DB9E345001CA1FB /* iHUnderLineColorTextField.swift in Sources */,
 				80B1144D1DB9FD8300417B6D /* Validator.swift in Sources */,
 				80B1143D1DB9FD8300417B6D /* ValidationRuleCondition.swift in Sources */,
 				80B114441DB9FD8300417B6D /* ValidationRuleURL.swift in Sources */,
 				80B1143E1DB9FD8300417B6D /* ValidationRuleContains.swift in Sources */,
 				80B1144A1DB9FD8300417B6D /* ValidationResult.swift in Sources */,
 				80B114491DB9FD8300417B6D /* ValidationError.swift in Sources */,
+				5388F31D1DBDDCC000B80A2B /* iHUnderLineColorTextField.swift in Sources */,
 				80B1143C1DB9FD8300417B6D /* ValidationRuleComparison.swift in Sources */,
-				80E8F2401DB9C69D001CA1FB /* iHBorderColorBackgroundTextField.swift in Sources */,
 				80E8F23C1DB9C1ED001CA1FB /* BaseViewController.swift in Sources */,
 				80965E8B1DB893190055E7AE /* SocketIOManager.swift in Sources */,
-				80E8F2421DB9DF37001CA1FB /* TextFieldsEffects.swift in Sources */,
 				80B114431DB9FD8300417B6D /* ValidationRuleRequired.swift in Sources */,
+				5388F31E1DBDDCC000B80A2B /* TextFieldsEffects.swift in Sources */,
 				80B114481DB9FD8300417B6D /* Validatable.swift in Sources */,
-				80E8F2441DB9E003001CA1FB /* iHBorderColorTextField.swift in Sources */,
 				80B114461DB9FD8300417B6D /* UITextField+Validator.swift in Sources */,
 				80B1144C1DB9FD8300417B6D /* ValidationRuleSet.swift in Sources */,
+				5388F31F1DBDDCC000B80A2B /* MyConstant.swift in Sources */,
 				80B1144B1DB9FD8300417B6D /* ValidationRule.swift in Sources */,
 				807A419F1DB87CCF00E31900 /* AppDelegate.swift in Sources */,
 				80B114471DB9FD8300417B6D /* ValidatableInterfaceElement.swift in Sources */,
 				80B114411DB9FD8300417B6D /* ValidationRulePattern.swift in Sources */,
 				80B114421DB9FD8300417B6D /* ValidationRulePaymentCard.swift in Sources */,
 				80B114451DB9FD8300417B6D /* UISlider+Validator.swift in Sources */,
+				5388F31C1DBDDCC000B80A2B /* iHBorderColorTextField.swift in Sources */,
+				5388F31B1DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
