@@ -31,12 +31,13 @@
 		5388F31D1DBDDCC000B80A2B /* iHUnderLineColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3171DBDDCC000B80A2B /* iHUnderLineColorTextField.swift */; };
 		5388F31E1DBDDCC000B80A2B /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3181DBDDCC000B80A2B /* TextFieldsEffects.swift */; };
 		5388F31F1DBDDCC000B80A2B /* MyConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F31A1DBDDCC000B80A2B /* MyConstant.swift */; };
+		8075D5E91DBF669000A5FCED /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075D5E61DBF669000A5FCED /* BaseViewController.swift */; };
+		8075D5EA1DBF669000A5FCED /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075D5E71DBF669000A5FCED /* SocketIOManager.swift */; };
+		8075D5EB1DBF669000A5FCED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075D5E81DBF669000A5FCED /* ViewController.swift */; };
 		807A419F1DB87CCF00E31900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A419E1DB87CCF00E31900 /* AppDelegate.swift */; };
-		807A41A11DB87CCF00E31900 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A41A01DB87CCF00E31900 /* ViewController.swift */; };
 		807A41A41DB87CCF00E31900 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A41A21DB87CCF00E31900 /* Main.storyboard */; };
 		807A41A61DB87CCF00E31900 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807A41A51DB87CCF00E31900 /* Assets.xcassets */; };
 		807A41A91DB87CCF00E31900 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807A41A71DB87CCF00E31900 /* LaunchScreen.storyboard */; };
-		80965E8B1DB893190055E7AE /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80965E8A1DB893190055E7AE /* SocketIOManager.swift */; };
 		80B1143B1DB9FD8300417B6D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80B114251DB9FD8300417B6D /* Info.plist */; };
 		80B1143C1DB9FD8300417B6D /* ValidationRuleComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114271DB9FD8300417B6D /* ValidationRuleComparison.swift */; };
 		80B1143D1DB9FD8300417B6D /* ValidationRuleCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114281DB9FD8300417B6D /* ValidationRuleCondition.swift */; };
@@ -56,7 +57,6 @@
 		80B1144B1DB9FD8300417B6D /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114371DB9FD8300417B6D /* ValidationRule.swift */; };
 		80B1144C1DB9FD8300417B6D /* ValidationRuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114381DB9FD8300417B6D /* ValidationRuleSet.swift */; };
 		80B1144D1DB9FD8300417B6D /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1143A1DB9FD8300417B6D /* Validator.swift */; };
-		80E8F23C1DB9C1ED001CA1FB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8F23B1DB9C1ED001CA1FB /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,14 +85,15 @@
 		5388F3181DBDDCC000B80A2B /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsEffects.swift; sourceTree = "<group>"; };
 		5388F31A1DBDDCC000B80A2B /* MyConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConstant.swift; sourceTree = "<group>"; };
 		56DFD79A0B17744EA2A50E6D /* Pods_DemoSocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8075D5E61DBF669000A5FCED /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8075D5E71DBF669000A5FCED /* SocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
+		8075D5E81DBF669000A5FCED /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		807A419B1DB87CCF00E31900 /* DemoSocketIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoSocketIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807A419E1DB87CCF00E31900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		807A41A01DB87CCF00E31900 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		807A41A31DB87CCF00E31900 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		807A41A51DB87CCF00E31900 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		807A41A81DB87CCF00E31900 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		807A41AA1DB87CCF00E31900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80965E8A1DB893190055E7AE /* SocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		80B114251DB9FD8300417B6D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80B114271DB9FD8300417B6D /* ValidationRuleComparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleComparison.swift; sourceTree = "<group>"; };
 		80B114281DB9FD8300417B6D /* ValidationRuleCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleCondition.swift; sourceTree = "<group>"; };
@@ -113,7 +114,6 @@
 		80B114381DB9FD8300417B6D /* ValidationRuleSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleSet.swift; sourceTree = "<group>"; };
 		80B114391DB9FD8300417B6D /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
 		80B1143A1DB9FD8300417B6D /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		80E8F23B1DB9C1ED001CA1FB /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ../BaseViewController.swift; sourceTree = "<group>"; };
 		A497DAF8D43D310E44227EBB /* Pods-DemoSocketIO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSocketIO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSocketIO/Pods-DemoSocketIO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +207,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8075D5E51DBF669000A5FCED /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8075D5E61DBF669000A5FCED /* BaseViewController.swift */,
+				8075D5E71DBF669000A5FCED /* SocketIOManager.swift */,
+				8075D5E81DBF669000A5FCED /* ViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		807A41921DB87CCF00E31900 = {
 			isa = PBXGroup;
 			children = (
@@ -228,14 +238,13 @@
 		807A419D1DB87CCF00E31900 /* DemoSocketIO */ = {
 			isa = PBXGroup;
 			children = (
+				8075D5E51DBF669000A5FCED /* Classes */,
 				807A419E1DB87CCF00E31900 /* AppDelegate.swift */,
 				807A41A21DB87CCF00E31900 /* Main.storyboard */,
 				807A41A51DB87CCF00E31900 /* Assets.xcassets */,
 				807A41A71DB87CCF00E31900 /* LaunchScreen.storyboard */,
 				807A41AA1DB87CCF00E31900 /* Info.plist */,
-				80965E8A1DB893190055E7AE /* SocketIOManager.swift */,
 				80E8F23E1DB9C66E001CA1FB /* Utils */,
-				80E8F23D1DB9C205001CA1FB /* Classes */,
 			);
 			path = DemoSocketIO;
 			sourceTree = "<group>";
@@ -281,15 +290,6 @@
 				80B114331DB9FD8300417B6D /* ValidatableInterfaceElement.swift */,
 			);
 			path = "UIKit+Validator";
-			sourceTree = "<group>";
-		};
-		80E8F23D1DB9C205001CA1FB /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				807A41A01DB87CCF00E31900 /* ViewController.swift */,
-				80E8F23B1DB9C1ED001CA1FB /* BaseViewController.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		80E8F23E1DB9C66E001CA1FB /* Utils */ = {
@@ -430,7 +430,6 @@
 			files = (
 				80B1143F1DB9FD8300417B6D /* ValidationRuleEquality.swift in Sources */,
 				80B114401DB9FD8300417B6D /* ValidationRuleLength.swift in Sources */,
-				807A41A11DB87CCF00E31900 /* ViewController.swift in Sources */,
 				80B1144D1DB9FD8300417B6D /* Validator.swift in Sources */,
 				538835381DBF382D0093E755 /* M13CheckboxExpandController.swift in Sources */,
 				538835341DBF382D0093E755 /* M13CheckboxController.swift in Sources */,
@@ -444,10 +443,9 @@
 				538835331DBF382D0093E755 /* M13CheckboxAnimationGenerator.swift in Sources */,
 				80B114491DB9FD8300417B6D /* ValidationError.swift in Sources */,
 				5388F31D1DBDDCC000B80A2B /* iHUnderLineColorTextField.swift in Sources */,
+				8075D5E91DBF669000A5FCED /* BaseViewController.swift in Sources */,
 				80B1143C1DB9FD8300417B6D /* ValidationRuleComparison.swift in Sources */,
 				5388353D1DBF382D0093E755 /* M13CheckboxStrokeController.swift in Sources */,
-				80E8F23C1DB9C1ED001CA1FB /* BaseViewController.swift in Sources */,
-				80965E8B1DB893190055E7AE /* SocketIOManager.swift in Sources */,
 				80B114431DB9FD8300417B6D /* ValidationRuleRequired.swift in Sources */,
 				538835411DBF382D0093E755 /* M13CheckboxPathGenerator.swift in Sources */,
 				538835321DBF382D0093E755 /* M13Checkbox.swift in Sources */,
@@ -460,8 +458,10 @@
 				80B1144B1DB9FD8300417B6D /* ValidationRule.swift in Sources */,
 				5388353E1DBF382D0093E755 /* M13CheckboxAddRemovePathGenerator.swift in Sources */,
 				807A419F1DB87CCF00E31900 /* AppDelegate.swift in Sources */,
+				8075D5EB1DBF669000A5FCED /* ViewController.swift in Sources */,
 				80B114471DB9FD8300417B6D /* ValidatableInterfaceElement.swift in Sources */,
 				80B114411DB9FD8300417B6D /* ValidationRulePattern.swift in Sources */,
+				8075D5EA1DBF669000A5FCED /* SocketIOManager.swift in Sources */,
 				80B114421DB9FD8300417B6D /* ValidationRulePaymentCard.swift in Sources */,
 				5388353F1DBF382D0093E755 /* M13CheckboxCheckPathGenerator.swift in Sources */,
 				538835351DBF382D0093E755 /* M13CheckboxGestureRecognizer.swift in Sources */,
