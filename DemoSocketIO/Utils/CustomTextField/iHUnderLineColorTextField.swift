@@ -78,22 +78,30 @@ import UIKit
     private let inactiveBorderLayer = CALayer()
     private let activeBorderLayer = CALayer()
     private var activePlaceholderPoint: CGPoint = CGPoint.zero
+    private let checkbox:M13Checkbox =  M13Checkbox(frame: CGRect(x: 0.0, y: 0.0, width: 32, height: 32))
+    
     
     // MARK: - TextFieldsEffects
-    
     override open func drawViewsForRect(_ rect: CGRect) {
+        self.rightViewMode = .always
         let frame = CGRect(origin: CGPoint.zero, size: CGSize(width: rect.size.width, height: rect.size.height))
-        
         placeholderLabel.frame = frame.insetBy(dx: placeholderInsets.x, dy: placeholderInsets.y)
         placeholderLabel.font = placeholderFontFromFont(font!)
         
         updateBorder()
         updatePlaceholder()
-        
+
+        checkbox.isUserInteractionEnabled = false
+        checkbox.contentMode = .center
+
         layer.addSublayer(inactiveBorderLayer)
         layer.addSublayer(activeBorderLayer)
         addSubview(placeholderLabel)
+        
+        self.rightView = checkbox
+        self.rightView?.contentMode = .center
     }
+
     
     override open func animateViewsForTextEntry() {
         updateBorder()
@@ -134,18 +142,31 @@ import UIKit
     public func updateBorder() {
         switch valid {
         case 1:
+            checkbox.isHidden = false
+            if checkbox.checkState != .checked{
+                checkbox.toggleCheckState(true)
+            }
+            
             inactiveBorderLayer.frame = rectForBorder(borderThickness.inactive, isFilled: true)
-            inactiveBorderLayer.backgroundColor = UIColor.green.cgColor
+            inactiveBorderLayer.backgroundColor = borderInactiveColor?.cgColor
             
             activeBorderLayer.frame = rectForBorder(borderThickness.active, isFilled: false)
             activeBorderLayer.backgroundColor = UIColor.green.cgColor
         case 0:
+            if checkbox.checkState == .checked{
+                checkbox.toggleCheckState(true)
+            }
+            checkbox.isHidden = true
             inactiveBorderLayer.frame = rectForBorder(borderThickness.inactive, isFilled: true)
-            inactiveBorderLayer.backgroundColor = UIColor.red.cgColor
+            inactiveBorderLayer.backgroundColor = borderInactiveColor?.cgColor
             
             activeBorderLayer.frame = rectForBorder(borderThickness.active, isFilled: false)
             activeBorderLayer.backgroundColor = UIColor.red.cgColor
         default:
+            if checkbox.checkState == .checked{
+                checkbox.toggleCheckState(true)
+            }
+            checkbox.isHidden = true
             inactiveBorderLayer.frame = rectForBorder(borderThickness.inactive, isFilled: true)
             inactiveBorderLayer.backgroundColor = borderInactiveColor?.cgColor
             
@@ -199,7 +220,7 @@ import UIKit
     // MARK: - Overrides
     
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.offsetBy(dx: textFieldInsets.x, dy: textFieldInsets.y)
+        return CGRect(x: textFieldInsets.x, y: textFieldInsets.y, width: bounds.size.width - checkbox.frame.width, height: bounds.size.height)
     }
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {

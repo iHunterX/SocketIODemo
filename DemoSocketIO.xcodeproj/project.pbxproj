@@ -8,6 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		462030149A206055EEBA15FF /* Pods_DemoSocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DFD79A0B17744EA2A50E6D /* Pods_DemoSocketIO.framework */; };
+		538835311DBF382D0093E755 /* M13Checkbox+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388351D1DBF382D0093E755 /* M13Checkbox+IB.swift */; };
+		538835321DBF382D0093E755 /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388351E1DBF382D0093E755 /* M13Checkbox.swift */; };
+		538835331DBF382D0093E755 /* M13CheckboxAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388351F1DBF382D0093E755 /* M13CheckboxAnimationGenerator.swift */; };
+		538835341DBF382D0093E755 /* M13CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538835201DBF382D0093E755 /* M13CheckboxController.swift */; };
+		538835351DBF382D0093E755 /* M13CheckboxGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538835211DBF382D0093E755 /* M13CheckboxGestureRecognizer.swift */; };
+		538835361DBF382D0093E755 /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538835231DBF382D0093E755 /* M13CheckboxBounceController.swift */; };
+		538835371DBF382D0093E755 /* M13CheckboxDotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538835241DBF382D0093E755 /* M13CheckboxDotController.swift */; };
+		538835381DBF382D0093E755 /* M13CheckboxExpandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538835251DBF382D0093E755 /* M13CheckboxExpandController.swift */; };
+		538835391DBF382D0093E755 /* M13CheckboxFadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538835261DBF382D0093E755 /* M13CheckboxFadeController.swift */; };
+		5388353A1DBF382D0093E755 /* M13CheckboxFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538835271DBF382D0093E755 /* M13CheckboxFillController.swift */; };
+		5388353B1DBF382D0093E755 /* M13CheckboxFlatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538835281DBF382D0093E755 /* M13CheckboxFlatController.swift */; };
+		5388353C1DBF382D0093E755 /* M13CheckboxSpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538835291DBF382D0093E755 /* M13CheckboxSpiralController.swift */; };
+		5388353D1DBF382D0093E755 /* M13CheckboxStrokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388352A1DBF382D0093E755 /* M13CheckboxStrokeController.swift */; };
+		5388353E1DBF382D0093E755 /* M13CheckboxAddRemovePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388352C1DBF382D0093E755 /* M13CheckboxAddRemovePathGenerator.swift */; };
+		5388353F1DBF382D0093E755 /* M13CheckboxCheckPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388352D1DBF382D0093E755 /* M13CheckboxCheckPathGenerator.swift */; };
+		538835401DBF382D0093E755 /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388352E1DBF382D0093E755 /* M13CheckboxDisclosurePathGenerator.swift */; };
+		538835411DBF382D0093E755 /* M13CheckboxPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388352F1DBF382D0093E755 /* M13CheckboxPathGenerator.swift */; };
+		538835421DBF382D0093E755 /* M13CheckboxRadioPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538835301DBF382D0093E755 /* M13CheckboxRadioPathGenerator.swift */; };
 		5388F31B1DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3151DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift */; };
 		5388F31C1DBDDCC000B80A2B /* iHBorderColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3161DBDDCC000B80A2B /* iHBorderColorTextField.swift */; };
 		5388F31D1DBDDCC000B80A2B /* iHUnderLineColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3171DBDDCC000B80A2B /* iHUnderLineColorTextField.swift */; };
@@ -43,6 +61,24 @@
 
 /* Begin PBXFileReference section */
 		4E2787E9B8C58C4005966F4F /* Pods-DemoSocketIO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSocketIO.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSocketIO/Pods-DemoSocketIO.release.xcconfig"; sourceTree = "<group>"; };
+		5388351D1DBF382D0093E755 /* M13Checkbox+IB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "M13Checkbox+IB.swift"; sourceTree = "<group>"; };
+		5388351E1DBF382D0093E755 /* M13Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13Checkbox.swift; sourceTree = "<group>"; };
+		5388351F1DBF382D0093E755 /* M13CheckboxAnimationGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxAnimationGenerator.swift; sourceTree = "<group>"; };
+		538835201DBF382D0093E755 /* M13CheckboxController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxController.swift; sourceTree = "<group>"; };
+		538835211DBF382D0093E755 /* M13CheckboxGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxGestureRecognizer.swift; sourceTree = "<group>"; };
+		538835231DBF382D0093E755 /* M13CheckboxBounceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxBounceController.swift; sourceTree = "<group>"; };
+		538835241DBF382D0093E755 /* M13CheckboxDotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxDotController.swift; sourceTree = "<group>"; };
+		538835251DBF382D0093E755 /* M13CheckboxExpandController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxExpandController.swift; sourceTree = "<group>"; };
+		538835261DBF382D0093E755 /* M13CheckboxFadeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxFadeController.swift; sourceTree = "<group>"; };
+		538835271DBF382D0093E755 /* M13CheckboxFillController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxFillController.swift; sourceTree = "<group>"; };
+		538835281DBF382D0093E755 /* M13CheckboxFlatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxFlatController.swift; sourceTree = "<group>"; };
+		538835291DBF382D0093E755 /* M13CheckboxSpiralController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxSpiralController.swift; sourceTree = "<group>"; };
+		5388352A1DBF382D0093E755 /* M13CheckboxStrokeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxStrokeController.swift; sourceTree = "<group>"; };
+		5388352C1DBF382D0093E755 /* M13CheckboxAddRemovePathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxAddRemovePathGenerator.swift; sourceTree = "<group>"; };
+		5388352D1DBF382D0093E755 /* M13CheckboxCheckPathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxCheckPathGenerator.swift; sourceTree = "<group>"; };
+		5388352E1DBF382D0093E755 /* M13CheckboxDisclosurePathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxDisclosurePathGenerator.swift; sourceTree = "<group>"; };
+		5388352F1DBF382D0093E755 /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
+		538835301DBF382D0093E755 /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
 		5388F3151DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHBorderColorBackgroundTextField.swift; sourceTree = "<group>"; };
 		5388F3161DBDDCC000B80A2B /* iHBorderColorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHBorderColorTextField.swift; sourceTree = "<group>"; };
 		5388F3171DBDDCC000B80A2B /* iHUnderLineColorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHUnderLineColorTextField.swift; sourceTree = "<group>"; };
@@ -99,6 +135,48 @@
 				56DFD79A0B17744EA2A50E6D /* Pods_DemoSocketIO.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5388351C1DBF382D0093E755 /* M13CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				5388351D1DBF382D0093E755 /* M13Checkbox+IB.swift */,
+				5388351E1DBF382D0093E755 /* M13Checkbox.swift */,
+				5388351F1DBF382D0093E755 /* M13CheckboxAnimationGenerator.swift */,
+				538835201DBF382D0093E755 /* M13CheckboxController.swift */,
+				538835211DBF382D0093E755 /* M13CheckboxGestureRecognizer.swift */,
+				538835221DBF382D0093E755 /* Managers */,
+				5388352B1DBF382D0093E755 /* Paths */,
+			);
+			name = M13CheckBox;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		538835221DBF382D0093E755 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				538835231DBF382D0093E755 /* M13CheckboxBounceController.swift */,
+				538835241DBF382D0093E755 /* M13CheckboxDotController.swift */,
+				538835251DBF382D0093E755 /* M13CheckboxExpandController.swift */,
+				538835261DBF382D0093E755 /* M13CheckboxFadeController.swift */,
+				538835271DBF382D0093E755 /* M13CheckboxFillController.swift */,
+				538835281DBF382D0093E755 /* M13CheckboxFlatController.swift */,
+				538835291DBF382D0093E755 /* M13CheckboxSpiralController.swift */,
+				5388352A1DBF382D0093E755 /* M13CheckboxStrokeController.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		5388352B1DBF382D0093E755 /* Paths */ = {
+			isa = PBXGroup;
+			children = (
+				5388352C1DBF382D0093E755 /* M13CheckboxAddRemovePathGenerator.swift */,
+				5388352D1DBF382D0093E755 /* M13CheckboxCheckPathGenerator.swift */,
+				5388352E1DBF382D0093E755 /* M13CheckboxDisclosurePathGenerator.swift */,
+				5388352F1DBF382D0093E755 /* M13CheckboxPathGenerator.swift */,
+				538835301DBF382D0093E755 /* M13CheckboxRadioPathGenerator.swift */,
+			);
+			path = Paths;
 			sourceTree = "<group>";
 		};
 		5388F3141DBDDCC000B80A2B /* CustomTextField */ = {
@@ -217,6 +295,7 @@
 		80E8F23E1DB9C66E001CA1FB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5388351C1DBF382D0093E755 /* M13CheckBox */,
 				5388F3141DBDDCC000B80A2B /* CustomTextField */,
 				5388F3191DBDDCC000B80A2B /* MyConstant */,
 				80B114241DB9FD8300417B6D /* Validator */,
@@ -353,29 +432,47 @@
 				80B114401DB9FD8300417B6D /* ValidationRuleLength.swift in Sources */,
 				807A41A11DB87CCF00E31900 /* ViewController.swift in Sources */,
 				80B1144D1DB9FD8300417B6D /* Validator.swift in Sources */,
+				538835381DBF382D0093E755 /* M13CheckboxExpandController.swift in Sources */,
+				538835341DBF382D0093E755 /* M13CheckboxController.swift in Sources */,
 				80B1143D1DB9FD8300417B6D /* ValidationRuleCondition.swift in Sources */,
+				538835311DBF382D0093E755 /* M13Checkbox+IB.swift in Sources */,
 				80B114441DB9FD8300417B6D /* ValidationRuleURL.swift in Sources */,
 				80B1143E1DB9FD8300417B6D /* ValidationRuleContains.swift in Sources */,
+				538835401DBF382D0093E755 /* M13CheckboxDisclosurePathGenerator.swift in Sources */,
 				80B1144A1DB9FD8300417B6D /* ValidationResult.swift in Sources */,
+				538835361DBF382D0093E755 /* M13CheckboxBounceController.swift in Sources */,
+				538835331DBF382D0093E755 /* M13CheckboxAnimationGenerator.swift in Sources */,
 				80B114491DB9FD8300417B6D /* ValidationError.swift in Sources */,
 				5388F31D1DBDDCC000B80A2B /* iHUnderLineColorTextField.swift in Sources */,
 				80B1143C1DB9FD8300417B6D /* ValidationRuleComparison.swift in Sources */,
+				5388353D1DBF382D0093E755 /* M13CheckboxStrokeController.swift in Sources */,
 				80E8F23C1DB9C1ED001CA1FB /* BaseViewController.swift in Sources */,
 				80965E8B1DB893190055E7AE /* SocketIOManager.swift in Sources */,
 				80B114431DB9FD8300417B6D /* ValidationRuleRequired.swift in Sources */,
+				538835411DBF382D0093E755 /* M13CheckboxPathGenerator.swift in Sources */,
+				538835321DBF382D0093E755 /* M13Checkbox.swift in Sources */,
 				5388F31E1DBDDCC000B80A2B /* TextFieldsEffects.swift in Sources */,
 				80B114481DB9FD8300417B6D /* Validatable.swift in Sources */,
 				80B114461DB9FD8300417B6D /* UITextField+Validator.swift in Sources */,
 				80B1144C1DB9FD8300417B6D /* ValidationRuleSet.swift in Sources */,
 				5388F31F1DBDDCC000B80A2B /* MyConstant.swift in Sources */,
+				538835421DBF382D0093E755 /* M13CheckboxRadioPathGenerator.swift in Sources */,
 				80B1144B1DB9FD8300417B6D /* ValidationRule.swift in Sources */,
+				5388353E1DBF382D0093E755 /* M13CheckboxAddRemovePathGenerator.swift in Sources */,
 				807A419F1DB87CCF00E31900 /* AppDelegate.swift in Sources */,
 				80B114471DB9FD8300417B6D /* ValidatableInterfaceElement.swift in Sources */,
 				80B114411DB9FD8300417B6D /* ValidationRulePattern.swift in Sources */,
 				80B114421DB9FD8300417B6D /* ValidationRulePaymentCard.swift in Sources */,
+				5388353F1DBF382D0093E755 /* M13CheckboxCheckPathGenerator.swift in Sources */,
+				538835351DBF382D0093E755 /* M13CheckboxGestureRecognizer.swift in Sources */,
+				5388353A1DBF382D0093E755 /* M13CheckboxFillController.swift in Sources */,
+				538835371DBF382D0093E755 /* M13CheckboxDotController.swift in Sources */,
+				5388353B1DBF382D0093E755 /* M13CheckboxFlatController.swift in Sources */,
 				80B114451DB9FD8300417B6D /* UISlider+Validator.swift in Sources */,
 				5388F31C1DBDDCC000B80A2B /* iHBorderColorTextField.swift in Sources */,
+				538835391DBF382D0093E755 /* M13CheckboxFadeController.swift in Sources */,
 				5388F31B1DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift in Sources */,
+				5388353C1DBF382D0093E755 /* M13CheckboxSpiralController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
