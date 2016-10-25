@@ -238,12 +238,12 @@
 		807A419D1DB87CCF00E31900 /* DemoSocketIO */ = {
 			isa = PBXGroup;
 			children = (
-				8075D5E51DBF669000A5FCED /* Classes */,
 				807A419E1DB87CCF00E31900 /* AppDelegate.swift */,
 				807A41A21DB87CCF00E31900 /* Main.storyboard */,
 				807A41A51DB87CCF00E31900 /* Assets.xcassets */,
 				807A41A71DB87CCF00E31900 /* LaunchScreen.storyboard */,
 				807A41AA1DB87CCF00E31900 /* Info.plist */,
+				8075D5E51DBF669000A5FCED /* Classes */,
 				80E8F23E1DB9C66E001CA1FB /* Utils */,
 			);
 			path = DemoSocketIO;

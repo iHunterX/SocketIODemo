@@ -43,6 +43,9 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2R-oy-B65">
                                 <state key="normal" title="Join Chat"/>
+                                <connections>
+                                    <segue destination="eMQ-rg-JDQ" kind="push" id="chP-jy-935"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iSpam" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a1-kN-a6P">
                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="60"/>
@@ -76,10 +79,30 @@
             </objects>
             <point key="canvasLocation" x="1021.6" y="776.76161919040487"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="YjO-cN-Tfk">
+            <objects>
+                <viewController id="eMQ-rg-JDQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="euE-va-NUl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mxg-6Q-CY8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o5T-12-Gi1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bBW-LO-hs7"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qQX-Mg-IrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="777"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="fEj-bF-6aj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7Ct-my-Vhr" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Ct-my-Vhr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="k8w-sW-oNi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

@@ -28,6 +28,7 @@ open class TextFieldEffects : UITextField {
         switch result {
         case .valid:
             print("valid")
+            animateViewsForTextEntry()
             valid = 1
             
             
@@ -35,6 +36,7 @@ open class TextFieldEffects : UITextField {
             let messages = failures.map { $0.message }
             print(messages)
             valid = 0
+            animateViewsForTextEntry()
         }
     }
 
@@ -117,7 +119,7 @@ open class TextFieldEffects : UITextField {
         if newSuperview != nil {
             NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidEndEditing), name: NSNotification.Name.UITextFieldTextDidEndEditing, object: self)
             NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidBeginEditing), name: NSNotification.Name.UITextFieldTextDidBeginEditing, object: self)
-            NotificationCenter.default.addObserver(self, selector: #selector(changeing), name: NSNotification.Name.UITextFieldTextDidChange, object: self)
+            NotificationCenter.default.addObserver(self, selector: #selector(changing), name: NSNotification.Name.UITextFieldTextDidChange, object: self)
         } else {
             NotificationCenter.default.removeObserver(self)
         }
@@ -131,9 +133,8 @@ open class TextFieldEffects : UITextField {
         animateViewsForTextEntry()
        
     }
-    open func changeing() {
+    open func changing() {
         self.validationHandler = {result in self.updateValidationState(result: result)}
-        animateViewsForTextEntry()
     }
     
     /**

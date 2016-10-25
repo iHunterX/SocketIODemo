@@ -15,23 +15,22 @@ class ViewController: BaseViewController, UITextFieldDelegate{
 
 
     @IBOutlet weak var userNameTextField: iHUnderLineColorTextField!
+    
+
     @IBOutlet weak var connectButton: UIButton!
-//    var validationRuleSetUserName: ValidationRuleSet<String>? = ValidationRuleSet<String>() {
-//        didSet { userNameTextField.validationRules = validationRuleSetUserName }
-//    }
+
     var validationRuleSetUserName: ValidationRuleSet<String>? = ValidationRuleSet<String>()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationController?.navigationBar.isHidden = true
         userNameTextField.delegate = self
-        userNameTextFieldRules()
+        addTextFieldRules()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        userNameTextField.validationRuleSet = validationRuleSetUserName
-        userNameTextField.validateOnInputChange(validationEnabled: true)
+        
         
     }
 
@@ -39,9 +38,11 @@ class ViewController: BaseViewController, UITextFieldDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func userNameTextFieldRules(){
+    func addTextFieldRules(){
         self.validationRuleSetUserName?.add(rule: UserName)
         self.validationRuleSetUserName?.add(rule: rangeLengthRule)
+        userNameTextField.validationRuleSet = validationRuleSetUserName
+        userNameTextField.validateOnInputChange(validationEnabled: true)
     }
     
     

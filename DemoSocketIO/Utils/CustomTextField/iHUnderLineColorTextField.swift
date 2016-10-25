@@ -113,6 +113,9 @@ import UIKit
                 self.animationCompletionHandler?(.textEntry)
             })
         }
+        else{
+            updateBorder()
+        }
         
         layoutPlaceholderInTextRect()
         placeholderLabel.frame.origin = activePlaceholderPoint
@@ -134,6 +137,8 @@ import UIKit
             })
             
             activeBorderLayer.frame = self.rectForBorder(self.borderThickness.active, isFilled: false)
+        }else {
+            updateBorder()
         }
     }
     
@@ -144,8 +149,9 @@ import UIKit
         case 1:
             checkbox.isHidden = false
             if checkbox.checkState != .checked{
-                checkbox.toggleCheckState(true)
+                checkbox.toggleCheckState(true,isHidden: false)
             }
+            
             
             inactiveBorderLayer.frame = rectForBorder(borderThickness.inactive, isFilled: true)
             inactiveBorderLayer.backgroundColor = borderInactiveColor?.cgColor
@@ -154,19 +160,19 @@ import UIKit
             activeBorderLayer.backgroundColor = UIColor.green.cgColor
         case 0:
             if checkbox.checkState == .checked{
-                checkbox.toggleCheckState(true)
+                checkbox.toggleCheckState(true,isHidden: true)//
             }
-            checkbox.isHidden = true
+            
             inactiveBorderLayer.frame = rectForBorder(borderThickness.inactive, isFilled: true)
             inactiveBorderLayer.backgroundColor = borderInactiveColor?.cgColor
             
             activeBorderLayer.frame = rectForBorder(borderThickness.active, isFilled: false)
             activeBorderLayer.backgroundColor = UIColor.red.cgColor
         default:
+            checkbox.isHidden = true
             if checkbox.checkState == .checked{
                 checkbox.toggleCheckState(true)
             }
-            checkbox.isHidden = true
             inactiveBorderLayer.frame = rectForBorder(borderThickness.inactive, isFilled: true)
             inactiveBorderLayer.backgroundColor = borderInactiveColor?.cgColor
             

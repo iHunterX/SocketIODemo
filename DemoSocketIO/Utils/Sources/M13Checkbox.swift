@@ -305,18 +305,22 @@ public class M13Checkbox: UIControl {
      - parameter checkState: The new state of the checkbox.
      - parameter animated: Whether or not to animate the change.
      */
-    public func setCheckState(_ newState: CheckState, animated: Bool) {
+    public func setCheckState(_ newState: CheckState, animated: Bool,isHidden: Bool = false) {
         if checkState == newState {
             return
         }
         
         if animated {
             if enableMorphing {
-                controller.animate(checkState, toState: newState)
+                controller.animate(checkState, toState: newState,completion: {
+                    self.isHidden = isHidden
+                })
+                
             } else {
                 controller.animate(checkState, toState: nil, completion: { [weak self] in
                     self?.controller.resetLayersForState(newState)
                     self?.controller.animate(nil, toState: newState)
+                    self?.isHidden = isHidden
                     })
             }
         } else {
@@ -329,10 +333,10 @@ public class M13Checkbox: UIControl {
      - parameter animated: Whether or not to animate the change. Defaults to false.
      - note: If the checkbox is mixed, it will return to the unchecked state.
      */
-    public func toggleCheckState(_ animated: Bool = false) {
+    public func toggleCheckState(_ animated: Bool = false, isHidden: Bool = false) {
         switch checkState {
         case .checked:
-            setCheckState(.unchecked, animated: animated)
+            setCheckState(.unchecked, animated: animated,isHidden: isHidden)
             break
         case .unchecked:
             setCheckState(.checked, animated: animated)
