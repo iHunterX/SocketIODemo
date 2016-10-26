@@ -99,7 +99,7 @@ import UIKit
     
     // MARK: - Private
     
-    private func updateBorder() {
+    open override func updateBorder() {
         borderLayer.frame = rectForBorder(frame)
         borderLayer.backgroundColor = backgroundColor?.cgColor
     }

@@ -8,8 +8,9 @@
 
 import UIKit
 
+
 @IBDesignable open class iHUnderLineColorTextField: TextFieldEffects {
-    
+
     /**
      The color of the border when it has no content.
      
@@ -27,6 +28,21 @@ import UIKit
      This property applies a color to the lower edge of the control. The default value for this property is a clear color.
      */
     @IBInspectable dynamic open var borderActiveColor: UIColor? {
+        didSet {
+            updateBorder()
+        }
+    }
+    @IBInspectable dynamic open var borderValidColor: UIColor? {
+        didSet {
+            updateBorder()
+        }
+    }
+    @IBInspectable dynamic open var borderInvalidColor: UIColor? {
+        didSet {
+            updateBorder()
+        }
+    }
+    @IBInspectable dynamic open var borderActiveValidColor: UIColor? {
         didSet {
             updateBorder()
         }
@@ -78,28 +94,38 @@ import UIKit
     private let inactiveBorderLayer = CALayer()
     private let activeBorderLayer = CALayer()
     private var activePlaceholderPoint: CGPoint = CGPoint.zero
-    private let checkbox:M13Checkbox =  M13Checkbox(frame: CGRect(x: 0.0, y: 0.0, width: 32, height: 32))
+    private let checkbox:M13Checkbox =  M13Checkbox()
     
     
     // MARK: - TextFieldsEffects
     override open func drawViewsForRect(_ rect: CGRect) {
+        backgroundColor = UIColor.blue.withAlphaComponent(0.5)
         self.rightViewMode = .always
         let frame = CGRect(origin: CGPoint.zero, size: CGSize(width: rect.size.width, height: rect.size.height))
+        let checkBoxHeight = self.frame.size.height - 20
         placeholderLabel.frame = frame.insetBy(dx: placeholderInsets.x, dy: placeholderInsets.y)
         placeholderLabel.font = placeholderFontFromFont(font!)
         
         updateBorder()
         updatePlaceholder()
-
-        checkbox.isUserInteractionEnabled = false
-        checkbox.contentMode = .center
+        setupCheckBox(checkBoxHeight)
 
         layer.addSublayer(inactiveBorderLayer)
         layer.addSublayer(activeBorderLayer)
         addSubview(placeholderLabel)
         
-        self.rightView = checkbox
-        self.rightView?.contentMode = .center
+    }
+    
+    func setupCheckBox(_ checkBoxHeight:CGFloat = 25){
+        checkbox.isUserInteractionEnabled = false
+        checkbox.frame = (frame: CGRect(x: 0.0, y: 0.0, width: checkBoxHeight, height: checkBoxHeight))
+        checkbox.animationDuration = 0.5 
+        checkbox.boxLineWidth = 2
+        checkbox.checkmarkLineWidth = 2
+        checkbox.stateChangeAnimation = .spiral
+        checkbox.tintColor = borderValidColor
+        rightView = checkbox
+        rightView?.contentMode = .bottom
     }
 
     
@@ -128,6 +154,7 @@ import UIKit
     }
     
     override open func animateViewsForTextDisplay() {
+        updateBorder()
         if text!.isEmpty {
             UIView.animate(withDuration: 0.35, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 2.0, options: UIViewAnimationOptions.beginFromCurrentState, animations: ({
                 self.layoutPlaceholderInTextRect()
@@ -144,7 +171,7 @@ import UIKit
     
     // MARK: - Private
     
-    public func updateBorder() {
+    override open func updateBorder() {
         switch valid {
         case 1:
             checkbox.isHidden = false
@@ -154,20 +181,20 @@ import UIKit
             
             
             inactiveBorderLayer.frame = rectForBorder(borderThickness.inactive, isFilled: true)
-            inactiveBorderLayer.backgroundColor = borderInactiveColor?.cgColor
+            inactiveBorderLayer.backgroundColor = borderValidColor?.cgColor
             
             activeBorderLayer.frame = rectForBorder(borderThickness.active, isFilled: false)
-            activeBorderLayer.backgroundColor = UIColor.green.cgColor
+            activeBorderLayer.backgroundColor = borderValidColor?.cgColor
         case 0:
             if checkbox.checkState == .checked{
-                checkbox.toggleCheckState(true,isHidden: true)//
+                checkbox.toggleCheckState(true,isHidden: false)
             }
             
             inactiveBorderLayer.frame = rectForBorder(borderThickness.inactive, isFilled: true)
-            inactiveBorderLayer.backgroundColor = borderInactiveColor?.cgColor
+            inactiveBorderLayer.backgroundColor = borderInvalidColor?.cgColor
             
             activeBorderLayer.frame = rectForBorder(borderThickness.active, isFilled: false)
-            activeBorderLayer.backgroundColor = UIColor.red.cgColor
+            activeBorderLayer.backgroundColor = borderInvalidColor?.cgColor
         default:
             checkbox.isHidden = true
             if checkbox.checkState == .checked{
@@ -183,6 +210,7 @@ import UIKit
     }
     
     public func updatePlaceholder() {
+        updateBorder()
         placeholderLabel.text = placeholder
         placeholderLabel.textColor = placeholderColor
         placeholderLabel.sizeToFit()
@@ -226,11 +254,15 @@ import UIKit
     // MARK: - Overrides
     
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return CGRect(x: textFieldInsets.x, y: textFieldInsets.y, width: bounds.size.width - checkbox.frame.width, height: bounds.size.height)
+        if checkbox.isHidden{
+            return bounds.offsetBy(dx: textFieldInsets.x, dy: textFieldInsets.y - 5)
+        }else{
+            return CGRect(x: textFieldInsets.x, y: textFieldInsets.y - 5, width: bounds.size.width - checkbox.frame.width, height: bounds.size.height)
+        }
     }
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.offsetBy(dx: textFieldInsets.x, dy: textFieldInsets.y)
+        return bounds.offsetBy(dx: textFieldInsets.x, dy: textFieldInsets.y - 5)
     }
 
 }

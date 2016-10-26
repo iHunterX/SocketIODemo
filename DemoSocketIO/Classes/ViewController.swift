@@ -26,6 +26,7 @@ class ViewController: BaseViewController, UITextFieldDelegate{
         self.navigationController?.navigationBar.isHidden = true
         userNameTextField.delegate = self
         addTextFieldRules()
+        connectButton.isEnabled = false
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -41,10 +42,17 @@ class ViewController: BaseViewController, UITextFieldDelegate{
     func addTextFieldRules(){
         self.validationRuleSetUserName?.add(rule: UserName)
         self.validationRuleSetUserName?.add(rule: rangeLengthRule)
+        self.validationRuleSetUserName?.add(rule: ValidationRuleRequired<String>(failureError: ValidationError(message: "😫")))
         userNameTextField.validationRuleSet = validationRuleSetUserName
         userNameTextField.validateOnInputChange(validationEnabled: true)
     }
     
     
+}
+
+extension ViewController:TextFieldEffectsDelegate{
+    private func validTextField(_ textField: iHUnderLineColorTextField, valid: Bool) {
+        connectButton.isEnabled = valid
+    }
 }
 

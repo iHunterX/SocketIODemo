@@ -106,7 +106,7 @@ import UIKit
     
     // MARK: - Private
     
-    private func updateBorder() {
+    open override func updateBorder() {
         borderLayer.frame = rectForBorder(borderThickness, isFilled: false)
         borderLayer.backgroundColor = borderColor?.cgColor
     }

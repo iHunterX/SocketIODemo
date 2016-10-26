@@ -8,6 +8,9 @@
 
 import UIKit
 
+@objc public protocol TextFieldEffectsDelegate: NSObjectProtocol {
+    @objc optional func validTextField(_ textField: TextFieldEffects,valid: Bool)
+}
 
 extension String {
     /**
@@ -21,20 +24,24 @@ extension String {
 /**
  A TextFieldEffects object is a control that displays editable text and contains the boilerplates to setup unique animations for text entrey and display. You typically use this class the same way you use UITextField.
  */
-open class TextFieldEffects : UITextField {
-    
+open class TextFieldEffects : UITextField,UITextFieldDelegate {
+   
+    weak open var tfdelegate:TextFieldEffectsDelegate?
     var valid = -1
+    var failureMsg:[String]? = nil
     open func updateValidationState(result: ValidationResult) {
         switch result {
         case .valid:
-            print("valid")
-            animateViewsForTextEntry()
             valid = 1
-            
-            
+            print("valid")
+            tfdelegate?.validTextField?(self,valid: true)
+            animateViewsForTextEntry()
+  
         case .invalid(let failures):
             let messages = failures.map { $0.message }
-            print(messages)
+            failureMsg = messages
+            print(failureMsg)
+            tfdelegate?.validTextField?(self,valid: false)
             valid = 0
             animateViewsForTextEntry()
         }
@@ -92,7 +99,9 @@ open class TextFieldEffects : UITextField {
     open func updateViewsForBoundsChange(_ bounds: CGRect) {
         fatalError("\(#function) must be overridden")
     }
-    
+    open func updateBorder() {
+        fatalError("\(#function) must be overridden")
+    }
     // MARK: - Overrides
     
     override open func draw(_ rect: CGRect) {

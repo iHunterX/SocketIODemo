@@ -11,9 +11,10 @@ import UIKit
 class BaseViewController: UIViewController {
     
     
-    let UserName = ValidationRulePattern(pattern: .UserName, failureError: ValidationError(message: "false"))
-    let digitRule = ValidationRulePattern(pattern: .ContainsNumber, failureError: ValidationError(message: "😥"))
-    let rangeLengthRule = ValidationRuleLength(min: 5, max: 15, failureError: ValidationError(message: "😫"))
+    let UserName = ValidationRulePattern(pattern: .UserName, failureError: ValidationError(message: "Not username"))
+    let digitRule = ValidationRulePattern(pattern: .ContainsNumber, failureError: ValidationError(message: "Must have number"))
+    let rangeLengthRule = ValidationRuleLength(min: 5, max: 15, failureError: ValidationError(message: "Must have 5 to 15 characters"))
+//    let requiredRule = ValidationRuleRequired(failureError: ValidationError(message: "requirred"))
 
     override func viewDidLoad() {
         super.viewDidLoad()
