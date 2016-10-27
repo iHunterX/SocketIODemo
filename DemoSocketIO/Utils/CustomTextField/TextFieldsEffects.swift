@@ -8,10 +8,10 @@
 
 import UIKit
 
-@objc public protocol TextFieldEffectsDelegate: NSObjectProtocol {
-    @objc optional func validTextField(_ textField: TextFieldEffects,valid: Bool)
-}
 
+@objc public protocol TextFieldEffectsDelegate: class {
+    @objc optional func validTextField(valid: Bool)
+}
 extension String {
     /**
      true iff self contains characters.
@@ -24,7 +24,7 @@ extension String {
 /**
  A TextFieldEffects object is a control that displays editable text and contains the boilerplates to setup unique animations for text entrey and display. You typically use this class the same way you use UITextField.
  */
-open class TextFieldEffects : UITextField,UITextFieldDelegate {
+open class TextFieldEffects : UITextField {
    
     weak open var tfdelegate:TextFieldEffectsDelegate?
     var valid = -1
@@ -34,15 +34,15 @@ open class TextFieldEffects : UITextField,UITextFieldDelegate {
         case .valid:
             valid = 1
             print("valid")
-            tfdelegate?.validTextField?(self,valid: true)
+            tfdelegate?.validTextField?(valid: true)
             animateViewsForTextEntry()
   
         case .invalid(let failures):
             let messages = failures.map { $0.message }
             failureMsg = messages
             print(failureMsg)
-            tfdelegate?.validTextField?(self,valid: false)
             valid = 0
+            tfdelegate?.validTextField?(valid: false)
             animateViewsForTextEntry()
         }
     }

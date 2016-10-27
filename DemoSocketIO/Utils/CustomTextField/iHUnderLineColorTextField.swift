@@ -9,8 +9,8 @@
 import UIKit
 
 
-@IBDesignable open class iHUnderLineColorTextField: TextFieldEffects {
 
+@IBDesignable open class iHUnderLineColorTextField: TextFieldEffects {
     /**
      The color of the border when it has no content.
      
@@ -178,8 +178,6 @@ import UIKit
             if checkbox.checkState != .checked{
                 checkbox.toggleCheckState(true,isHidden: false)
             }
-            
-            
             inactiveBorderLayer.frame = rectForBorder(borderThickness.inactive, isFilled: true)
             inactiveBorderLayer.backgroundColor = borderValidColor?.cgColor
             
@@ -187,9 +185,8 @@ import UIKit
             activeBorderLayer.backgroundColor = borderValidColor?.cgColor
         case 0:
             if checkbox.checkState == .checked{
-                checkbox.toggleCheckState(true,isHidden: false)
+                checkbox.toggleCheckState(true,isHidden: true)
             }
-            
             inactiveBorderLayer.frame = rectForBorder(borderThickness.inactive, isFilled: true)
             inactiveBorderLayer.backgroundColor = borderInvalidColor?.cgColor
             
