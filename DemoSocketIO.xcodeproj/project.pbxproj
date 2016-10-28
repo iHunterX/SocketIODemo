@@ -10,6 +10,9 @@
 		462030149A206055EEBA15FF /* Pods_DemoSocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DFD79A0B17744EA2A50E6D /* Pods_DemoSocketIO.framework */; };
 		53201D0C1DC30D9700C30A9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53201D091DC30D9700C30A9B /* Main.storyboard */; };
 		53201D0D1DC30D9700C30A9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53201D0B1DC30D9700C30A9B /* LaunchScreen.storyboard */; };
+		53201D0F1DC3279D00C30A9B /* ChatInterfaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53201D0E1DC3279D00C30A9B /* ChatInterfaceViewController.swift */; };
+		53201D111DC32B9900C30A9B /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53201D101DC32B9900C30A9B /* PaddingTextField.swift */; };
+		53201D141DC3317200C30A9B /* UIViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53201D131DC3317200C30A9B /* UIViewBorder.swift */; };
 		5366B8EA1DC1AA2000F642DC /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366B8D41DC1AA2000F642DC /* IQNSArray+Sort.swift */; };
 		5366B8EB1DC1AA2000F642DC /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366B8D51DC1AA2000F642DC /* IQUIScrollView+Additions.swift */; };
 		5366B8EC1DC1AA2000F642DC /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366B8D61DC1AA2000F642DC /* IQUITextFieldView+Additions.swift */; };
@@ -80,6 +83,9 @@
 		4E2787E9B8C58C4005966F4F /* Pods-DemoSocketIO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSocketIO.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSocketIO/Pods-DemoSocketIO.release.xcconfig"; sourceTree = "<group>"; };
 		53201D0A1DC30D9700C30A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53201D0B1DC30D9700C30A9B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53201D0E1DC3279D00C30A9B /* ChatInterfaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInterfaceViewController.swift; sourceTree = "<group>"; };
+		53201D101DC32B9900C30A9B /* PaddingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
+		53201D131DC3317200C30A9B /* UIViewBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewBorder.swift; sourceTree = "<group>"; };
 		5366B8D41DC1AA2000F642DC /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		5366B8D51DC1AA2000F642DC /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		5366B8D61DC1AA2000F642DC /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
@@ -179,6 +185,14 @@
 				53201D0B1DC30D9700C30A9B /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		53201D121DC3315F00C30A9B /* UIViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				53201D131DC3317200C30A9B /* UIViewBorder.swift */,
+			);
+			path = UIViewExtensions;
 			sourceTree = "<group>";
 		};
 		5366B8D21DC1AA2000F642DC /* KeyboardManagerSwift */ = {
@@ -295,6 +309,7 @@
 				5388F3161DBDDCC000B80A2B /* iHBorderColorTextField.swift */,
 				5388F3171DBDDCC000B80A2B /* iHUnderLineColorTextField.swift */,
 				5388F3181DBDDCC000B80A2B /* TextFieldsEffects.swift */,
+				53201D101DC32B9900C30A9B /* PaddingTextField.swift */,
 			);
 			path = CustomTextField;
 			sourceTree = "<group>";
@@ -322,6 +337,7 @@
 				8075D5E61DBF669000A5FCED /* BaseViewController.swift */,
 				8075D5E71DBF669000A5FCED /* SocketIOManager.swift */,
 				8075D5E81DBF669000A5FCED /* ViewController.swift */,
+				53201D0E1DC3279D00C30A9B /* ChatInterfaceViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -403,6 +419,7 @@
 		80E8F23E1DB9C66E001CA1FB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				53201D121DC3315F00C30A9B /* UIViewExtensions */,
 				5366B8D21DC1AA2000F642DC /* KeyboardManagerSwift */,
 				5388351C1DBF382D0093E755 /* M13CheckBox */,
 				5388F3141DBDDCC000B80A2B /* CustomTextField */,
@@ -552,6 +569,7 @@
 				80B1143E1DB9FD8300417B6D /* ValidationRuleContains.swift in Sources */,
 				5366B8F71DC1AA2100F642DC /* IQTitleBarButtonItem.swift in Sources */,
 				538835401DBF382D0093E755 /* M13CheckboxDisclosurePathGenerator.swift in Sources */,
+				53201D0F1DC3279D00C30A9B /* ChatInterfaceViewController.swift in Sources */,
 				80B1144A1DB9FD8300417B6D /* ValidationResult.swift in Sources */,
 				538835361DBF382D0093E755 /* M13CheckboxBounceController.swift in Sources */,
 				5366B8F41DC1AA2100F642DC /* IQTextView.swift in Sources */,
@@ -563,6 +581,7 @@
 				5388353D1DBF382D0093E755 /* M13CheckboxStrokeController.swift in Sources */,
 				80B114431DB9FD8300417B6D /* ValidationRuleRequired.swift in Sources */,
 				5366B8F81DC1AA2100F642DC /* IQToolbar.swift in Sources */,
+				53201D141DC3317200C30A9B /* UIViewBorder.swift in Sources */,
 				538835411DBF382D0093E755 /* M13CheckboxPathGenerator.swift in Sources */,
 				538835321DBF382D0093E755 /* M13Checkbox.swift in Sources */,
 				5388F31E1DBDDCC000B80A2B /* TextFieldsEffects.swift in Sources */,
@@ -595,6 +614,7 @@
 				5388353B1DBF382D0093E755 /* M13CheckboxFlatController.swift in Sources */,
 				5366B8F61DC1AA2100F642DC /* IQPreviousNextView.swift in Sources */,
 				80B114451DB9FD8300417B6D /* UISlider+Validator.swift in Sources */,
+				53201D111DC32B9900C30A9B /* PaddingTextField.swift in Sources */,
 				5388F31C1DBDDCC000B80A2B /* iHBorderColorTextField.swift in Sources */,
 				538835391DBF382D0093E755 /* M13CheckboxFadeController.swift in Sources */,
 				5388F31B1DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift in Sources */,

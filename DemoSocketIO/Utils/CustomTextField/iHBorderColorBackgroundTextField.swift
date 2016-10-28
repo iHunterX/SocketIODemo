@@ -17,7 +17,7 @@ import UIKit
      
      This property applies a color to the lower edge of the control. The default value for this property is a clear color.
      */
-    @IBInspectable dynamic open var borderColor: UIColor? {
+    @IBInspectable dynamic open var borderTFColor: UIColor? {
         didSet {
             updateBorder()
         }
@@ -109,7 +109,7 @@ import UIKit
     
     open override func updateBorder() {
         borderLayer.frame = rectForBorder(borderThickness, isFilled: false)
-        borderLayer.backgroundColor = borderColor?.cgColor
+        borderLayer.backgroundColor = borderTFColor?.cgColor
     }
     
     private func updatePlaceholder() {

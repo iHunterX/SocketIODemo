@@ -14,12 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     var isFirstLoad = true
-//    let socket = SocketIOClient(socketURL: URL(string: "http://192.168.1.134:5000")!, config: [.log(true), .forcePolling(true)])
     let socketSingleton = SocketIOManager.sharedInstance
+    let keyboardSingleton = IQKeyboardManager.sharedManager()
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        IQKeyboardManager.sharedManager().enable = true
+        keyboardSingleton.shouldResignOnTouchOutside = true
+        keyboardSingleton.enableAutoToolbar = false
+        keyboardSingleton.enableDebugging = true
+        keyboardSingleton.enable = true
         if isFirstLoad{
             socketSingleton.establishConnection()
             isFirstLoad = false
