@@ -27,9 +27,10 @@ extension String {
 open class TextFieldEffects : UITextField {
    
     weak open var tfdelegate:TextFieldEffectsDelegate?
-    var valid = -1
-    var failureMsg:[String]? = nil
+    internal var valid = -1
+    internal var failureMsgs:[String]? = nil
     open func updateValidationState(result: ValidationResult) {
+        failureMsgs = nil
         switch result {
         case .valid:
             valid = 1
@@ -39,8 +40,8 @@ open class TextFieldEffects : UITextField {
   
         case .invalid(let failures):
             let messages = failures.map { $0.message }
-            failureMsg = messages
-            print(failureMsg)
+            failureMsgs = messages
+            print(failureMsgs)
             valid = 0
             tfdelegate?.validTextField?(valid: false)
             animateViewsForTextEntry()
@@ -69,6 +70,10 @@ open class TextFieldEffects : UITextField {
     open let placeholderLabel = UILabel()
     
     /**
+     UILabel that holds all the error info
+     */
+    open let textfieldErrors = UILabel()
+    /**
      Creates all the animations that are used to leave the textfield in the "entering text" state.
      */
     open func animateViewsForTextEntry() {
@@ -79,6 +84,10 @@ open class TextFieldEffects : UITextField {
      Creates all the animations that are used to leave the textfield in the "display input text" state.
      */
     open func animateViewsForTextDisplay() {
+        fatalError("\(#function) must be overridden")
+    }
+    
+    open func animateForErrorDisplay(isError:Bool,errorMessage:[String]?) {
         fatalError("\(#function) must be overridden")
     }
     

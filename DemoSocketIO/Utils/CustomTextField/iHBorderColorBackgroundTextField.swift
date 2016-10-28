@@ -66,6 +66,7 @@ import UIKit
     // MARK: - TextFieldsEffects
     
     override open func drawViewsForRect(_ rect: CGRect) {
+        self.layoutSubviews()
         let frame = CGRect(origin: CGPoint.zero, size: CGSize(width: rect.size.width, height: rect.size.height))
         
         placeholderLabel.frame = frame.insetBy(dx: placeholderInsets.x, dy: placeholderInsets.y)

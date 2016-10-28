@@ -42,11 +42,6 @@ import UIKit
             updateBorder()
         }
     }
-    @IBInspectable dynamic open var borderActiveValidColor: UIColor? {
-        didSet {
-            updateBorder()
-        }
-    }
     
     /**
      The color of the placeholder text.
@@ -85,8 +80,8 @@ import UIKit
     public var validationRuleSet: ValidationRuleSet<String>? = ValidationRuleSet<String>() {
         didSet { self.validationRules = validationRuleSet }
     }
-   
-
+    
+    
     
     private let borderThickness: (active: CGFloat, inactive: CGFloat) = (active: 2, inactive: 0.5)
     private let placeholderInsets = CGPoint(x: 0, y: 6)
@@ -97,29 +92,50 @@ import UIKit
     private let checkbox:M13Checkbox =  M13Checkbox()
     
     
-    // MARK: - TextFieldsEffects
+    // MARK: - iHunterX's TextField-underline
     override open func drawViewsForRect(_ rect: CGRect) {
-        backgroundColor = UIColor.blue.withAlphaComponent(0.5)
+        autoresizesSubviews = true
+        let checkBoxHeight = self.frame.size.height - 20
         self.rightViewMode = .always
         let frame = CGRect(origin: CGPoint.zero, size: CGSize(width: rect.size.width, height: rect.size.height))
-        let checkBoxHeight = self.frame.size.height - 20
+        
         placeholderLabel.frame = frame.insetBy(dx: placeholderInsets.x, dy: placeholderInsets.y)
         placeholderLabel.font = placeholderFontFromFont(font!)
         
+        setupErrorLabel(rect)
         updateBorder()
         updatePlaceholder()
         setupCheckBox(checkBoxHeight)
-
+        
         layer.addSublayer(inactiveBorderLayer)
         layer.addSublayer(activeBorderLayer)
         addSubview(placeholderLabel)
-        
+        addSubview(textfieldErrors)
     }
-    
+//    iHunter'sTextField
+    func setupErrorLabel(_ rect: CGRect){
+        textfieldErrors.alpha = 0.0
+        textfieldErrors.textColor = borderInvalidColor
+        textfieldErrors.textAlignment = .right
+        textfieldErrors.font = errorFontFromFont(font!)
+        textfieldErrors.contentMode = .topRight
+        textfieldErrors.numberOfLines = 3
+        let tfwidth = rect.size.width/2
+        textfieldErrors.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: tfwidth, height: 40))
+        var tfframe = textfieldErrors.frame
+        let xPosition:CGFloat = rect.size.width - tfframe.size.width
+        
+        tfframe.origin = CGPoint(x: ceil(xPosition), y: -10)
+        textfieldErrors.frame = tfframe
+
+        textfieldErrors.autoresizingMask = [.flexibleLeftMargin, .flexibleBottomMargin]
+        textfieldErrors.textAlignment = .right
+    }
+
     func setupCheckBox(_ checkBoxHeight:CGFloat = 25){
         checkbox.isUserInteractionEnabled = false
         checkbox.frame = (frame: CGRect(x: 0.0, y: 0.0, width: checkBoxHeight, height: checkBoxHeight))
-        checkbox.animationDuration = 0.5 
+        checkbox.animationDuration = 0.5
         checkbox.boxLineWidth = 2
         checkbox.checkmarkLineWidth = 2
         checkbox.stateChangeAnimation = .spiral
@@ -127,7 +143,7 @@ import UIKit
         rightView = checkbox
         rightView?.contentMode = .bottom
     }
-
+    
     
     override open func animateViewsForTextEntry() {
         updateBorder()
@@ -164,16 +180,39 @@ import UIKit
             })
             
             activeBorderLayer.frame = self.rectForBorder(self.borderThickness.active, isFilled: false)
-        }else {
+        }else if text == ""  {
+            valid = -1
             updateBorder()
         }
     }
     
+    override open func animateForErrorDisplay(isError:Bool, errorMessage:[String]?) {    
+        if isError{
+            var errorFormatted:String = ""
+            for errorTxt in errorMessage! {
+                if (errorMessage?.count)! > 1{
+                    errorFormatted.append(errorTxt + "\n")
+                }else{
+                    errorFormatted = errorTxt
+                }
+            }
+            textfieldErrors.text = errorFormatted
+            UIView.animate(withDuration: 0.9, delay: checkbox.animationDuration, usingSpringWithDamping: 0.8, initialSpringVelocity: 2.0, options: UIViewAnimationOptions.beginFromCurrentState, animations: ({
+                self.textfieldErrors.alpha = 1
+            }), completion: nil)
+        } else {
+            textfieldErrors.text = ""
+            UIView.animate(withDuration: 0.9, delay: checkbox.animationDuration, usingSpringWithDamping: 0.8, initialSpringVelocity: 2.0, options: UIViewAnimationOptions.beginFromCurrentState, animations: ({
+                self.textfieldErrors.alpha = 0
+            }), completion: nil)
+        }
+    }
     // MARK: - Private
     
     override open func updateBorder() {
         switch valid {
         case 1:
+            animateForErrorDisplay(isError: false, errorMessage: failureMsgs)
             checkbox.isHidden = false
             if checkbox.checkState != .checked{
                 checkbox.toggleCheckState(true,isHidden: false)
@@ -192,7 +231,9 @@ import UIKit
             
             activeBorderLayer.frame = rectForBorder(borderThickness.active, isFilled: false)
             activeBorderLayer.backgroundColor = borderInvalidColor?.cgColor
+            animateForErrorDisplay(isError: true, errorMessage: failureMsgs)
         default:
+            animateForErrorDisplay(isError: false, errorMessage: failureMsgs)
             checkbox.isHidden = true
             if checkbox.checkState == .checked{
                 checkbox.toggleCheckState(true)
@@ -219,6 +260,10 @@ import UIKit
     }
     
     private func placeholderFontFromFont(_ font: UIFont) -> UIFont! {
+        let smallerFont = UIFont(name: font.fontName, size: font.pointSize * placeholderFontScale)
+        return smallerFont
+    }
+    private func errorFontFromFont(_ font: UIFont) -> UIFont! {
         let smallerFont = UIFont(name: font.fontName, size: font.pointSize * placeholderFontScale)
         return smallerFont
     }
@@ -261,5 +306,11 @@ import UIKit
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.offsetBy(dx: textFieldInsets.x, dy: textFieldInsets.y - 5)
     }
-
+    override open func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+        let x = bounds.size.width - checkbox.frame.size.width
+        let y = bounds.offsetBy(dx: textFieldInsets.x, dy: textFieldInsets.y).origin.y
+        let rightBounds = CGRect(x: x, y: y ,width: checkbox.frame.size.width, height:checkbox.frame.size.height)
+        return rightBounds
+    }
+//
 }

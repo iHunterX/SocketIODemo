@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
     
     
-    let UserName = ValidationRulePattern(pattern: .UserName, failureError: ValidationError(message: "Not username"))
+    let UserName = ValidationRulePattern(pattern: .UserName, failureError: ValidationError(message: "Only a-z,A-Z,0-9 and _.- allowed"))
     let digitRule = ValidationRulePattern(pattern: .ContainsNumber, failureError: ValidationError(message: "Must have number"))
     let rangeLengthRule = ValidationRuleLength(min: 5, max: 15, failureError: ValidationError(message: "Must have 5 to 15 characters"))
 //    let requiredRule = ValidationRuleRequired(failureError: ValidationError(message: "requirred"))
