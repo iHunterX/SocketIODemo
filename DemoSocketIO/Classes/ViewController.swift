@@ -46,21 +46,6 @@ class ViewController: BaseViewController, UITextFieldDelegate{
         super.viewDidAppear(animated)
 
     }
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            appDelegate.shouldRotate = lastControllerRotationStatus ?? true
-        }
-    }
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.portrait
-    }
-    
-    override var shouldAutorotate: Bool {
-        return false
-    }
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

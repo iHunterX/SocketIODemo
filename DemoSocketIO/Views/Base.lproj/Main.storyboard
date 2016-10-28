@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Ct-my-Vhr">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Ct-my-Vhr">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -17,10 +17,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xiI-qD-pfp" customClass="iHUnderLineColorTextField" customModule="DemoSocketIO" customModuleProvider="target">
+                            <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xiI-qD-pfp" customClass="iHUnderLineColorTextField" customModule="DemoSocketIO" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="H4n-BP-sKj"/>
                                 </constraints>
@@ -53,24 +53,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSh-gK-THm">
+                                <frame key="frameInset" minX="186" minY="532" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3a1-kN-a6P" secondAttribute="trailing" constant="40" id="8J7-jB-MSX"/>
+                            <constraint firstItem="3a1-kN-a6P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Ox-bO-fxZ"/>
                             <constraint firstAttribute="trailing" secondItem="xiI-qD-pfp" secondAttribute="trailing" constant="15" id="9hD-yz-jAb"/>
                             <constraint firstItem="xiI-qD-pfp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="B3k-c5-PBg"/>
                             <constraint firstItem="Q2R-oy-B65" firstAttribute="width" secondItem="xiI-qD-pfp" secondAttribute="width" multiplier="1:3" id="BuL-sC-aJg"/>
                             <constraint firstItem="xiI-qD-pfp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BwG-zD-Ymx"/>
-                            <constraint firstItem="3a1-kN-a6P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pj2-HW-bXH"/>
-                            <constraint firstItem="3a1-kN-a6P" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:5" id="UZB-w9-WOK"/>
-                            <constraint firstItem="3a1-kN-a6P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="b9W-h6-4Nk"/>
-                            <constraint firstAttribute="trailing" secondItem="3a1-kN-a6P" secondAttribute="trailing" constant="40" id="bCc-3k-Zh2"/>
+                            <constraint firstItem="3a1-kN-a6P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="T6Y-pi-XLg"/>
+                            <constraint firstItem="3a1-kN-a6P" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="Yfg-AX-Nwn"/>
+                            <constraint firstItem="xiI-qD-pfp" firstAttribute="top" secondItem="3a1-kN-a6P" secondAttribute="bottom" priority="999" constant="25" id="c5I-BS-6Hd"/>
                             <constraint firstItem="Q2R-oy-B65" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d9C-dL-ZTA"/>
                             <constraint firstItem="xiI-qD-pfp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f5q-qI-sA8"/>
+                            <constraint firstItem="xiI-qD-pfp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3a1-kN-a6P" secondAttribute="bottom" constant="20" id="jAL-lc-k2D"/>
                             <constraint firstItem="Q2R-oy-B65" firstAttribute="top" secondItem="xiI-qD-pfp" secondAttribute="bottom" constant="20" id="sTC-JT-7fP"/>
-                            <constraint firstItem="3a1-kN-a6P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="tKN-e6-GZr"/>
+                            <constraint firstItem="3a1-kN-a6P" firstAttribute="top" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="80" id="trZ-nc-i8e"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="XSh-gK-THm"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <exclude reference="XSh-gK-THm"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="rqs-Kq-90O"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="connectButton" destination="Q2R-oy-B65" id="51s-gv-xVT"/>
                         <outlet property="userNameTextField" destination="xiI-qD-pfp" id="G1J-BZ-f9e"/>
@@ -89,7 +109,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Mxg-6Q-CY8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="o5T-12-Gi1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HxL-1K-nCj" userLabel="inputTextView">
@@ -97,9 +117,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZo-TC-JsY" userLabel="TFView">
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Type messages..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="URG-4H-dsL" customClass="PaddingTextField" customModule="DemoSocketIO" customModuleProvider="target">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="vqy-Bq-s6S"/>
-                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -112,18 +129,16 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="URG-4H-dsL" secondAttribute="bottom" id="MZK-aS-RYv"/>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Oe2-d7-X8p"/>
                                             <constraint firstAttribute="trailing" secondItem="URG-4H-dsL" secondAttribute="trailing" id="Scz-2B-vqQ"/>
                                             <constraint firstItem="URG-4H-dsL" firstAttribute="leading" secondItem="BZo-TC-JsY" secondAttribute="leading" id="WKt-Br-FNe"/>
                                             <constraint firstItem="URG-4H-dsL" firstAttribute="top" secondItem="BZo-TC-JsY" secondAttribute="top" id="hnI-yj-9LS"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="hnk-8E-dcc"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXJ-vm-dDP" userLabel="ButtonField">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFq-3z-6Jc">
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="sFq-3z-6Jc" secondAttribute="height" multiplier="2:1" id="yWt-qH-8LA"/>
+                                                    <constraint firstAttribute="width" secondItem="sFq-3z-6Jc" secondAttribute="height" multiplier="1:1" id="yWt-qH-8LA"/>
                                                 </constraints>
                                                 <state key="normal" title="Send"/>
                                                 <userDefinedRuntimeAttributes>
@@ -148,10 +163,8 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="sFq-3z-6Jc" secondAttribute="trailing" id="1XK-XZ-B4k"/>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="6nC-gV-f5P"/>
                                             <constraint firstAttribute="bottom" secondItem="sJu-yU-Q2A" secondAttribute="bottom" id="L0Z-AU-L8K"/>
                                             <constraint firstItem="sJu-yU-Q2A" firstAttribute="top" secondItem="MXJ-vm-dDP" secondAttribute="top" id="Tgz-gP-gol"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Xcn-Ur-6Gq"/>
                                             <constraint firstItem="sJu-yU-Q2A" firstAttribute="leading" secondItem="MXJ-vm-dDP" secondAttribute="leading" constant="5" id="XkT-LQ-8hm"/>
                                             <constraint firstAttribute="bottom" secondItem="sFq-3z-6Jc" secondAttribute="bottom" id="di2-0y-9Di"/>
                                             <constraint firstItem="sFq-3z-6Jc" firstAttribute="top" secondItem="MXJ-vm-dDP" secondAttribute="top" id="tIk-vD-Ch1"/>
@@ -160,14 +173,14 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="MXJ-vm-dDP" secondAttribute="trailing" id="2K7-MH-ZvH"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="130" id="73Z-dn-eHF"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="75t-kK-ic7"/>
                                     <constraint firstItem="MXJ-vm-dDP" firstAttribute="leading" secondItem="HxL-1K-nCj" secondAttribute="leading" id="FZ0-wP-sfg"/>
                                     <constraint firstAttribute="bottom" secondItem="MXJ-vm-dDP" secondAttribute="bottom" id="S7f-T2-Lrn"/>
                                     <constraint firstItem="BZo-TC-JsY" firstAttribute="leading" secondItem="HxL-1K-nCj" secondAttribute="leading" id="gL2-fU-sWz"/>
+                                    <constraint firstAttribute="height" constant="90" id="iyr-rM-AV4"/>
+                                    <constraint firstItem="MXJ-vm-dDP" firstAttribute="height" secondItem="HxL-1K-nCj" secondAttribute="height" multiplier="1:2" id="j4B-Tw-USc"/>
                                     <constraint firstItem="BZo-TC-JsY" firstAttribute="top" secondItem="HxL-1K-nCj" secondAttribute="top" id="rYF-nA-p8C"/>
                                     <constraint firstAttribute="trailing" secondItem="BZo-TC-JsY" secondAttribute="trailing" id="tc1-Ik-aG4"/>
-                                    <constraint firstItem="MXJ-vm-dDP" firstAttribute="height" secondItem="HxL-1K-nCj" secondAttribute="height" multiplier="1:2" priority="999" id="wYA-AU-TTQ"/>
+                                    <constraint firstItem="MXJ-vm-dDP" firstAttribute="height" relation="greaterThanOrEqual" secondItem="HxL-1K-nCj" secondAttribute="height" multiplier="1:2.5" id="wYA-AU-TTQ"/>
                                     <constraint firstItem="MXJ-vm-dDP" firstAttribute="top" secondItem="BZo-TC-JsY" secondAttribute="bottom" id="ygF-qW-6m4"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -188,6 +201,17 @@
                                         <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="iyr-rM-AV4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="iyr-rM-AV4"/>
+                                        <exclude reference="wYA-AU-TTQ"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -195,8 +219,13 @@
                             <constraint firstItem="Mxg-6Q-CY8" firstAttribute="top" secondItem="HxL-1K-nCj" secondAttribute="bottom" id="HFm-Zv-UGj"/>
                             <constraint firstItem="HxL-1K-nCj" firstAttribute="leading" secondItem="o5T-12-Gi1" secondAttribute="leading" id="R2e-lO-vRj"/>
                             <constraint firstAttribute="trailing" secondItem="HxL-1K-nCj" secondAttribute="trailing" id="Vd7-Bl-Ga5"/>
-                            <constraint firstItem="HxL-1K-nCj" firstAttribute="height" secondItem="o5T-12-Gi1" secondAttribute="height" multiplier="1:9" priority="999" id="hzF-oy-k6O"/>
+                            <constraint firstItem="HxL-1K-nCj" firstAttribute="height" secondItem="o5T-12-Gi1" secondAttribute="height" multiplier="1:7" id="hzF-oy-k6O"/>
                         </constraints>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="hzF-oy-k6O"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="bBW-LO-hs7"/>
                     <connections>

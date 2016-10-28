@@ -110,26 +110,28 @@ import UIKit
         layer.addSublayer(inactiveBorderLayer)
         layer.addSublayer(activeBorderLayer)
         addSubview(placeholderLabel)
-        addSubview(textfieldErrors)
+        
     }
 //    iHunter'sTextField
     func setupErrorLabel(_ rect: CGRect){
-        textfieldErrors.alpha = 0.0
         textfieldErrors.textColor = borderInvalidColor
-        textfieldErrors.textAlignment = .right
+        textfieldErrors.lineBreakMode = .byWordWrapping
+        textfieldErrors.textAlignment = .left
         textfieldErrors.font = errorFontFromFont(font!)
-        textfieldErrors.contentMode = .topRight
-        textfieldErrors.numberOfLines = 3
+        textfieldErrors.numberOfLines = 2
         let tfwidth = rect.size.width/2
         textfieldErrors.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: tfwidth, height: 40))
-        var tfframe = textfieldErrors.frame
-        let xPosition:CGFloat = rect.size.width - tfframe.size.width
+        addSubview(textfieldErrors)
         
-        tfframe.origin = CGPoint(x: ceil(xPosition), y: -10)
-        textfieldErrors.frame = tfframe
-
-        textfieldErrors.autoresizingMask = [.flexibleLeftMargin, .flexibleBottomMargin]
-        textfieldErrors.textAlignment = .right
+        textfieldErrors.translatesAutoresizingMaskIntoConstraints = false
+        let height = NSLayoutConstraint(item:textfieldErrors, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.greaterThanOrEqual, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 20)
+        let topRightViewTrailing = NSLayoutConstraint(item: textfieldErrors, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal
+            , toItem: self, attribute: NSLayoutAttribute.trailing, multiplier: 1, constant: 0)
+        
+        let topRightViewTopConstraint = NSLayoutConstraint(item: textfieldErrors, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal
+            , toItem: self, attribute: NSLayoutAttribute.top, multiplier: 1, constant: 0)
+        NSLayoutConstraint.activate([height,topRightViewTrailing,topRightViewTopConstraint])
+        textfieldErrors.translatesAutoresizingMaskIntoConstraints = false
     }
 
     func setupCheckBox(_ checkBoxHeight:CGFloat = 25){

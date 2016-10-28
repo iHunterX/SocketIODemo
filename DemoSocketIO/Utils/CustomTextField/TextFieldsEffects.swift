@@ -76,6 +76,8 @@ open class TextFieldEffects : UITextField {
     /**
      Creates all the animations that are used to leave the textfield in the "entering text" state.
      */
+    open var errorLabelTopConstraint = NSLayoutConstraint()
+    open var errorLabelHeightConstraint = NSLayoutConstraint()
     open func animateViewsForTextEntry() {
         fatalError("\(#function) must be overridden")
     }
