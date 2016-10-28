@@ -13,6 +13,7 @@
 		53201D0F1DC3279D00C30A9B /* ChatInterfaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53201D0E1DC3279D00C30A9B /* ChatInterfaceViewController.swift */; };
 		53201D111DC32B9900C30A9B /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53201D101DC32B9900C30A9B /* PaddingTextField.swift */; };
 		53201D141DC3317200C30A9B /* UIViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53201D131DC3317200C30A9B /* UIViewBorder.swift */; };
+		53201D171DC36A9400C30A9B /* NavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53201D161DC36A9400C30A9B /* NavigationControllerExtensions.swift */; };
 		5366B8EA1DC1AA2000F642DC /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366B8D41DC1AA2000F642DC /* IQNSArray+Sort.swift */; };
 		5366B8EB1DC1AA2000F642DC /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366B8D51DC1AA2000F642DC /* IQUIScrollView+Additions.swift */; };
 		5366B8EC1DC1AA2000F642DC /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366B8D61DC1AA2000F642DC /* IQUITextFieldView+Additions.swift */; };
@@ -86,6 +87,7 @@
 		53201D0E1DC3279D00C30A9B /* ChatInterfaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInterfaceViewController.swift; sourceTree = "<group>"; };
 		53201D101DC32B9900C30A9B /* PaddingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
 		53201D131DC3317200C30A9B /* UIViewBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewBorder.swift; sourceTree = "<group>"; };
+		53201D161DC36A9400C30A9B /* NavigationControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtensions.swift; sourceTree = "<group>"; };
 		5366B8D41DC1AA2000F642DC /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		5366B8D51DC1AA2000F642DC /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		5366B8D61DC1AA2000F642DC /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
@@ -193,6 +195,14 @@
 				53201D131DC3317200C30A9B /* UIViewBorder.swift */,
 			);
 			path = UIViewExtensions;
+			sourceTree = "<group>";
+		};
+		53201D151DC36A7B00C30A9B /* NavigationContoller */ = {
+			isa = PBXGroup;
+			children = (
+				53201D161DC36A9400C30A9B /* NavigationControllerExtensions.swift */,
+			);
+			path = NavigationContoller;
 			sourceTree = "<group>";
 		};
 		5366B8D21DC1AA2000F642DC /* KeyboardManagerSwift */ = {
@@ -419,6 +429,7 @@
 		80E8F23E1DB9C66E001CA1FB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				53201D151DC36A7B00C30A9B /* NavigationContoller */,
 				53201D121DC3315F00C30A9B /* UIViewExtensions */,
 				5366B8D21DC1AA2000F642DC /* KeyboardManagerSwift */,
 				5388351C1DBF382D0093E755 /* M13CheckBox */,
@@ -586,6 +597,7 @@
 				538835321DBF382D0093E755 /* M13Checkbox.swift in Sources */,
 				5388F31E1DBDDCC000B80A2B /* TextFieldsEffects.swift in Sources */,
 				80B114481DB9FD8300417B6D /* Validatable.swift in Sources */,
+				53201D171DC36A9400C30A9B /* NavigationControllerExtensions.swift in Sources */,
 				80B114461DB9FD8300417B6D /* UITextField+Validator.swift in Sources */,
 				80B1144C1DB9FD8300417B6D /* ValidationRuleSet.swift in Sources */,
 				5388F31F1DBDDCC000B80A2B /* MyConstant.swift in Sources */,
