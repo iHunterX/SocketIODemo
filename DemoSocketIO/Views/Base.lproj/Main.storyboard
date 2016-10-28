@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Ct-my-Vhr">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Ct-my-Vhr">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LoginScreen-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginScreen" id="BYZ-38-t0r" userLabel="LoginScreen" customClass="ViewController" customModule="DemoSocketIO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DemoSocketIO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -44,7 +45,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2R-oy-B65">
                                 <state key="normal" title="Join Chat"/>
                                 <connections>
-                                    <segue destination="eMQ-rg-JDQ" kind="push" id="chP-jy-935"/>
+                                    <segue destination="eMQ-rg-JDQ" kind="show" id="chP-jy-935"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iSpam" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a1-kN-a6P">
@@ -79,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="1021.6" y="776.76161919040487"/>
         </scene>
-        <!--ChatViewScreen-->
+        <!--Chat Interface View Controller-->
         <scene sceneID="YjO-cN-Tfk">
             <objects>
-                <viewController id="eMQ-rg-JDQ" userLabel="ChatViewScreen" sceneMemberID="viewController">
+                <viewController id="eMQ-rg-JDQ" customClass="ChatInterfaceViewController" customModule="DemoSocketIO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="euE-va-NUl"/>
                         <viewControllerLayoutGuide type="bottom" id="Mxg-6Q-CY8"/>
@@ -91,18 +92,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uOu-Df-VVu" customClass="iHUnderLineColorTextField" customModule="DemoSocketIO" customModuleProvider="target">
-                                <frame key="frameInset" minX="22" minY="341" width="347" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HxL-1K-nCj" userLabel="inputTextView">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZo-TC-JsY" userLabel="TFView">
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Type messages..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="URG-4H-dsL" customClass="PaddingTextField" customModule="DemoSocketIO" customModuleProvider="target">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="vqy-Bq-s6S"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                        <real key="value" value="11"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="URG-4H-dsL" secondAttribute="bottom" id="MZK-aS-RYv"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Oe2-d7-X8p"/>
+                                            <constraint firstAttribute="trailing" secondItem="URG-4H-dsL" secondAttribute="trailing" id="Scz-2B-vqQ"/>
+                                            <constraint firstItem="URG-4H-dsL" firstAttribute="leading" secondItem="BZo-TC-JsY" secondAttribute="leading" id="WKt-Br-FNe"/>
+                                            <constraint firstItem="URG-4H-dsL" firstAttribute="top" secondItem="BZo-TC-JsY" secondAttribute="top" id="hnI-yj-9LS"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="hnk-8E-dcc"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXJ-vm-dDP" userLabel="ButtonField">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFq-3z-6Jc">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="sFq-3z-6Jc" secondAttribute="height" multiplier="2:1" id="yWt-qH-8LA"/>
+                                                </constraints>
+                                                <state key="normal" title="Send"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftBorderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="sendAction:" destination="eMQ-rg-JDQ" eventType="touchUpInside" id="kkS-C9-w5A"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJu-yU-Q2A">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="sJu-yU-Q2A" secondAttribute="height" multiplier="1:1" id="3VD-xb-BJr"/>
+                                                </constraints>
+                                                <state key="normal" title="x"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="sFq-3z-6Jc" secondAttribute="trailing" id="1XK-XZ-B4k"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="6nC-gV-f5P"/>
+                                            <constraint firstAttribute="bottom" secondItem="sJu-yU-Q2A" secondAttribute="bottom" id="L0Z-AU-L8K"/>
+                                            <constraint firstItem="sJu-yU-Q2A" firstAttribute="top" secondItem="MXJ-vm-dDP" secondAttribute="top" id="Tgz-gP-gol"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Xcn-Ur-6Gq"/>
+                                            <constraint firstItem="sJu-yU-Q2A" firstAttribute="leading" secondItem="MXJ-vm-dDP" secondAttribute="leading" constant="5" id="XkT-LQ-8hm"/>
+                                            <constraint firstAttribute="bottom" secondItem="sFq-3z-6Jc" secondAttribute="bottom" id="di2-0y-9Di"/>
+                                            <constraint firstItem="sFq-3z-6Jc" firstAttribute="top" secondItem="MXJ-vm-dDP" secondAttribute="top" id="tIk-vD-Ch1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="MXJ-vm-dDP" secondAttribute="trailing" id="2K7-MH-ZvH"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="130" id="73Z-dn-eHF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="75t-kK-ic7"/>
+                                    <constraint firstItem="MXJ-vm-dDP" firstAttribute="leading" secondItem="HxL-1K-nCj" secondAttribute="leading" id="FZ0-wP-sfg"/>
+                                    <constraint firstAttribute="bottom" secondItem="MXJ-vm-dDP" secondAttribute="bottom" id="S7f-T2-Lrn"/>
+                                    <constraint firstItem="BZo-TC-JsY" firstAttribute="leading" secondItem="HxL-1K-nCj" secondAttribute="leading" id="gL2-fU-sWz"/>
+                                    <constraint firstItem="BZo-TC-JsY" firstAttribute="top" secondItem="HxL-1K-nCj" secondAttribute="top" id="rYF-nA-p8C"/>
+                                    <constraint firstAttribute="trailing" secondItem="BZo-TC-JsY" secondAttribute="trailing" id="tc1-Ik-aG4"/>
+                                    <constraint firstItem="MXJ-vm-dDP" firstAttribute="height" secondItem="HxL-1K-nCj" secondAttribute="height" multiplier="1:2" priority="999" id="wYA-AU-TTQ"/>
+                                    <constraint firstItem="MXJ-vm-dDP" firstAttribute="top" secondItem="BZo-TC-JsY" secondAttribute="bottom" id="ygF-qW-6m4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderTop">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topBorder" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topBorderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderViewColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mxg-6Q-CY8" firstAttribute="top" secondItem="HxL-1K-nCj" secondAttribute="bottom" id="HFm-Zv-UGj"/>
+                            <constraint firstItem="HxL-1K-nCj" firstAttribute="leading" secondItem="o5T-12-Gi1" secondAttribute="leading" id="R2e-lO-vRj"/>
+                            <constraint firstAttribute="trailing" secondItem="HxL-1K-nCj" secondAttribute="trailing" id="Vd7-Bl-Ga5"/>
+                            <constraint firstItem="HxL-1K-nCj" firstAttribute="height" secondItem="o5T-12-Gi1" secondAttribute="height" multiplier="1:9" priority="999" id="hzF-oy-k6O"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bBW-LO-hs7"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonView" destination="MXJ-vm-dDP" id="qFA-HS-8AV"/>
+                        <outlet property="chatTextField" destination="URG-4H-dsL" id="aql-eu-jgq"/>
+                        <outlet property="sendButton" destination="sFq-3z-6Jc" id="MUu-Lu-bh4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQX-Mg-IrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
