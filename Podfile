@@ -6,7 +6,8 @@ target 'DemoSocketIO' do
   use_frameworks!
 
   # Pods for DemoSocketIO
-pod 'Socket.IO-Client-Swift', '~> 8.0.2'
+pod 'Socket.IO-Client-Swift'
+pod "AsyncDisplayKit"
 
 
 end
