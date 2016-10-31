@@ -219,6 +219,7 @@
 		53A5E6261DC7667B0060CE93 /* ModalAlertUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A5E56F1DC7667A0060CE93 /* ModalAlertUtilities.swift */; };
 		53A5E6271DC7667B0060CE93 /* UIColor+N1Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A5E5701DC7667A0060CE93 /* UIColor+N1Colors.swift */; };
 		53A5E6281DC7667B0060CE93 /* UIFont+N1Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A5E5711DC7667A0060CE93 /* UIFont+N1Fonts.swift */; };
+		53A5E62A1DC768040060CE93 /* chatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A5E6291DC768040060CE93 /* chatViewController.swift */; };
 		8075D5E91DBF669000A5FCED /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075D5E61DBF669000A5FCED /* BaseViewController.swift */; };
 		8075D5EA1DBF669000A5FCED /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075D5E71DBF669000A5FCED /* SocketIOManager.swift */; };
 		8075D5EB1DBF669000A5FCED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075D5E81DBF669000A5FCED /* ViewController.swift */; };
@@ -477,6 +478,7 @@
 		53A5E56F1DC7667A0060CE93 /* ModalAlertUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalAlertUtilities.swift; sourceTree = "<group>"; };
 		53A5E5701DC7667A0060CE93 /* UIColor+N1Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+N1Colors.swift"; sourceTree = "<group>"; };
 		53A5E5711DC7667A0060CE93 /* UIFont+N1Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+N1Fonts.swift"; sourceTree = "<group>"; };
+		53A5E6291DC768040060CE93 /* chatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chatViewController.swift; sourceTree = "<group>"; };
 		56DFD79A0B17744EA2A50E6D /* Pods_DemoSocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8075D5E61DBF669000A5FCED /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8075D5E71DBF669000A5FCED /* SocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
@@ -1070,6 +1072,7 @@
 				8075D5E81DBF669000A5FCED /* ViewController.swift */,
 				53201D0E1DC3279D00C30A9B /* ChatInterfaceViewController.swift */,
 				80D6C0CD1DC3B56200DA74F2 /* RequiredViewController.swift */,
+				53A5E6291DC768040060CE93 /* chatViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1581,6 +1584,7 @@
 				53A5E61C1DC7667A0060CE93 /* MessageCellProtocol.swift in Sources */,
 				80D6C0BF1DC3B3FA00DA74F2 /* PACameraPermissionsCheck.swift in Sources */,
 				53A5E6191DC7667A0060CE93 /* GeneralMessengerCell.swift in Sources */,
+				53A5E62A1DC768040060CE93 /* chatViewController.swift in Sources */,
 				5366B8EE1DC1AA2000F642DC /* IQUIViewController+Additions.swift in Sources */,
 				5366B8F61DC1AA2100F642DC /* IQPreviousNextView.swift in Sources */,
 				53A5E57D1DC7667A0060CE93 /* M13CheckboxSpiralController.swift in Sources */,
