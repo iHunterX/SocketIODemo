@@ -230,6 +230,7 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 		self.setupDetailsLabel()
 		self.setupTableView()
 		self.setupContinueButton()
+        
 		
 		let horizontalSpace = 10
 		let views = ["titleLabel": self.titleLabel,
@@ -294,10 +295,12 @@ class PAPermissionsView: UIView, UITableViewDataSource, UITableViewDelegate {
 	
 	fileprivate func setupTableView() {
 		if self.tableView == nil {
+            
 			let tableView = UITableView(frame: CGRect.zero, style: .plain)
 			tableView.translatesAutoresizingMaskIntoConstraints = false
 			self.addSubview(tableView)
 			self.tableView = tableView
+            self.tableView.separatorStyle = .none
 			self.tableView.backgroundColor = UIColor.clear
 			self.tableView.dataSource = self
 			self.tableView.delegate = self

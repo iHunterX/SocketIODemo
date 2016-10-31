@@ -99,7 +99,8 @@ open class PAPermissionsViewController: BaseViewController, PAPermissionsViewDel
 
 	open override func viewDidLoad() {
 		super.viewDidLoad()
-		self.setupUI()
+        setupUI()
+
 	}
 	
 	open override func viewDidAppear(_ animated: Bool) {
@@ -109,7 +110,7 @@ open class PAPermissionsViewController: BaseViewController, PAPermissionsViewDel
 		}
 	}
 	
-	fileprivate func setupUI() {
+    fileprivate func setupUI() {
 		let mainView = PAPermissionsView(frame: CGRect(origin: CGPoint.zero, size: CGSize.zero));
 		mainView.delegate = self
 		mainView.dataSource = self
@@ -120,6 +121,7 @@ open class PAPermissionsViewController: BaseViewController, PAPermissionsViewDel
 		mainView.superview!.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": mainView]))
 		mainView.superview!.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: [], metrics: nil, views: ["subview": mainView]))
 		mainView.backgroundColor = UIColor.white
+
 		mainView.continueButton.addTarget(self, action: #selector(PAPermissionsViewController.didContinue), for: .touchUpInside)
 	}
 	
@@ -129,11 +131,18 @@ open class PAPermissionsViewController: BaseViewController, PAPermissionsViewDel
 		
 		self.permissionsView.permissions = permissions
 		self.permissionHandlers = handlers
-		
+        var perCount:Int = 1
 		for permission in self.permissionHandlers.values {
 			permission.delegate = self
 			permission.checkStatus()
+            if permission.status == .enabled{
+                perCount = perCount + 1
+                print(perCount)
+            }
 		}
+        if perCount == self.permissionsView.permissions.count{
+            self.didContinue()
+        }
 	}
 	
 	@objc fileprivate func didContinue() {

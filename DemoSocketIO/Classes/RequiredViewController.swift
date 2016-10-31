@@ -59,11 +59,18 @@ class RequiredViewController: PAPermissionsViewController,PAPermissionsViewContr
     }
     func permissionsViewControllerDidContinue(_ viewController: PAPermissionsViewController) {
         if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? ViewController {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            self.dismiss(animated: true, completion: { 
-                
-            })
-            appDelegate.window?.rootViewController!.present(loginVC, animated: true, completion: nil)
+//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//            let presentingViewController: UIViewController! = self.presentingViewController
+//            
+//            self.dismiss(animated: false) {
+//                // go back to MainMenuView as the eyes of the user
+//                presentingViewController.dismiss(animated: false, completion: {
+////                    self.present(loginVC, animated: true, completion: nil)
+//                })
+//            }
+            
+            loginVC.modalTransitionStyle = .crossDissolve
+            self.present(loginVC, animated: true, completion: nil)
         }
         
     }
