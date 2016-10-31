@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+open class BaseViewController: UIViewController {
     
     
     let UserName = ValidationRulePattern(pattern: .UserName, failureError: ValidationError(message: "Only a-z,A-Z,0-9 and _.- allowed"))
@@ -16,13 +16,13 @@ class BaseViewController: UIViewController {
     let rangeLengthRule = ValidationRuleLength(min: 5, max: 15, failureError: ValidationError(message: "Must have 5 to 15 characters"))
     let requiredRule = ValidationRuleRequired<String>(failureError: ValidationError(message: "requirred"))
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -42,7 +42,7 @@ class BaseViewController: UIViewController {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: stringValue)
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
          self.view.endEditing(true)
     }
     

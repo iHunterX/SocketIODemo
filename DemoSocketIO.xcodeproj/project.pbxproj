@@ -78,6 +78,24 @@
 		80B1144B1DB9FD8300417B6D /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114371DB9FD8300417B6D /* ValidationRule.swift */; };
 		80B1144C1DB9FD8300417B6D /* ValidationRuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B114381DB9FD8300417B6D /* ValidationRuleSet.swift */; };
 		80B1144D1DB9FD8300417B6D /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1143A1DB9FD8300417B6D /* Validator.swift */; };
+		80D6C0BC1DC3B3FA00DA74F2 /* pa_icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D6C0A81DC3B3FA00DA74F2 /* pa_icons.xcassets */; };
+		80D6C0BD1DC3B3FA00DA74F2 /* PAABAddressBookCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0AB1DC3B3FA00DA74F2 /* PAABAddressBookCheck.swift */; };
+		80D6C0BE1DC3B3FA00DA74F2 /* PABluetoothPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0AC1DC3B3FA00DA74F2 /* PABluetoothPermissionsCheck.swift */; };
+		80D6C0BF1DC3B3FA00DA74F2 /* PACameraPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0AD1DC3B3FA00DA74F2 /* PACameraPermissionsCheck.swift */; };
+		80D6C0C01DC3B3FA00DA74F2 /* PACNContactsPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0AE1DC3B3FA00DA74F2 /* PACNContactsPermissionsCheck.swift */; };
+		80D6C0C11DC3B3FA00DA74F2 /* PAEventKitPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0AF1DC3B3FA00DA74F2 /* PAEventKitPermissionsCheck.swift */; };
+		80D6C0C21DC3B3FA00DA74F2 /* PALocationPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0B01DC3B3FA00DA74F2 /* PALocationPermissionsCheck.swift */; };
+		80D6C0C31DC3B3FA00DA74F2 /* PAMicrophonePermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0B11DC3B3FA00DA74F2 /* PAMicrophonePermissionsCheck.swift */; };
+		80D6C0C41DC3B3FA00DA74F2 /* PAMotionFitnessPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0B21DC3B3FA00DA74F2 /* PAMotionFitnessPermissionsCheck.swift */; };
+		80D6C0C51DC3B3FA00DA74F2 /* PANotificationsPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0B31DC3B3FA00DA74F2 /* PANotificationsPermissionsCheck.swift */; };
+		80D6C0C61DC3B3FA00DA74F2 /* PAPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0B41DC3B3FA00DA74F2 /* PAPermissionsCheck.swift */; };
+		80D6C0C71DC3B3FA00DA74F2 /* PAPhotoLibraryPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0B51DC3B3FA00DA74F2 /* PAPhotoLibraryPermissionsCheck.swift */; };
+		80D6C0C81DC3B3FA00DA74F2 /* PAUNNotificationPermissionsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0B61DC3B3FA00DA74F2 /* PAUNNotificationPermissionsCheck.swift */; };
+		80D6C0C91DC3B3FA00DA74F2 /* PAPermissionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0B71DC3B3FA00DA74F2 /* PAPermissionsTableViewCell.swift */; };
+		80D6C0CA1DC3B3FA00DA74F2 /* PAPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0B81DC3B3FA00DA74F2 /* PAPermissionsView.swift */; };
+		80D6C0CB1DC3B3FA00DA74F2 /* PAPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0B91DC3B3FA00DA74F2 /* PAPermissionsViewController.swift */; };
+		80D6C0CC1DC3B3FA00DA74F2 /* PAConstraintsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0BB1DC3B3FA00DA74F2 /* PAConstraintsUtils.swift */; };
+		80D6C0CE1DC3B56200DA74F2 /* RequiredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C0CD1DC3B56200DA74F2 /* RequiredViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +175,24 @@
 		80B114381DB9FD8300417B6D /* ValidationRuleSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleSet.swift; sourceTree = "<group>"; };
 		80B114391DB9FD8300417B6D /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
 		80B1143A1DB9FD8300417B6D /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		80D6C0A81DC3B3FA00DA74F2 /* pa_icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = pa_icons.xcassets; sourceTree = "<group>"; };
+		80D6C0AB1DC3B3FA00DA74F2 /* PAABAddressBookCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAABAddressBookCheck.swift; sourceTree = "<group>"; };
+		80D6C0AC1DC3B3FA00DA74F2 /* PABluetoothPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PABluetoothPermissionsCheck.swift; sourceTree = "<group>"; };
+		80D6C0AD1DC3B3FA00DA74F2 /* PACameraPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACameraPermissionsCheck.swift; sourceTree = "<group>"; };
+		80D6C0AE1DC3B3FA00DA74F2 /* PACNContactsPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACNContactsPermissionsCheck.swift; sourceTree = "<group>"; };
+		80D6C0AF1DC3B3FA00DA74F2 /* PAEventKitPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAEventKitPermissionsCheck.swift; sourceTree = "<group>"; };
+		80D6C0B01DC3B3FA00DA74F2 /* PALocationPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PALocationPermissionsCheck.swift; sourceTree = "<group>"; };
+		80D6C0B11DC3B3FA00DA74F2 /* PAMicrophonePermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMicrophonePermissionsCheck.swift; sourceTree = "<group>"; };
+		80D6C0B21DC3B3FA00DA74F2 /* PAMotionFitnessPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMotionFitnessPermissionsCheck.swift; sourceTree = "<group>"; };
+		80D6C0B31DC3B3FA00DA74F2 /* PANotificationsPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PANotificationsPermissionsCheck.swift; sourceTree = "<group>"; };
+		80D6C0B41DC3B3FA00DA74F2 /* PAPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsCheck.swift; sourceTree = "<group>"; };
+		80D6C0B51DC3B3FA00DA74F2 /* PAPhotoLibraryPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPhotoLibraryPermissionsCheck.swift; sourceTree = "<group>"; };
+		80D6C0B61DC3B3FA00DA74F2 /* PAUNNotificationPermissionsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAUNNotificationPermissionsCheck.swift; sourceTree = "<group>"; };
+		80D6C0B71DC3B3FA00DA74F2 /* PAPermissionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsTableViewCell.swift; sourceTree = "<group>"; };
+		80D6C0B81DC3B3FA00DA74F2 /* PAPermissionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsView.swift; sourceTree = "<group>"; };
+		80D6C0B91DC3B3FA00DA74F2 /* PAPermissionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPermissionsViewController.swift; sourceTree = "<group>"; };
+		80D6C0BB1DC3B3FA00DA74F2 /* PAConstraintsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAConstraintsUtils.swift; sourceTree = "<group>"; };
+		80D6C0CD1DC3B56200DA74F2 /* RequiredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredViewController.swift; sourceTree = "<group>"; };
 		A497DAF8D43D310E44227EBB /* Pods-DemoSocketIO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSocketIO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoSocketIO/Pods-DemoSocketIO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -348,6 +384,7 @@
 				8075D5E71DBF669000A5FCED /* SocketIOManager.swift */,
 				8075D5E81DBF669000A5FCED /* ViewController.swift */,
 				53201D0E1DC3279D00C30A9B /* ChatInterfaceViewController.swift */,
+				80D6C0CD1DC3B56200DA74F2 /* RequiredViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -426,9 +463,66 @@
 			path = "UIKit+Validator";
 			sourceTree = "<group>";
 		};
+		80D6C0A61DC3B3FA00DA74F2 /* PAPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				80D6C0A71DC3B3FA00DA74F2 /* Assets */,
+				80D6C0A91DC3B3FA00DA74F2 /* Classes */,
+			);
+			path = PAPermissions;
+			sourceTree = "<group>";
+		};
+		80D6C0A71DC3B3FA00DA74F2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				80D6C0A81DC3B3FA00DA74F2 /* pa_icons.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		80D6C0A91DC3B3FA00DA74F2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				80D6C0AA1DC3B3FA00DA74F2 /* Checks */,
+				80D6C0B71DC3B3FA00DA74F2 /* PAPermissionsTableViewCell.swift */,
+				80D6C0B81DC3B3FA00DA74F2 /* PAPermissionsView.swift */,
+				80D6C0B91DC3B3FA00DA74F2 /* PAPermissionsViewController.swift */,
+				80D6C0BA1DC3B3FA00DA74F2 /* Utils */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		80D6C0AA1DC3B3FA00DA74F2 /* Checks */ = {
+			isa = PBXGroup;
+			children = (
+				80D6C0AB1DC3B3FA00DA74F2 /* PAABAddressBookCheck.swift */,
+				80D6C0AC1DC3B3FA00DA74F2 /* PABluetoothPermissionsCheck.swift */,
+				80D6C0AD1DC3B3FA00DA74F2 /* PACameraPermissionsCheck.swift */,
+				80D6C0AE1DC3B3FA00DA74F2 /* PACNContactsPermissionsCheck.swift */,
+				80D6C0AF1DC3B3FA00DA74F2 /* PAEventKitPermissionsCheck.swift */,
+				80D6C0B01DC3B3FA00DA74F2 /* PALocationPermissionsCheck.swift */,
+				80D6C0B11DC3B3FA00DA74F2 /* PAMicrophonePermissionsCheck.swift */,
+				80D6C0B21DC3B3FA00DA74F2 /* PAMotionFitnessPermissionsCheck.swift */,
+				80D6C0B31DC3B3FA00DA74F2 /* PANotificationsPermissionsCheck.swift */,
+				80D6C0B41DC3B3FA00DA74F2 /* PAPermissionsCheck.swift */,
+				80D6C0B51DC3B3FA00DA74F2 /* PAPhotoLibraryPermissionsCheck.swift */,
+				80D6C0B61DC3B3FA00DA74F2 /* PAUNNotificationPermissionsCheck.swift */,
+			);
+			path = Checks;
+			sourceTree = "<group>";
+		};
+		80D6C0BA1DC3B3FA00DA74F2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				80D6C0BB1DC3B3FA00DA74F2 /* PAConstraintsUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		80E8F23E1DB9C66E001CA1FB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				80D6C0A61DC3B3FA00DA74F2 /* PAPermissions */,
 				53201D151DC36A7B00C30A9B /* NavigationContoller */,
 				53201D121DC3315F00C30A9B /* UIViewExtensions */,
 				5366B8D21DC1AA2000F642DC /* KeyboardManagerSwift */,
@@ -508,6 +602,7 @@
 				807A41A61DB87CCF00E31900 /* Assets.xcassets in Resources */,
 				53201D0D1DC30D9700C30A9B /* LaunchScreen.storyboard in Resources */,
 				53201D0C1DC30D9700C30A9B /* Main.storyboard in Resources */,
+				80D6C0BC1DC3B3FA00DA74F2 /* pa_icons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,28 +664,38 @@
 				80B1143F1DB9FD8300417B6D /* ValidationRuleEquality.swift in Sources */,
 				80B114401DB9FD8300417B6D /* ValidationRuleLength.swift in Sources */,
 				5366B8EA1DC1AA2000F642DC /* IQNSArray+Sort.swift in Sources */,
+				80D6C0C51DC3B3FA00DA74F2 /* PANotificationsPermissionsCheck.swift in Sources */,
 				5366B8F51DC1AA2100F642DC /* IQBarButtonItem.swift in Sources */,
 				80B1144D1DB9FD8300417B6D /* Validator.swift in Sources */,
 				538835381DBF382D0093E755 /* M13CheckboxExpandController.swift in Sources */,
+				80D6C0C21DC3B3FA00DA74F2 /* PALocationPermissionsCheck.swift in Sources */,
+				80D6C0CB1DC3B3FA00DA74F2 /* PAPermissionsViewController.swift in Sources */,
 				538835341DBF382D0093E755 /* M13CheckboxController.swift in Sources */,
 				80B1143D1DB9FD8300417B6D /* ValidationRuleCondition.swift in Sources */,
 				538835311DBF382D0093E755 /* M13Checkbox+IB.swift in Sources */,
 				80B114441DB9FD8300417B6D /* ValidationRuleURL.swift in Sources */,
+				80D6C0BD1DC3B3FA00DA74F2 /* PAABAddressBookCheck.swift in Sources */,
 				5366B8F91DC1AA2100F642DC /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				80B1143E1DB9FD8300417B6D /* ValidationRuleContains.swift in Sources */,
 				5366B8F71DC1AA2100F642DC /* IQTitleBarButtonItem.swift in Sources */,
 				538835401DBF382D0093E755 /* M13CheckboxDisclosurePathGenerator.swift in Sources */,
+				80D6C0BE1DC3B3FA00DA74F2 /* PABluetoothPermissionsCheck.swift in Sources */,
 				53201D0F1DC3279D00C30A9B /* ChatInterfaceViewController.swift in Sources */,
+				80D6C0C01DC3B3FA00DA74F2 /* PACNContactsPermissionsCheck.swift in Sources */,
+				80D6C0CE1DC3B56200DA74F2 /* RequiredViewController.swift in Sources */,
 				80B1144A1DB9FD8300417B6D /* ValidationResult.swift in Sources */,
 				538835361DBF382D0093E755 /* M13CheckboxBounceController.swift in Sources */,
 				5366B8F41DC1AA2100F642DC /* IQTextView.swift in Sources */,
+				80D6C0CC1DC3B3FA00DA74F2 /* PAConstraintsUtils.swift in Sources */,
 				538835331DBF382D0093E755 /* M13CheckboxAnimationGenerator.swift in Sources */,
 				80B114491DB9FD8300417B6D /* ValidationError.swift in Sources */,
 				5388F31D1DBDDCC000B80A2B /* iHUnderLineColorTextField.swift in Sources */,
 				8075D5E91DBF669000A5FCED /* BaseViewController.swift in Sources */,
+				80D6C0C41DC3B3FA00DA74F2 /* PAMotionFitnessPermissionsCheck.swift in Sources */,
 				80B1143C1DB9FD8300417B6D /* ValidationRuleComparison.swift in Sources */,
 				5388353D1DBF382D0093E755 /* M13CheckboxStrokeController.swift in Sources */,
 				80B114431DB9FD8300417B6D /* ValidationRuleRequired.swift in Sources */,
+				80D6C0C81DC3B3FA00DA74F2 /* PAUNNotificationPermissionsCheck.swift in Sources */,
 				5366B8F81DC1AA2100F642DC /* IQToolbar.swift in Sources */,
 				53201D141DC3317200C30A9B /* UIViewBorder.swift in Sources */,
 				538835411DBF382D0093E755 /* M13CheckboxPathGenerator.swift in Sources */,
@@ -598,6 +703,7 @@
 				5388F31E1DBDDCC000B80A2B /* TextFieldsEffects.swift in Sources */,
 				80B114481DB9FD8300417B6D /* Validatable.swift in Sources */,
 				53201D171DC36A9400C30A9B /* NavigationControllerExtensions.swift in Sources */,
+				80D6C0CA1DC3B3FA00DA74F2 /* PAPermissionsView.swift in Sources */,
 				80B114461DB9FD8300417B6D /* UITextField+Validator.swift in Sources */,
 				80B1144C1DB9FD8300417B6D /* ValidationRuleSet.swift in Sources */,
 				5388F31F1DBDDCC000B80A2B /* MyConstant.swift in Sources */,
@@ -609,18 +715,23 @@
 				5366B8EB1DC1AA2000F642DC /* IQUIScrollView+Additions.swift in Sources */,
 				807A419F1DB87CCF00E31900 /* AppDelegate.swift in Sources */,
 				5366B8ED1DC1AA2000F642DC /* IQUIView+Hierarchy.swift in Sources */,
+				80D6C0C71DC3B3FA00DA74F2 /* PAPhotoLibraryPermissionsCheck.swift in Sources */,
 				5366B8F11DC1AA2000F642DC /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				8075D5EB1DBF669000A5FCED /* ViewController.swift in Sources */,
 				80B114471DB9FD8300417B6D /* ValidatableInterfaceElement.swift in Sources */,
 				80B114411DB9FD8300417B6D /* ValidationRulePattern.swift in Sources */,
 				8075D5EA1DBF669000A5FCED /* SocketIOManager.swift in Sources */,
 				80B114421DB9FD8300417B6D /* ValidationRulePaymentCard.swift in Sources */,
+				80D6C0C11DC3B3FA00DA74F2 /* PAEventKitPermissionsCheck.swift in Sources */,
 				5388353F1DBF382D0093E755 /* M13CheckboxCheckPathGenerator.swift in Sources */,
+				80D6C0C61DC3B3FA00DA74F2 /* PAPermissionsCheck.swift in Sources */,
 				5366B8F21DC1AA2100F642DC /* IQKeyboardManager.swift in Sources */,
 				5366B8EC1DC1AA2000F642DC /* IQUITextFieldView+Additions.swift in Sources */,
 				538835351DBF382D0093E755 /* M13CheckboxGestureRecognizer.swift in Sources */,
 				5388353A1DBF382D0093E755 /* M13CheckboxFillController.swift in Sources */,
 				5366B8F31DC1AA2100F642DC /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				80D6C0C31DC3B3FA00DA74F2 /* PAMicrophonePermissionsCheck.swift in Sources */,
+				80D6C0BF1DC3B3FA00DA74F2 /* PACameraPermissionsCheck.swift in Sources */,
 				5366B8EE1DC1AA2000F642DC /* IQUIViewController+Additions.swift in Sources */,
 				538835371DBF382D0093E755 /* M13CheckboxDotController.swift in Sources */,
 				5388353B1DBF382D0093E755 /* M13CheckboxFlatController.swift in Sources */,
@@ -630,6 +741,7 @@
 				5388F31C1DBDDCC000B80A2B /* iHBorderColorTextField.swift in Sources */,
 				538835391DBF382D0093E755 /* M13CheckboxFadeController.swift in Sources */,
 				5388F31B1DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift in Sources */,
+				80D6C0C91DC3B3FA00DA74F2 /* PAPermissionsTableViewCell.swift in Sources */,
 				5388353C1DBF382D0093E755 /* M13CheckboxSpiralController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
