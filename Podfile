@@ -7,7 +7,6 @@ target 'DemoSocketIO' do
 
   # Pods for DemoSocketIO
 pod 'Socket.IO-Client-Swift'
-pod "AsyncDisplayKit"
 
 
 end

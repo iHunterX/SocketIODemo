@@ -24,6 +24,7 @@ class RequiredViewController: PAPermissionsViewController,PAPermissionsViewContr
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         self.delegate = self
         let permissions = [
             PAPermissionsItem.itemForType(.location, reason: PAPermissionDefaultReason)!,
@@ -58,7 +59,7 @@ class RequiredViewController: PAPermissionsViewController,PAPermissionsViewContr
         // Dispose of any resources that can be recreated.
     }
     func permissionsViewControllerDidContinue(_ viewController: PAPermissionsViewController) {
-        if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? ViewController {
+        if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "MainController") as? UINavigationController {
 //            let appDelegate = UIApplication.shared.delegate as! AppDelegate
 //            let presentingViewController: UIViewController! = self.presentingViewController
 //            

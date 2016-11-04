@@ -20,10 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var shouldRotate = true
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        keyboardSingleton.shouldResignOnTouchOutside = true
-        keyboardSingleton.enableAutoToolbar = false
-        keyboardSingleton.enableDebugging = true
-        keyboardSingleton.enable = true
+
+        UINavigationBar.appearance().barTintColor = UIColor.crayons_oceanColor(alpha: 1)
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+            
         if isFirstLoad{
             socketSingleton.establishConnection()
             isFirstLoad = false
@@ -31,15 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         return true
-    }
-    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        if self.window?.rootViewController?.presentedViewController is ViewController {
-            
-            return UIInterfaceOrientationMask.portrait;
-            
-        } else {
-            return UIInterfaceOrientationMask.all;
-        }
     }
 
     

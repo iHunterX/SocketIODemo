@@ -9,18 +9,17 @@
 import UIKit
 
 //class UIViewBorder: UIView {
-extension UIView {
+class BorderView: UIView {
 
-
-    @IBInspectable var borderColor: UIColor? {
-        get {
-            return UIColor(cgColor: layer.borderColor!)
-        }
-        set {
-            layer.borderColor = newValue?.cgColor
+    var lineColor = UIColor.clear
+    @IBInspectable var lineBorderColor: UIColor = .clear {
+        didSet{
+            updateColor()
         }
     }
-    
+    func updateColor(){
+        lineColor = lineBorderColor
+    }
     @IBInspectable var leftBorderWidth: CGFloat {
         get {
             return 0.0   // Just to satisfy property
@@ -28,7 +27,7 @@ extension UIView {
         set {
             let line = UIView(frame: CGRect(x: 0.0, y: 0.0, width: newValue, height: bounds.height))
             line.translatesAutoresizingMaskIntoConstraints = false
-            line.backgroundColor = UIColor(cgColor: layer.borderColor!)
+            line.backgroundColor = lineColor
             self.addSubview(line)
             
             let views = ["line": line]
@@ -45,7 +44,7 @@ extension UIView {
         set {
             let line = UIView(frame: CGRect(x: 0.0, y: 0.0, width: bounds.width, height: newValue))
             line.translatesAutoresizingMaskIntoConstraints = false
-            line.backgroundColor = borderColor
+            line.backgroundColor = lineColor
             self.addSubview(line)
             
             let views = ["line": line]
@@ -62,7 +61,7 @@ extension UIView {
         set {
             let line = UIView(frame: CGRect(x: bounds.width, y: 0.0, width: newValue, height: bounds.height))
             line.translatesAutoresizingMaskIntoConstraints = false
-            line.backgroundColor = borderColor
+            line.backgroundColor = lineColor
             self.addSubview(line)
             
             let views = ["line": line]
@@ -78,7 +77,7 @@ extension UIView {
         set {
             let line = UIView(frame: CGRect(x: 0.0, y: bounds.height, width: bounds.width, height: newValue))
             line.translatesAutoresizingMaskIntoConstraints = false
-            line.backgroundColor = borderColor
+            line.backgroundColor = lineColor
             self.addSubview(line)
             
             let views = ["line": line]
@@ -146,4 +145,16 @@ extension UIView {
     //        self.layer.addSublayer(border)
     //    }
 
+}
+
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

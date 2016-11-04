@@ -41,7 +41,7 @@ open class TextFieldEffects : UITextField {
         case .invalid(let failures):
             let messages = failures.map { $0.message }
             failureMsgs = messages
-            print(failureMsgs)
+            print(failureMsgs ?? "Error")
             valid = 0
             tfdelegate?.validTextField?(valid: false)
             animateViewsForTextEntry()
