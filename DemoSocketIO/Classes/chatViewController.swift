@@ -21,10 +21,9 @@ class chatViewController: JSQMessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround() 
-        setupBackButton()
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
-        
+        self.navigationItem.backBarButtonItem?.title = ""
         if defaults.bool(forKey: Setting.removeBubbleTails.rawValue) {
             // Make taillessBubbles
             incomingBubble = JSQMessagesBubbleImageFactory(bubble: UIImage.jsq_bubbleCompactTailless(), capInsets: UIEdgeInsets.zero, layoutDirection: UIApplication.shared.userInterfaceLayoutDirection).incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
@@ -54,21 +53,13 @@ class chatViewController: JSQMessagesViewController {
         
         self.collectionView?.reloadData()
         self.collectionView?.layoutIfNeeded()
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func setupBackButton() {
-        let backButton = UIBarButtonItem(image: #imageLiteral(resourceName: "Back-100"), style: .plain, target: self, action: #selector(backButtonTapped))
-        navigationItem.leftBarButtonItem = backButton
-    }
-    func backButtonTapped() {
-        dismiss(animated: true, completion: nil)
-    }
-    
+
     
     /*
      // MARK: - Navigation

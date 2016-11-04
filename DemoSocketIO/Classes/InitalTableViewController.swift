@@ -101,18 +101,14 @@ class InitalTableViewController: UITableViewController {
             switch indexPath.row {
             case 0:
                 let chatView = chatViewController()
-                //chatView.messages = makeNormalConversation()
-                let chatNavigationController = UINavigationController(rootViewController: chatView)
-                chatNavigationController.modalTransitionStyle = .crossDissolve
-                present(chatNavigationController, animated: true, completion: nil)
+                chatView.modalTransitionStyle = .crossDissolve
+                self.navigationController?.pushViewController(chatView, animated: true)
+
 
             default:
                 let chatView = chatViewController()
-                //chatView.messages = makeGroupConversation()
-
-                let chatNavigationController = UINavigationController(rootViewController: chatView)
-                chatNavigationController.modalTransitionStyle = .crossDissolve
-                present(chatNavigationController, animated: true, completion: nil)
+                chatView.modalTransitionStyle = .crossDissolve
+                self.navigationController?.pushViewController(chatView, animated: true)
                 return
             }
         case 1:

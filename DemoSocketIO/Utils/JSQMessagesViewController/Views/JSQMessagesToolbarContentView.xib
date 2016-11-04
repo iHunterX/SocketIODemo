@@ -45,14 +45,29 @@
                             </constraints>
                             <state key="normal" image="Like Filled-96"/>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wj-7F-GdH">
+                            <state key="normal" image="Source Code-100"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0n2-X9-xjc">
+                            <state key="normal" image="Camera-100"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="0n2-X9-xjc" firstAttribute="leading" secondItem="3Wj-7F-GdH" secondAttribute="trailing" constant="8" id="1Io-2l-MQw"/>
+                        <constraint firstItem="0n2-X9-xjc" firstAttribute="leading" secondItem="3Wj-7F-GdH" secondAttribute="trailing" constant="8" id="5op-gM-1pA"/>
+                        <constraint firstItem="3Wj-7F-GdH" firstAttribute="height" secondItem="v3j-ZI-LnU" secondAttribute="height" id="6AY-N1-0Wx"/>
+                        <constraint firstItem="3Wj-7F-GdH" firstAttribute="width" secondItem="3Wj-7F-GdH" secondAttribute="height" multiplier="1:1" id="8nk-IG-z1u"/>
+                        <constraint firstItem="0n2-X9-xjc" firstAttribute="height" secondItem="3Wj-7F-GdH" secondAttribute="height" id="GA4-6j-fNB"/>
+                        <constraint firstItem="0n2-X9-xjc" firstAttribute="centerY" secondItem="3Wj-7F-GdH" secondAttribute="centerY" id="Nin-kU-rxF"/>
                         <constraint firstItem="v3j-ZI-LnU" firstAttribute="leading" secondItem="VJz-2d-l8w" secondAttribute="leading" constant="8" id="Phg-g8-7RG"/>
                         <constraint firstAttribute="bottom" secondItem="v3j-ZI-LnU" secondAttribute="bottom" constant="5" id="VE5-Lo-khL"/>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="XNX-fT-TUd"/>
+                        <constraint firstItem="3Wj-7F-GdH" firstAttribute="leading" secondItem="v3j-ZI-LnU" secondAttribute="trailing" constant="8" id="WVf-el-rhy"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="XNX-fT-TUd"/>
+                        <constraint firstItem="0n2-X9-xjc" firstAttribute="width" secondItem="0n2-X9-xjc" secondAttribute="height" multiplier="1:1" id="eft-FE-H2i"/>
+                        <constraint firstItem="3Wj-7F-GdH" firstAttribute="centerY" secondItem="v3j-ZI-LnU" secondAttribute="centerY" id="gTA-VO-E9m"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="kvS-XE-vOC"/>
-                        <constraint firstItem="v3j-ZI-LnU" firstAttribute="top" secondItem="VJz-2d-l8w" secondAttribute="top" id="wwb-lx-qvc"/>
+                        <constraint firstItem="v3j-ZI-LnU" firstAttribute="top" secondItem="VJz-2d-l8w" secondAttribute="top" constant="5" id="wwb-lx-qvc"/>
                     </constraints>
                 </view>
             </subviews>
@@ -81,11 +96,13 @@
                 <outlet property="rightHorizontalSpacingConstraint" destination="ds6-61-GNv" id="ZQh-8M-QFs"/>
                 <outlet property="textView" destination="dm4-NT-mvr" id="PFw-HO-oT8"/>
             </connections>
-            <point key="canvasLocation" x="308" y="567.5"/>
+            <point key="canvasLocation" x="73" y="420.5"/>
         </view>
     </objects>
     <resources>
-        <image name="Like Filled-96" width="33" height="33"/>
+        <image name="Camera-100" width="15" height="15"/>
+        <image name="Like Filled-96" width="15" height="15"/>
+        <image name="Source Code-100" width="15" height="15"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

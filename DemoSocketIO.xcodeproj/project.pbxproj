@@ -104,6 +104,7 @@
 		53B24F711DCB262E007C9552 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B24F701DCB262E007C9552 /* MyColor.swift */; };
 		53B24F741DCB2F2F007C9552 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B24F731DCB2F2F007C9552 /* Conversation.swift */; };
 		53B24F791DCB3398007C9552 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B24F781DCB3398007C9552 /* Users.swift */; };
+		53F3C1401DCC816700ECB305 /* CATransitionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3C13F1DCC816700ECB305 /* CATransitionExtension.swift */; };
 		8075D5E91DBF669000A5FCED /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075D5E61DBF669000A5FCED /* BaseViewController.swift */; };
 		8075D5EA1DBF669000A5FCED /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075D5E71DBF669000A5FCED /* SocketIOManager.swift */; };
 		8075D5EB1DBF669000A5FCED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075D5E81DBF669000A5FCED /* LoginViewController.swift */; };
@@ -295,6 +296,7 @@
 		53B24F701DCB262E007C9552 /* MyColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
 		53B24F731DCB2F2F007C9552 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		53B24F781DCB3398007C9552 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		53F3C13F1DCC816700ECB305 /* CATransitionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATransitionExtension.swift; sourceTree = "<group>"; };
 		56DFD79A0B17744EA2A50E6D /* Pods_DemoSocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8075D5E61DBF669000A5FCED /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8075D5E71DBF669000A5FCED /* SocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 		530F15031DC9BC7800F6B8A3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				53F3C13F1DCC816700ECB305 /* CATransitionExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1084,6 +1087,7 @@
 				5366B8EF1DC1AA2000F642DC /* IQUIWindow+Hierarchy.swift in Sources */,
 				532FEA4E1DCB0CA2008F5D92 /* JSQMessagesLoadEarlierHeaderView.m in Sources */,
 				5366B8EB1DC1AA2000F642DC /* IQUIScrollView+Additions.swift in Sources */,
+				53F3C1401DCC816700ECB305 /* CATransitionExtension.swift in Sources */,
 				53A5E5731DC7667A0060CE93 /* M13Checkbox.swift in Sources */,
 				807A419F1DB87CCF00E31900 /* AppDelegate.swift in Sources */,
 				532FEA2B1DCB0CA2008F5D92 /* NSString+JSQMessages.m in Sources */,
