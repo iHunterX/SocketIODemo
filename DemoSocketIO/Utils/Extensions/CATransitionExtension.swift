@@ -28,37 +28,27 @@ enum transitionType: String{
     case kCATransitionFromBottom
 }
 
-enum CAMediaRimingFuntionName:String{
-    case kCAMediaTimingFunctionLinear = "kCAMediaTimingFunctionLinear"
-    
-    case kCAMediaTimingFunctionEaseIn = "kCAMediaTimingFunctionEaseIn"
-    
-    case kCAMediaTimingFunctionEaseOut = "kCAMediaTimingFunctionEaseOut"
-    
-    case kCAMediaTimingFunctionEaseInEaseOut = "kCAMediaTimingFunctionEaseInEaseOut"
-    
-    case kCAMediaTimingFunctionDefault = "kCAMediaTimingFunctionDefault"
-}
 
-extension CATransition{
-    func transitionType(navigationController: UINavigationController,pushTo:UIViewController, transType: UINavigationControllerOperation,animationType: transitionType, duration: Float, timingFunction:CAMediaRimingFuntionName,timingFunctionName: CAMediaRimingFuntionName, animated:Bool){
+extension UIView{
+    func transitionType(navigationController: UINavigationController,pushTo:UIViewController?, transType: UINavigationControllerOperation,animationType: transitionType, duration: Float, animated:Bool = false){
         let transition = CATransition()
         transition.duration = CFTimeInterval(duration)
-        transition.timingFunction = CAMediaTimingFunction(name: timingFunction.rawValue)
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         transition.type = animationType.rawValue
         navigationController.view.layer.add(transition, forKey: nil)
         switch transType {
         case .push:
-         navigationController.pushViewController(pushTo, animated: animated)
+            if  pushTo !=  nil {
+                navigationController.pushViewController(pushTo!, animated: animated)
+            }
         case .pop:
-         navigationController.pop
-            
+            navigationController.popToRootViewController(animated: animated)
         default:
-            <#code#>
+            if  pushTo !=  nil {
+                navigationController.present(pushTo!, animated: animated, completion: nil)
+            }
         }
     }
-    
-    
     
 }
 

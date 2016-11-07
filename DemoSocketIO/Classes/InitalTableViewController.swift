@@ -102,9 +102,13 @@ class InitalTableViewController: UITableViewController {
             case 0:
                 let chatView = chatViewController()
                 chatView.modalTransitionStyle = .crossDissolve
-                self.navigationController?.pushViewController(chatView, animated: true)
-
-
+                if let thisView  = self.view{
+                    if let thisNavController = self.navigationController{
+                        thisView.transitionType(navigationController: thisNavController, pushTo: chatView, transType: .push, animationType: .kCATransitionReveal, duration: 0.5, animated: false)
+                    }
+                }
+                //                self.navigationController?.pushViewController(chatView, animated: true)
+                
             default:
                 let chatView = chatViewController()
                 chatView.modalTransitionStyle = .crossDissolve

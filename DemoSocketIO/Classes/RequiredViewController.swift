@@ -42,7 +42,6 @@ class RequiredViewController: PAPermissionsViewController,PAPermissionsViewContr
             PAPermissionsType.camera.rawValue: self.cameraCheck,
             PAPermissionsType.notifications.rawValue: self.notificationsCheck
         ]
-
         
         self.setupData(permissions, handlers: handlers)
 
