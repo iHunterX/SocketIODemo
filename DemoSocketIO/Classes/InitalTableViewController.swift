@@ -22,7 +22,6 @@ class InitalTableViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
     
-    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -109,9 +108,16 @@ class InitalTableViewController: UITableViewController {
                 chatView.title = titleVC
                 if let thisView  = self.view{
                     if let thisNavController = self.navigationController{
-                        thisView.transitionType(navigationController: thisNavController, pushTo: chatView, transType: .push, animationType: .kCATransitionFade,animationSubType: nil , duration: 0.5, animated: false)
+                        thisView.transitionType(navigationController: thisNavController, pushTo: chatView, transType: .push, animationType: kCATransitionPush,animationSubType: kCATransitionFromBottom , duration: 0.5, animated: false)
                     }
                 }
+//                let transition:CATransition = CATransition()
+//                transition.duration = 0.5
+//                transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+//                transition.type = kCATransitionPush
+//                transition.subtype = kCATransitionFromTop
+//                self.navigationController!.view.layer.add(transition, forKey: kCATransition)
+//                self.navigationController?.pushViewController(chatView, animated: false)
                 return
             //                self.navigationController?.pushViewController(chatView, animated: true)
             default:
@@ -119,16 +125,16 @@ class InitalTableViewController: UITableViewController {
                 chatView.title = titleVC
                 if let thisView  = self.view{
                     if let thisNavController = self.navigationController{
-                        thisView.transitionType(navigationController: thisNavController, pushTo: chatView, transType: .push, animationType: .kCATransitionPush,animationSubType: .kCATransitionFromBottom, duration: 0.5, animated: false)
+                        thisView.transitionType(navigationController: self.navigationController!, pushTo: chatView, transType: .push, animationType: kCATransitionFade,animationSubType: nil, duration: 0.5, animated: false)
                     }
                 }
-                //let transition:CATransition = CATransition()
-                //transition.duration = 0.5
-                //transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-                //transition.type = kCATransitionPush
-                //transition.subtype = kCATransitionFromBottom
-                //self.navigationController!.view.layer.add(transition, forKey: kCATransition)
-                //self.navigationController?.pushViewController(chatView, animated: false)
+//                let transition:CATransition = CATransition()
+//                transition.duration = 0.5
+//                transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+//                transition.type = kCATransitionPush
+//                transition.subtype = kCATransitionFromBottom
+//                self.navigationController!.view.layer.add(transition, forKey: kCATransition)
+//                self.navigationController?.pushViewController(chatView, animated: false)
                 return
             }
         case 1:

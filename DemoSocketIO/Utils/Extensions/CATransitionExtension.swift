@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum transitionType: String{
+enum transitionType:String {
     case kCATransitionFade
     
     case kCATransitionMoveIn
@@ -17,7 +17,7 @@ enum transitionType: String{
     
     case  kCATransitionReveal
 }
-enum transitionSubType: String{
+enum transitionSubType {
 
     
     /* Common transition subtypes. */
@@ -33,13 +33,15 @@ enum transitionSubType: String{
 
 
 extension UIView{
-    func transitionType(navigationController: UINavigationController,pushTo:UIViewController?, transType: UINavigationControllerOperation,animationType: transitionType,animationSubType: transitionSubType?, duration: Float, animated:Bool = false){
+    func transitionType(navigationController: UINavigationController,pushTo:UIViewController?, transType: UINavigationControllerOperation,animationType: String,animationSubType: String?, duration: Float, animated:Bool = false){
+        
         navigationController.view.layer.removeAnimation(forKey: kCATransition)
         let transition = CATransition()
         transition.duration = CFTimeInterval(duration)
         transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        transition.type = animationType.rawValue
-        transition.subtype = animationSubType?.rawValue
+        
+        transition.type = animationType
+        transition.subtype = animationSubType
         navigationController.view.layer.add(transition, forKey: kCATransition)
         switch transType {
             

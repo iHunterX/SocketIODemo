@@ -27,7 +27,6 @@ class chatViewController: JSQMessagesViewController {
         // Do any additional setup after loading the view.
         
         //Important
-        self.navigationController?.navigationBar.backItem?.title = ""
         ////////////////////////////////////////////////////////////////////////
         if defaults.bool(forKey: Setting.removeBubbleTails.rawValue) {
             // Make taillessBubbles
