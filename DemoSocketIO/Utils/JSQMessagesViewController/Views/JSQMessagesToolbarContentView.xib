@@ -13,20 +13,6 @@
             <rect key="frame" x="0.0" y="0.0" width="400" height="83"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEq-G7-jGt" userLabel="Left button container">
-                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="32" id="0sE-GV-joM"/>
-                        <constraint firstAttribute="width" constant="34" id="eMy-Af-wwH"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myo-1S-Vg1" userLabel="Right button container">
-                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="32" id="NaR-re-dJ4"/>
-                        <constraint firstAttribute="width" constant="50" id="yde-S9-dHe"/>
-                    </constraints>
-                </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dm4-NT-mvr" customClass="JSQMessagesComposerTextView">
                     <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -39,6 +25,20 @@
                 </textView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJz-2d-l8w">
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myo-1S-Vg1" userLabel="Right button container">
+                            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="NaR-re-dJ4"/>
+                                <constraint firstAttribute="width" constant="50" id="yde-S9-dHe"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEq-G7-jGt" userLabel="Left button container">
+                            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="0sE-GV-joM"/>
+                                <constraint firstAttribute="width" constant="34" id="eMy-Af-wwH"/>
+                            </constraints>
+                        </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3j-ZI-LnU">
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="v3j-ZI-LnU" secondAttribute="height" multiplier="1:1" id="tkT-oR-ts6"/>
@@ -58,55 +58,55 @@
                         <constraint firstItem="0n2-X9-xjc" firstAttribute="leading" secondItem="3Wj-7F-GdH" secondAttribute="trailing" constant="8" id="5op-gM-1pA"/>
                         <constraint firstItem="3Wj-7F-GdH" firstAttribute="height" secondItem="v3j-ZI-LnU" secondAttribute="height" id="6AY-N1-0Wx"/>
                         <constraint firstItem="3Wj-7F-GdH" firstAttribute="width" secondItem="3Wj-7F-GdH" secondAttribute="height" multiplier="1:1" id="8nk-IG-z1u"/>
+                        <constraint firstItem="LEq-G7-jGt" firstAttribute="leading" secondItem="VJz-2d-l8w" secondAttribute="leading" constant="8" id="Eys-3t-IAz"/>
                         <constraint firstItem="0n2-X9-xjc" firstAttribute="height" secondItem="3Wj-7F-GdH" secondAttribute="height" id="GA4-6j-fNB"/>
                         <constraint firstItem="0n2-X9-xjc" firstAttribute="centerY" secondItem="3Wj-7F-GdH" secondAttribute="centerY" id="Nin-kU-rxF"/>
-                        <constraint firstItem="v3j-ZI-LnU" firstAttribute="leading" secondItem="VJz-2d-l8w" secondAttribute="leading" constant="8" id="Phg-g8-7RG"/>
+                        <constraint firstAttribute="trailing" secondItem="Myo-1S-Vg1" secondAttribute="trailing" constant="8" id="UWK-ID-q0T"/>
+                        <constraint firstAttribute="top" secondItem="Myo-1S-Vg1" secondAttribute="bottom" constant="-35" id="V8a-pa-m0r"/>
                         <constraint firstAttribute="bottom" secondItem="v3j-ZI-LnU" secondAttribute="bottom" constant="5" id="VE5-Lo-khL"/>
                         <constraint firstItem="3Wj-7F-GdH" firstAttribute="leading" secondItem="v3j-ZI-LnU" secondAttribute="trailing" constant="8" id="WVf-el-rhy"/>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="XNX-fT-TUd"/>
                         <constraint firstItem="0n2-X9-xjc" firstAttribute="width" secondItem="0n2-X9-xjc" secondAttribute="height" multiplier="1:1" id="eft-FE-H2i"/>
+                        <constraint firstItem="v3j-ZI-LnU" firstAttribute="leading" secondItem="LEq-G7-jGt" secondAttribute="trailing" constant="8" id="fNZ-9g-PLx"/>
                         <constraint firstItem="3Wj-7F-GdH" firstAttribute="centerY" secondItem="v3j-ZI-LnU" secondAttribute="centerY" id="gTA-VO-E9m"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="kvS-XE-vOC"/>
+                        <constraint firstAttribute="top" secondItem="LEq-G7-jGt" secondAttribute="bottom" constant="-35" id="wPT-BJ-Z8S"/>
                         <constraint firstItem="v3j-ZI-LnU" firstAttribute="top" secondItem="VJz-2d-l8w" secondAttribute="top" constant="5" id="wwb-lx-qvc"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Myo-1S-Vg1" firstAttribute="leading" secondItem="dm4-NT-mvr" secondAttribute="trailing" constant="8" id="7Ld-5r-Hp3"/>
                 <constraint firstItem="VJz-2d-l8w" firstAttribute="top" secondItem="dm4-NT-mvr" secondAttribute="bottom" constant="7" id="7dG-pg-Gct"/>
                 <constraint firstItem="dm4-NT-mvr" firstAttribute="top" secondItem="1" secondAttribute="top" constant="7" id="9Tz-Wq-xIf"/>
-                <constraint firstItem="LEq-G7-jGt" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="8" id="LAU-fo-GJJ"/>
+                <constraint firstItem="dm4-NT-mvr" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="8" id="Dq2-fM-lgl"/>
                 <constraint firstAttribute="bottom" secondItem="VJz-2d-l8w" secondAttribute="bottom" id="Q55-i5-0cb"/>
                 <constraint firstAttribute="trailing" secondItem="VJz-2d-l8w" secondAttribute="trailing" id="TLX-JD-eQ4"/>
-                <constraint firstAttribute="trailing" secondItem="Myo-1S-Vg1" secondAttribute="trailing" constant="8" id="ds6-61-GNv"/>
-                <constraint firstItem="VJz-2d-l8w" firstAttribute="top" secondItem="Myo-1S-Vg1" secondAttribute="bottom" constant="6" id="kZM-UK-ysu"/>
                 <constraint firstItem="VJz-2d-l8w" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="n03-PB-nOo"/>
-                <constraint firstItem="dm4-NT-mvr" firstAttribute="leading" secondItem="LEq-G7-jGt" secondAttribute="trailing" constant="8" id="owo-gB-gyR"/>
-                <constraint firstItem="VJz-2d-l8w" firstAttribute="top" secondItem="LEq-G7-jGt" secondAttribute="bottom" constant="6" id="to2-01-8ry"/>
+                <constraint firstAttribute="trailing" secondItem="dm4-NT-mvr" secondAttribute="trailing" constant="8" id="owQ-PO-oHi"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="leftBarButtonContainerView" destination="LEq-G7-jGt" id="F0V-4N-1Mo"/>
                 <outlet property="leftBarButtonContainerViewWidthConstraint" destination="eMy-Af-wwH" id="FI9-F2-2bN"/>
-                <outlet property="leftHorizontalSpacingConstraint" destination="LAU-fo-GJJ" id="X2c-BI-0Q4"/>
+                <outlet property="leftHorizontalSpacingConstraint" destination="Dq2-fM-lgl" id="rm3-Ei-if0"/>
                 <outlet property="rightBarButtonContainerView" destination="Myo-1S-Vg1" id="0SR-cw-EkD"/>
                 <outlet property="rightBarButtonContainerViewWidthConstraint" destination="yde-S9-dHe" id="WGu-df-M3L"/>
-                <outlet property="rightHorizontalSpacingConstraint" destination="ds6-61-GNv" id="ZQh-8M-QFs"/>
+                <outlet property="rightHorizontalSpacingConstraint" destination="owQ-PO-oHi" id="73l-dc-fzO"/>
                 <outlet property="textView" destination="dm4-NT-mvr" id="PFw-HO-oT8"/>
             </connections>
-            <point key="canvasLocation" x="73" y="420.5"/>
+            <point key="canvasLocation" x="408" y="425.5"/>
         </view>
     </objects>
     <resources>
-        <image name="Camera-100" width="15" height="15"/>
-        <image name="Like Filled-96" width="15" height="15"/>
-        <image name="Source Code-100" width="15" height="15"/>
+        <image name="Camera-100" width="25" height="25"/>
+        <image name="Like Filled-96" width="25" height="25"/>
+        <image name="Source Code-100" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
 </document>

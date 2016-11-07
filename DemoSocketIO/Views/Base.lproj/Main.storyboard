@@ -125,7 +125,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nmc-UB-PDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3540" y="775.86206896551732"/>
+            <point key="canvasLocation" x="3604" y="775"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="njr-rg-Kxf">
@@ -139,21 +139,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obj-70-xlX">
-                                <items>
-                                    <navigationItem title="Channel " id="Ohl-re-JxW">
-                                        <barButtonItem key="backBarButtonItem" title=" " id="pxl-18-xOC"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yvz-4t-8m8" customClass="SpringView" customModule="DemoSocketIO" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeRight"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="obj-70-xlX" firstAttribute="top" secondItem="NgK-dU-zG7" secondAttribute="bottom" id="3kY-Vt-ZXg"/>
-                            <constraint firstItem="obj-70-xlX" firstAttribute="leading" secondItem="fZW-nq-nIw" secondAttribute="leading" id="CSp-9h-cNW"/>
-                            <constraint firstAttribute="trailing" secondItem="obj-70-xlX" secondAttribute="trailing" id="TF6-lo-sij"/>
+                            <constraint firstAttribute="trailing" secondItem="Yvz-4t-8m8" secondAttribute="trailing" id="M9Y-xP-mSf"/>
+                            <constraint firstItem="Yvz-4t-8m8" firstAttribute="top" secondItem="fZW-nq-nIw" secondAttribute="top" id="a3F-Q5-NZb"/>
+                            <constraint firstItem="Ozc-gd-FKf" firstAttribute="top" secondItem="Yvz-4t-8m8" secondAttribute="bottom" id="hgM-fN-Igq"/>
+                            <constraint firstItem="Yvz-4t-8m8" firstAttribute="leading" secondItem="fZW-nq-nIw" secondAttribute="leading" id="l6J-pR-3Gn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animateView" destination="Yvz-4t-8m8" id="ccr-U4-oid"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UB3-4Q-HvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,14 +179,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TdC-sP-M4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298" y="776"/>
+            <point key="canvasLocation" x="1422" y="776"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Z2c-tE-Rt7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9eS-ag-GOz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dYg-LU-SBX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dYg-LU-SBX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -214,7 +217,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NN2-Fa-cjt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1927.2" y="775.86206896551732"/>
+            <point key="canvasLocation" x="2172" y="776"/>
         </scene>
     </scenes>
 </document>

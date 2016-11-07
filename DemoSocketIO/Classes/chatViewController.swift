@@ -18,12 +18,17 @@ class chatViewController: JSQMessagesViewController {
     var incomingBubble: JSQMessagesBubbleImage!
     var outgoingBubble: JSQMessagesBubbleImage!
     
+    @IBOutlet weak var animateView: SpringView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        
         // Do any additional setup after loading the view.
-        self.navigationItem.backBarButtonItem?.title = ""
+        
+        //Important
+        self.navigationController?.navigationBar.backItem?.title = ""
+        ////////////////////////////////////////////////////////////////////////
         if defaults.bool(forKey: Setting.removeBubbleTails.rawValue) {
             // Make taillessBubbles
             incomingBubble = JSQMessagesBubbleImageFactory(bubble: UIImage.jsq_bubbleCompactTailless(), capInsets: UIEdgeInsets.zero, layoutDirection: UIApplication.shared.userInterfaceLayoutDirection).incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
@@ -70,6 +75,10 @@ class chatViewController: JSQMessagesViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
     
     
     

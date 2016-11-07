@@ -13,6 +13,7 @@ let cellIdentifier = "cellIdentifier"
 class InitalTableViewController: UITableViewController {
     
     //MARK: - View lifecycle
+    let springAnimation = SpringAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,23 +97,38 @@ class InitalTableViewController: UITableViewController {
     //Mark: - Table view delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var titleVC = ""
+        if let cell = tableView.cellForRow(at: indexPath){
+            titleVC = (cell.textLabel?.text)!
+        }
         switch indexPath.section {
         case 0:
             switch indexPath.row {
             case 0:
                 let chatView = chatViewController()
-                chatView.modalTransitionStyle = .crossDissolve
+                chatView.title = titleVC
                 if let thisView  = self.view{
                     if let thisNavController = self.navigationController{
-                        thisView.transitionType(navigationController: thisNavController, pushTo: chatView, transType: .push, animationType: .kCATransitionReveal, duration: 0.5, animated: false)
+                        thisView.transitionType(navigationController: thisNavController, pushTo: chatView, transType: .push, animationType: .kCATransitionFade,animationSubType: nil , duration: 0.5, animated: false)
                     }
                 }
-                //                self.navigationController?.pushViewController(chatView, animated: true)
-                
+                return
+            //                self.navigationController?.pushViewController(chatView, animated: true)
             default:
                 let chatView = chatViewController()
-                chatView.modalTransitionStyle = .crossDissolve
-                self.navigationController?.pushViewController(chatView, animated: true)
+                chatView.title = titleVC
+                if let thisView  = self.view{
+                    if let thisNavController = self.navigationController{
+                        thisView.transitionType(navigationController: thisNavController, pushTo: chatView, transType: .push, animationType: .kCATransitionPush,animationSubType: .kCATransitionFromBottom, duration: 0.5, animated: false)
+                    }
+                }
+                //let transition:CATransition = CATransition()
+                //transition.duration = 0.5
+                //transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+                //transition.type = kCATransitionPush
+                //transition.subtype = kCATransitionFromBottom
+                //self.navigationController!.view.layer.add(transition, forKey: kCATransition)
+                //self.navigationController?.pushViewController(chatView, animated: false)
                 return
             }
         case 1:
@@ -126,7 +142,4 @@ class InitalTableViewController: UITableViewController {
             return
         }
     }
-    
-    
-    
 }

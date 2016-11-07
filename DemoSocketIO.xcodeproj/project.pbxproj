@@ -77,6 +77,35 @@
 		5366B8F81DC1AA2100F642DC /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366B8E61DC1AA2000F642DC /* IQToolbar.swift */; };
 		5366B8F91DC1AA2100F642DC /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366B8E71DC1AA2000F642DC /* IQUIView+IQKeyboardToolbar.swift */; };
 		5366B8FA1DC1AA2100F642DC /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5366B8E91DC1AA2000F642DC /* IQKeyboardManager.bundle */; };
+		536A3B811DD0721D00DAF352 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B631DD0721C00DAF352 /* AsyncButton.swift */; };
+		536A3B821DD0721D00DAF352 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B641DD0721C00DAF352 /* AsyncImageView.swift */; };
+		536A3B831DD0721D00DAF352 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B651DD0721C00DAF352 /* AutoTextView.swift */; };
+		536A3B841DD0721D00DAF352 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B661DD0721C00DAF352 /* BlurView.swift */; };
+		536A3B851DD0721D00DAF352 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B671DD0721C00DAF352 /* DesignableButton.swift */; };
+		536A3B861DD0721D00DAF352 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B681DD0721C00DAF352 /* DesignableImageView.swift */; };
+		536A3B871DD0721D00DAF352 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B691DD0721C00DAF352 /* DesignableLabel.swift */; };
+		536A3B881DD0721D00DAF352 /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B6A1DD0721C00DAF352 /* DesignableTabBarController.swift */; };
+		536A3B891DD0721D00DAF352 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B6B1DD0721C00DAF352 /* DesignableTextField.swift */; };
+		536A3B8A1DD0721D00DAF352 /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B6C1DD0721C00DAF352 /* DesignableTextView.swift */; };
+		536A3B8B1DD0721D00DAF352 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B6D1DD0721C00DAF352 /* DesignableView.swift */; };
+		536A3B8C1DD0721D00DAF352 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B6E1DD0721C00DAF352 /* ImageLoader.swift */; };
+		536A3B8D1DD0721D00DAF352 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 536A3B6F1DD0721C00DAF352 /* Info.plist */; };
+		536A3B8E1DD0721D00DAF352 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B701DD0721C00DAF352 /* KeyboardLayoutConstraint.swift */; };
+		536A3B8F1DD0721D00DAF352 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B711DD0721C00DAF352 /* LoadingView.swift */; };
+		536A3B901DD0721D00DAF352 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 536A3B721DD0721C00DAF352 /* LoadingView.xib */; };
+		536A3B911DD0721D00DAF352 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B731DD0721C00DAF352 /* Misc.swift */; };
+		536A3B921DD0721D00DAF352 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B741DD0721C00DAF352 /* SoundPlayer.swift */; };
+		536A3B931DD0721D00DAF352 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B761DD0721C00DAF352 /* Spring.swift */; };
+		536A3B941DD0721D00DAF352 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B771DD0721C00DAF352 /* SpringAnimation.swift */; };
+		536A3B951DD0721D00DAF352 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B781DD0721C00DAF352 /* SpringButton.swift */; };
+		536A3B961DD0721D00DAF352 /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B791DD0721C00DAF352 /* SpringImageView.swift */; };
+		536A3B971DD0721D00DAF352 /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B7A1DD0721C00DAF352 /* SpringLabel.swift */; };
+		536A3B981DD0721D00DAF352 /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B7B1DD0721C00DAF352 /* SpringTextField.swift */; };
+		536A3B991DD0721D00DAF352 /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B7C1DD0721C00DAF352 /* SpringTextView.swift */; };
+		536A3B9A1DD0721D00DAF352 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B7D1DD0721C00DAF352 /* SpringView.swift */; };
+		536A3B9B1DD0721D00DAF352 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B7E1DD0721C00DAF352 /* TransitionManager.swift */; };
+		536A3B9C1DD0721D00DAF352 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B7F1DD0721C00DAF352 /* TransitionZoom.swift */; };
+		536A3B9D1DD0721D00DAF352 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B801DD0721C00DAF352 /* UnwindSegue.swift */; };
 		5388F31B1DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3151DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift */; };
 		5388F31C1DBDDCC000B80A2B /* iHBorderColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3161DBDDCC000B80A2B /* iHBorderColorTextField.swift */; };
 		5388F31D1DBDDCC000B80A2B /* iHUnderLineColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3171DBDDCC000B80A2B /* iHUnderLineColorTextField.swift */; };
@@ -269,6 +298,36 @@
 		5366B8E61DC1AA2000F642DC /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
 		5366B8E71DC1AA2000F642DC /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		5366B8E91DC1AA2000F642DC /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		536A3B631DD0721C00DAF352 /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
+		536A3B641DD0721C00DAF352 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		536A3B651DD0721C00DAF352 /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
+		536A3B661DD0721C00DAF352 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		536A3B671DD0721C00DAF352 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		536A3B681DD0721C00DAF352 /* DesignableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageView.swift; sourceTree = "<group>"; };
+		536A3B691DD0721C00DAF352 /* DesignableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableLabel.swift; sourceTree = "<group>"; };
+		536A3B6A1DD0721C00DAF352 /* DesignableTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTabBarController.swift; sourceTree = "<group>"; };
+		536A3B6B1DD0721C00DAF352 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		536A3B6C1DD0721C00DAF352 /* DesignableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextView.swift; sourceTree = "<group>"; };
+		536A3B6D1DD0721C00DAF352 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		536A3B6E1DD0721C00DAF352 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		536A3B6F1DD0721C00DAF352 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		536A3B701DD0721C00DAF352 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		536A3B711DD0721C00DAF352 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		536A3B721DD0721C00DAF352 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		536A3B731DD0721C00DAF352 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		536A3B741DD0721C00DAF352 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		536A3B751DD0721C00DAF352 /* Spring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spring.h; sourceTree = "<group>"; };
+		536A3B761DD0721C00DAF352 /* Spring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spring.swift; sourceTree = "<group>"; };
+		536A3B771DD0721C00DAF352 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		536A3B781DD0721C00DAF352 /* SpringButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringButton.swift; sourceTree = "<group>"; };
+		536A3B791DD0721C00DAF352 /* SpringImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringImageView.swift; sourceTree = "<group>"; };
+		536A3B7A1DD0721C00DAF352 /* SpringLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringLabel.swift; sourceTree = "<group>"; };
+		536A3B7B1DD0721C00DAF352 /* SpringTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextField.swift; sourceTree = "<group>"; };
+		536A3B7C1DD0721C00DAF352 /* SpringTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextView.swift; sourceTree = "<group>"; };
+		536A3B7D1DD0721C00DAF352 /* SpringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringView.swift; sourceTree = "<group>"; };
+		536A3B7E1DD0721C00DAF352 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		536A3B7F1DD0721C00DAF352 /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
+		536A3B801DD0721C00DAF352 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		5388F3151DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHBorderColorBackgroundTextField.swift; sourceTree = "<group>"; };
 		5388F3161DBDDCC000B80A2B /* iHBorderColorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHBorderColorTextField.swift; sourceTree = "<group>"; };
 		5388F3171DBDDCC000B80A2B /* iHUnderLineColorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHUnderLineColorTextField.swift; sourceTree = "<group>"; };
@@ -620,6 +679,43 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		536A3B621DD0721C00DAF352 /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				536A3B631DD0721C00DAF352 /* AsyncButton.swift */,
+				536A3B641DD0721C00DAF352 /* AsyncImageView.swift */,
+				536A3B651DD0721C00DAF352 /* AutoTextView.swift */,
+				536A3B661DD0721C00DAF352 /* BlurView.swift */,
+				536A3B671DD0721C00DAF352 /* DesignableButton.swift */,
+				536A3B681DD0721C00DAF352 /* DesignableImageView.swift */,
+				536A3B691DD0721C00DAF352 /* DesignableLabel.swift */,
+				536A3B6A1DD0721C00DAF352 /* DesignableTabBarController.swift */,
+				536A3B6B1DD0721C00DAF352 /* DesignableTextField.swift */,
+				536A3B6C1DD0721C00DAF352 /* DesignableTextView.swift */,
+				536A3B6D1DD0721C00DAF352 /* DesignableView.swift */,
+				536A3B6E1DD0721C00DAF352 /* ImageLoader.swift */,
+				536A3B6F1DD0721C00DAF352 /* Info.plist */,
+				536A3B701DD0721C00DAF352 /* KeyboardLayoutConstraint.swift */,
+				536A3B711DD0721C00DAF352 /* LoadingView.swift */,
+				536A3B721DD0721C00DAF352 /* LoadingView.xib */,
+				536A3B731DD0721C00DAF352 /* Misc.swift */,
+				536A3B741DD0721C00DAF352 /* SoundPlayer.swift */,
+				536A3B751DD0721C00DAF352 /* Spring.h */,
+				536A3B761DD0721C00DAF352 /* Spring.swift */,
+				536A3B771DD0721C00DAF352 /* SpringAnimation.swift */,
+				536A3B781DD0721C00DAF352 /* SpringButton.swift */,
+				536A3B791DD0721C00DAF352 /* SpringImageView.swift */,
+				536A3B7A1DD0721C00DAF352 /* SpringLabel.swift */,
+				536A3B7B1DD0721C00DAF352 /* SpringTextField.swift */,
+				536A3B7C1DD0721C00DAF352 /* SpringTextView.swift */,
+				536A3B7D1DD0721C00DAF352 /* SpringView.swift */,
+				536A3B7E1DD0721C00DAF352 /* TransitionManager.swift */,
+				536A3B7F1DD0721C00DAF352 /* TransitionZoom.swift */,
+				536A3B801DD0721C00DAF352 /* UnwindSegue.swift */,
+			);
+			path = Spring;
+			sourceTree = "<group>";
+		};
 		5388F3141DBDDCC000B80A2B /* CustomTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -864,6 +960,7 @@
 		80E8F23E1DB9C66E001CA1FB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				536A3B621DD0721C00DAF352 /* Spring */,
 				53B24F6F1DCB2615007C9552 /* Colors */,
 				532FE9C51DCB0CA1008F5D92 /* JSQMessagesViewController */,
 				530F15031DC9BC7800F6B8A3 /* Extensions */,
@@ -948,8 +1045,10 @@
 				532FEA481DCB0CA2008F5D92 /* JSQMessagesCollectionViewCellIncoming.xib in Resources */,
 				80B1143B1DB9FD8300417B6D /* Info.plist in Resources */,
 				532FEA4A1DCB0CA2008F5D92 /* JSQMessagesCollectionViewCellOutgoing.xib in Resources */,
+				536A3B8D1DD0721D00DAF352 /* Info.plist in Resources */,
 				807A41A61DB87CCF00E31900 /* Assets.xcassets in Resources */,
 				53201D0D1DC30D9700C30A9B /* LaunchScreen.storyboard in Resources */,
+				536A3B901DD0721D00DAF352 /* LoadingView.xib in Resources */,
 				532FEA301DCB0CA2008F5D92 /* JSQMessagesViewController.xib in Resources */,
 				532FEA541DCB0CA2008F5D92 /* JSQMessagesTypingIndicatorFooterView.xib in Resources */,
 				532FEA521DCB0CA2008F5D92 /* JSQMessagesToolbarContentView.xib in Resources */,
@@ -1021,19 +1120,26 @@
 				5366B8EA1DC1AA2000F642DC /* IQNSArray+Sort.swift in Sources */,
 				80D6C0C51DC3B3FA00DA74F2 /* PANotificationsPermissionsCheck.swift in Sources */,
 				5366B8F51DC1AA2100F642DC /* IQBarButtonItem.swift in Sources */,
+				536A3B881DD0721D00DAF352 /* DesignableTabBarController.swift in Sources */,
+				536A3B971DD0721D00DAF352 /* SpringLabel.swift in Sources */,
 				80B1144D1DB9FD8300417B6D /* Validator.swift in Sources */,
 				53B24F741DCB2F2F007C9552 /* Conversation.swift in Sources */,
 				532FEA3F1DCB0CA2008F5D92 /* JSQMessage.m in Sources */,
+				536A3B921DD0721D00DAF352 /* SoundPlayer.swift in Sources */,
 				80D6C0C21DC3B3FA00DA74F2 /* PALocationPermissionsCheck.swift in Sources */,
 				532FEA4B1DCB0CA2008F5D92 /* JSQMessagesComposerTextView.m in Sources */,
 				80D6C0CB1DC3B3FA00DA74F2 /* PAPermissionsViewController.swift in Sources */,
 				532FEA411DCB0CA2008F5D92 /* JSQMessagesBubbleImage.m in Sources */,
+				536A3B991DD0721D00DAF352 /* SpringTextView.swift in Sources */,
 				532FEA451DCB0CA2008F5D92 /* JSQMessagesCollectionView.m in Sources */,
+				536A3B931DD0721D00DAF352 /* Spring.swift in Sources */,
 				532FEA2A1DCB0CA2008F5D92 /* NSBundle+JSQMessages.m in Sources */,
 				80B1143D1DB9FD8300417B6D /* ValidationRuleCondition.swift in Sources */,
 				80B114441DB9FD8300417B6D /* ValidationRuleURL.swift in Sources */,
 				80D6C0BD1DC3B3FA00DA74F2 /* PAABAddressBookCheck.swift in Sources */,
+				536A3B961DD0721D00DAF352 /* SpringImageView.swift in Sources */,
 				53A5E5811DC7667A0060CE93 /* M13CheckboxDisclosurePathGenerator.swift in Sources */,
+				536A3B811DD0721D00DAF352 /* AsyncButton.swift in Sources */,
 				532FEA421DCB0CA2008F5D92 /* JSQPhotoMediaItem.m in Sources */,
 				532FEA3D1DCB0CA2008F5D92 /* JSQLocationMediaItem.m in Sources */,
 				5366B8F91DC1AA2100F642DC /* IQUIView+IQKeyboardToolbar.swift in Sources */,
@@ -1044,10 +1150,13 @@
 				80D6C0C01DC3B3FA00DA74F2 /* PACNContactsPermissionsCheck.swift in Sources */,
 				80D6C0CE1DC3B56200DA74F2 /* RequiredViewController.swift in Sources */,
 				532FEA2D1DCB0CA2008F5D92 /* UIImage+JSQMessages.m in Sources */,
+				536A3B8F1DD0721D00DAF352 /* LoadingView.swift in Sources */,
 				53A5E57F1DC7667A0060CE93 /* M13CheckboxAddRemovePathGenerator.swift in Sources */,
 				80B1144A1DB9FD8300417B6D /* ValidationResult.swift in Sources */,
 				5366B8F41DC1AA2100F642DC /* IQTextView.swift in Sources */,
 				532FEA461DCB0CA2008F5D92 /* JSQMessagesCollectionViewCell.m in Sources */,
+				536A3B891DD0721D00DAF352 /* DesignableTextField.swift in Sources */,
+				536A3B8C1DD0721D00DAF352 /* ImageLoader.swift in Sources */,
 				80D6C0CC1DC3B3FA00DA74F2 /* PAConstraintsUtils.swift in Sources */,
 				53A5E5741DC7667A0060CE93 /* M13CheckboxAnimationGenerator.swift in Sources */,
 				532FEA441DCB0CA2008F5D92 /* JSQMessagesCellTextView.m in Sources */,
@@ -1057,8 +1166,11 @@
 				8075D5E91DBF669000A5FCED /* BaseViewController.swift in Sources */,
 				80D6C0C41DC3B3FA00DA74F2 /* PAMotionFitnessPermissionsCheck.swift in Sources */,
 				80B1143C1DB9FD8300417B6D /* ValidationRuleComparison.swift in Sources */,
+				536A3B9D1DD0721D00DAF352 /* UnwindSegue.swift in Sources */,
+				536A3B941DD0721D00DAF352 /* SpringAnimation.swift in Sources */,
 				53A5E5761DC7667A0060CE93 /* M13CheckboxGestureRecognizer.swift in Sources */,
 				80B114431DB9FD8300417B6D /* ValidationRuleRequired.swift in Sources */,
+				536A3B851DD0721D00DAF352 /* DesignableButton.swift in Sources */,
 				53A5E57B1DC7667A0060CE93 /* M13CheckboxFillController.swift in Sources */,
 				80D6C0C81DC3B3FA00DA74F2 /* PAUNNotificationPermissionsCheck.swift in Sources */,
 				5366B8F81DC1AA2100F642DC /* IQToolbar.swift in Sources */,
@@ -1079,6 +1191,8 @@
 				532FEA311DCB0CA2008F5D92 /* JSQMessagesAvatarImageFactory.m in Sources */,
 				80B1144C1DB9FD8300417B6D /* ValidationRuleSet.swift in Sources */,
 				5388F31F1DBDDCC000B80A2B /* MyConstant.swift in Sources */,
+				536A3B871DD0721D00DAF352 /* DesignableLabel.swift in Sources */,
+				536A3B9C1DD0721D00DAF352 /* TransitionZoom.swift in Sources */,
 				532FEA431DCB0CA2008F5D92 /* JSQVideoMediaItem.m in Sources */,
 				53A5E5791DC7667A0060CE93 /* M13CheckboxExpandController.swift in Sources */,
 				532FEA4C1DCB0CA2008F5D92 /* JSQMessagesInputToolbar.m in Sources */,
@@ -1099,6 +1213,7 @@
 				532FEA351DCB0CA2008F5D92 /* JSQMessagesToolbarButtonFactory.m in Sources */,
 				5366B8F11DC1AA2000F642DC /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				532FEA401DCB0CA2008F5D92 /* JSQMessagesAvatarImage.m in Sources */,
+				536A3B841DD0721D00DAF352 /* BlurView.swift in Sources */,
 				8075D5EB1DBF669000A5FCED /* LoginViewController.swift in Sources */,
 				53A5E5781DC7667A0060CE93 /* M13CheckboxDotController.swift in Sources */,
 				80B114471DB9FD8300417B6D /* ValidatableInterfaceElement.swift in Sources */,
@@ -1108,9 +1223,14 @@
 				532FEA371DCB0CA2008F5D92 /* JSQAudioMediaViewAttributes.m in Sources */,
 				532FEA2F1DCB0CA2008F5D92 /* JSQMessagesViewController.m in Sources */,
 				532FEA331DCB0CA2008F5D92 /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
+				536A3B8B1DD0721D00DAF352 /* DesignableView.swift in Sources */,
 				532FEA361DCB0CA2008F5D92 /* JSQMessagesVideoThumbnailFactory.m in Sources */,
+				536A3B911DD0721D00DAF352 /* Misc.swift in Sources */,
 				80B114421DB9FD8300417B6D /* ValidationRulePaymentCard.swift in Sources */,
+				536A3B861DD0721D00DAF352 /* DesignableImageView.swift in Sources */,
 				53B24F711DCB262E007C9552 /* MyColor.swift in Sources */,
+				536A3B8A1DD0721D00DAF352 /* DesignableTextView.swift in Sources */,
+				536A3B951DD0721D00DAF352 /* SpringButton.swift in Sources */,
 				532FEA381DCB0CA2008F5D92 /* JSQMessagesBubblesSizeCalculator.m in Sources */,
 				532FEA321DCB0CA2008F5D92 /* JSQMessagesBubbleImageFactory.m in Sources */,
 				80D6C0C11DC3B3FA00DA74F2 /* PAEventKitPermissionsCheck.swift in Sources */,
@@ -1119,6 +1239,9 @@
 				5366B8EC1DC1AA2000F642DC /* IQUITextFieldView+Additions.swift in Sources */,
 				53A5E5801DC7667A0060CE93 /* M13CheckboxCheckPathGenerator.swift in Sources */,
 				5366B8F31DC1AA2100F642DC /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				536A3B9A1DD0721D00DAF352 /* SpringView.swift in Sources */,
+				536A3B821DD0721D00DAF352 /* AsyncImageView.swift in Sources */,
+				536A3B9B1DD0721D00DAF352 /* TransitionManager.swift in Sources */,
 				532FEA511DCB0CA2008F5D92 /* JSQMessagesToolbarContentView.m in Sources */,
 				80D6C0C31DC3B3FA00DA74F2 /* PAMicrophonePermissionsCheck.swift in Sources */,
 				80D6C0BF1DC3B3FA00DA74F2 /* PACameraPermissionsCheck.swift in Sources */,
@@ -1128,15 +1251,18 @@
 				5366B8F61DC1AA2100F642DC /* IQPreviousNextView.swift in Sources */,
 				53B24F791DCB3398007C9552 /* Users.swift in Sources */,
 				53A5E57D1DC7667A0060CE93 /* M13CheckboxSpiralController.swift in Sources */,
+				536A3B8E1DD0721D00DAF352 /* KeyboardLayoutConstraint.swift in Sources */,
 				532FEA341DCB0CA2008F5D92 /* JSQMessagesTimestampFormatter.m in Sources */,
 				80B114451DB9FD8300417B6D /* UISlider+Validator.swift in Sources */,
 				53A5E57C1DC7667A0060CE93 /* M13CheckboxFlatController.swift in Sources */,
 				532FEA4D1DCB0CA2008F5D92 /* JSQMessagesLabel.m in Sources */,
 				532FEA601DCB15E3008F5D92 /* SettingsTableViewController.swift in Sources */,
+				536A3B981DD0721D00DAF352 /* SpringTextField.swift in Sources */,
 				532FEA2E1DCB0CA2008F5D92 /* UIView+JSQMessages.m in Sources */,
 				532FEA391DCB0CA2008F5D92 /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
 				53201D111DC32B9900C30A9B /* PaddingTextField.swift in Sources */,
 				5388F31C1DBDDCC000B80A2B /* iHBorderColorTextField.swift in Sources */,
+				536A3B831DD0721D00DAF352 /* AutoTextView.swift in Sources */,
 				5388F31B1DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift in Sources */,
 				80D6C0C91DC3B3FA00DA74F2 /* PAPermissionsTableViewCell.swift in Sources */,
 			);

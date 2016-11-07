@@ -16,6 +16,9 @@ enum transitionType: String{
     case kCATransitionPush
     
     case  kCATransitionReveal
+}
+enum transitionSubType: String{
+
     
     /* Common transition subtypes. */
     
@@ -30,25 +33,30 @@ enum transitionType: String{
 
 
 extension UIView{
-    func transitionType(navigationController: UINavigationController,pushTo:UIViewController?, transType: UINavigationControllerOperation,animationType: transitionType, duration: Float, animated:Bool = false){
+    func transitionType(navigationController: UINavigationController,pushTo:UIViewController?, transType: UINavigationControllerOperation,animationType: transitionType,animationSubType: transitionSubType?, duration: Float, animated:Bool = false){
+        navigationController.view.layer.removeAnimation(forKey: kCATransition)
         let transition = CATransition()
         transition.duration = CFTimeInterval(duration)
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         transition.type = animationType.rawValue
-        navigationController.view.layer.add(transition, forKey: nil)
+        transition.subtype = animationSubType?.rawValue
+        navigationController.view.layer.add(transition, forKey: kCATransition)
         switch transType {
+            
         case .push:
             if  pushTo !=  nil {
                 navigationController.pushViewController(pushTo!, animated: animated)
             }
+            
         case .pop:
             navigationController.popToRootViewController(animated: animated)
-        default:
+            
+        case .none:
             if  pushTo !=  nil {
                 navigationController.present(pushTo!, animated: animated, completion: nil)
             }
+            
         }
     }
-    
 }
 
