@@ -57,6 +57,8 @@ class chatViewController: JSQMessagesViewController {
         
         self.collectionView?.reloadData()
         self.collectionView?.layoutIfNeeded()
+        let bt =  UIButton()
+        bt.addTarget(self, action: #selector(self.ta), for: .touchUpInside)
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,7 +66,9 @@ class chatViewController: JSQMessagesViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
+    func ta (){
+        print("asdasda")
+    }
     /*
      // MARK: - Navigation
      
