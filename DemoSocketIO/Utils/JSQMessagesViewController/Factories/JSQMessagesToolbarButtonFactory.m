@@ -84,19 +84,84 @@
     sendButton.backgroundColor = [UIColor clearColor];
     sendButton.tintColor = [UIColor jsq_messageBubbleBlueColor];
 
-    CGFloat maxHeight = 32.0f;
+    CGFloat maxHeight = 40.0f;
 
     CGRect sendTitleRect = [sendTitle boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, maxHeight)
                                                    options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                                                 attributes:@{ NSFontAttributeName : sendButton.titleLabel.font }
                                                    context:nil];
-
+    NSLog(@"%f----sendButton",sendButton.frame.size.width);
     sendButton.frame = CGRectMake(0.0f,
                                   0.0f,
                                   CGRectGetWidth(CGRectIntegral(sendTitleRect)),
                                   maxHeight);
-
+    NSLog(@"%f----sendButtonafter",sendButton.frame.size.width);
+    //sendButton.backgroundColor = [UIColor yellowColor];
+    //sendButton.contentEdgeInsets = UIEdgeInsetsMake(15, 20, 10, 10);
     return sendButton;
+}
+- (UIButton *)defaultLikeButtonItem
+{
+   
+    
+    UIImage *accessoryImage = [UIImage dxl_defaultLikeAccessoryImage];
+    UIImage *normalImage = [accessoryImage jsq_imageMaskedWithColor:[UIColor redColor]];
+    UIImage *highlightedImage = [accessoryImage jsq_imageMaskedWithColor:[UIColor darkGrayColor]];
+    
+    UIButton *accessoryButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, accessoryImage.size.width, 32.0f)];
+    [accessoryButton setImage:normalImage forState:UIControlStateNormal];
+    [accessoryButton setImage:highlightedImage forState:UIControlStateHighlighted];
+    
+    accessoryButton.contentMode = UIViewContentModeScaleAspectFit;
+    accessoryButton.backgroundColor = [UIColor clearColor];
+    accessoryButton.tintColor = [UIColor lightGrayColor];
+    accessoryButton.titleLabel.font = self.buttonFont;
+    
+    //accessoryButton.accessibilityLabel = [NSBundle jsq_localizedStringForKey:@"accessory_button_accessibility_label"];
+    
+    return accessoryButton;
+}
+- (UIButton *)defaultCameraButtonItem
+{
+    
+    
+    UIImage *accessoryImage = [UIImage dxl_defaultCameraAccessoryImage];
+    UIImage *normalImage = [accessoryImage jsq_imageMaskedWithColor:[UIColor redColor]];
+    UIImage *highlightedImage = [accessoryImage jsq_imageMaskedWithColor:[UIColor darkGrayColor]];
+    
+    UIButton *accessoryButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, accessoryImage.size.width, 55.0f)];
+    [accessoryButton setImage:normalImage forState:UIControlStateNormal];
+    [accessoryButton setImage:highlightedImage forState:UIControlStateHighlighted];
+    
+    accessoryButton.contentMode = UIViewContentModeScaleAspectFit;
+    accessoryButton.backgroundColor = [UIColor clearColor];
+    accessoryButton.tintColor = [UIColor lightGrayColor];
+    accessoryButton.titleLabel.font = self.buttonFont;
+    
+    //accessoryButton.accessibilityLabel = [NSBundle jsq_localizedStringForKey:@"accessory_button_accessibility_label"];
+    
+    return accessoryButton;
+}
+- (UIButton *)defaultCodeButtonItem
+{
+    
+    
+    UIImage *accessoryImage = [UIImage dxl_defaultCodeAccessoryImage];
+    UIImage *normalImage = [accessoryImage jsq_imageMaskedWithColor:[UIColor redColor]];
+    UIImage *highlightedImage = [accessoryImage jsq_imageMaskedWithColor:[UIColor darkGrayColor]];
+    
+    UIButton *accessoryButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, accessoryImage.size.width, 55.0f)];
+    [accessoryButton setImage:normalImage forState:UIControlStateNormal];
+    [accessoryButton setImage:highlightedImage forState:UIControlStateHighlighted];
+    
+    accessoryButton.contentMode = UIViewContentModeScaleAspectFit;
+    accessoryButton.backgroundColor = [UIColor clearColor];
+    accessoryButton.tintColor = [UIColor lightGrayColor];
+    accessoryButton.titleLabel.font = self.buttonFont;
+    
+    //accessoryButton.accessibilityLabel = [NSBundle jsq_localizedStringForKey:@"accessory_button_accessibility_label"];
+    
+    return accessoryButton;
 }
 
 @end

@@ -61,6 +61,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (UIButton *)defaultSendButtonItem;
 
+- (UIButton *)defaultLikeButtonItem;
+- (UIButton *)defaultCodeButtonItem;
+- (UIButton *)defaultCameraButtonItem;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

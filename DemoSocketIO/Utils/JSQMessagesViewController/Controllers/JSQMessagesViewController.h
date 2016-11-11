@@ -304,6 +304,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)didReceiveMenuWillHideNotification:(NSNotification *)notification;
 
+
 @end
 
 NS_ASSUME_NONNULL_END

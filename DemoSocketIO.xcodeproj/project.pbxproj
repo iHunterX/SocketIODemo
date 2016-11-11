@@ -106,6 +106,8 @@
 		536A3B9B1DD0721D00DAF352 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B7E1DD0721C00DAF352 /* TransitionManager.swift */; };
 		536A3B9C1DD0721D00DAF352 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B7F1DD0721C00DAF352 /* TransitionZoom.swift */; };
 		536A3B9D1DD0721D00DAF352 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A3B801DD0721C00DAF352 /* UnwindSegue.swift */; };
+		536F290F1DD5783900379EA4 /* ExtendedHitButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 536F290E1DD5783900379EA4 /* ExtendedHitButton.m */; };
+		5375B8AE1DD471EA007BB5F4 /* Extension-RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5375B8AD1DD471EA007BB5F4 /* Extension-RandomColor.swift */; };
 		5388F31B1DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3151DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift */; };
 		5388F31C1DBDDCC000B80A2B /* iHBorderColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3161DBDDCC000B80A2B /* iHBorderColorTextField.swift */; };
 		5388F31D1DBDDCC000B80A2B /* iHUnderLineColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388F3171DBDDCC000B80A2B /* iHUnderLineColorTextField.swift */; };
@@ -328,6 +330,9 @@
 		536A3B7E1DD0721C00DAF352 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		536A3B7F1DD0721C00DAF352 /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		536A3B801DD0721C00DAF352 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
+		536F290D1DD5783900379EA4 /* ExtendedHitButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendedHitButton.h; sourceTree = "<group>"; };
+		536F290E1DD5783900379EA4 /* ExtendedHitButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtendedHitButton.m; sourceTree = "<group>"; };
+		5375B8AD1DD471EA007BB5F4 /* Extension-RandomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-RandomColor.swift"; sourceTree = "<group>"; };
 		5388F3151DBDDCC000B80A2B /* iHBorderColorBackgroundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHBorderColorBackgroundTextField.swift; sourceTree = "<group>"; };
 		5388F3161DBDDCC000B80A2B /* iHBorderColorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHBorderColorTextField.swift; sourceTree = "<group>"; };
 		5388F3171DBDDCC000B80A2B /* iHUnderLineColorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iHUnderLineColorTextField.swift; sourceTree = "<group>"; };
@@ -429,6 +434,9 @@
 			isa = PBXGroup;
 			children = (
 				53F3C13F1DCC816700ECB305 /* CATransitionExtension.swift */,
+				5375B8AD1DD471EA007BB5F4 /* Extension-RandomColor.swift */,
+				536F290D1DD5783900379EA4 /* ExtendedHitButton.h */,
+				536F290E1DD5783900379EA4 /* ExtendedHitButton.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1188,6 +1196,7 @@
 				80B114461DB9FD8300417B6D /* UITextField+Validator.swift in Sources */,
 				532FEA3C1DCB0CA2008F5D92 /* JSQAudioMediaItem.m in Sources */,
 				532FEA551DCB0CA2008F5D92 /* JSQMessagesTypingView.m in Sources */,
+				5375B8AE1DD471EA007BB5F4 /* Extension-RandomColor.swift in Sources */,
 				532FEA311DCB0CA2008F5D92 /* JSQMessagesAvatarImageFactory.m in Sources */,
 				80B1144C1DB9FD8300417B6D /* ValidationRuleSet.swift in Sources */,
 				5388F31F1DBDDCC000B80A2B /* MyConstant.swift in Sources */,
@@ -1242,6 +1251,7 @@
 				536A3B9A1DD0721D00DAF352 /* SpringView.swift in Sources */,
 				536A3B821DD0721D00DAF352 /* AsyncImageView.swift in Sources */,
 				536A3B9B1DD0721D00DAF352 /* TransitionManager.swift in Sources */,
+				536F290F1DD5783900379EA4 /* ExtendedHitButton.m in Sources */,
 				532FEA511DCB0CA2008F5D92 /* JSQMessagesToolbarContentView.m in Sources */,
 				80D6C0C31DC3B3FA00DA74F2 /* PAMicrophonePermissionsCheck.swift in Sources */,
 				80D6C0BF1DC3B3FA00DA74F2 /* PACameraPermissionsCheck.swift in Sources */,

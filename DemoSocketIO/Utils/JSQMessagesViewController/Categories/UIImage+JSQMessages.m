@@ -90,6 +90,19 @@
     return [UIImage jsq_bubbleImageFromBundleWithName:@"clip"];
 }
 
++ (UIImage *)dxl_defaultLikeAccessoryImage
+{
+    return [UIImage imageNamed:@"Like Filled-96"];
+}
++ (UIImage *)dxl_defaultCodeAccessoryImage
+{
+    return [UIImage imageNamed:@"Source Code-100"];
+}
++ (UIImage *)dxl_defaultCameraAccessoryImage
+{
+    return [UIImage imageNamed:@"Camera-100"];
+}
+
 + (UIImage *)jsq_defaultTypingIndicatorImage
 {
     return [UIImage jsq_bubbleImageFromBundleWithName:@"typing"];

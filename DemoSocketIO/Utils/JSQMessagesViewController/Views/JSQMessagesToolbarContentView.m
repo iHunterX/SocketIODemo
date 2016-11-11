@@ -35,6 +35,9 @@ const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingDefault = 8.0f;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftHorizontalSpacingConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightHorizontalSpacingConstraint;
+@property (weak, nonatomic) IBOutlet UIView *likeMidBarButtonContainerView;
+@property (weak, nonatomic) IBOutlet UIView *codeMidBarButtonContainerView;
+@property (weak, nonatomic) IBOutlet UIView *cameraMidBarButtonContainerView;
 
 @end
 
@@ -71,6 +74,9 @@ const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingDefault = 8.0f;
     [super setBackgroundColor:backgroundColor];
     self.leftBarButtonContainerView.backgroundColor = backgroundColor;
     self.rightBarButtonContainerView.backgroundColor = backgroundColor;
+    self.likeMidBarButtonContainerView.backgroundColor = backgroundColor;
+    self.cameraMidBarButtonContainerView.backgroundColor = backgroundColor;
+    self.codeMidBarButtonContainerView.backgroundColor = backgroundColor;
 }
 
 - (void)setLeftBarButtonItem:(UIButton *)leftBarButtonItem
@@ -94,6 +100,7 @@ const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingDefault = 8.0f;
     self.leftBarButtonContainerView.hidden = NO;
     self.leftHorizontalSpacingConstraint.constant = kJSQMessagesToolbarContentViewHorizontalSpacingDefault;
     self.leftBarButtonItemWidth = CGRectGetWidth(leftBarButtonItem.frame);
+    self.midBarButtonItemWidth = self.leftBarButtonItemWidth;
 
     [leftBarButtonItem setTranslatesAutoresizingMaskIntoConstraints:NO];
 
@@ -103,6 +110,90 @@ const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingDefault = 8.0f;
 
     _leftBarButtonItem = leftBarButtonItem;
 }
+////DXL-likeMidbar
+- (void)setLikeMidBarButtonItem:(UIButton *)likeMidBarButtonItem
+{
+    
+    if (_likeMidBarButtonItem) {
+        [_likeMidBarButtonItem removeFromSuperview];
+    }
+    
+    if (!likeMidBarButtonItem) {
+        _likeMidBarButtonItem = nil;
+        return;
+    }
+    
+    if (CGRectEqualToRect(likeMidBarButtonItem.frame, CGRectZero)) {
+        likeMidBarButtonItem.frame = self.likeMidBarButtonContainerView.bounds;
+    }
+    
+    [likeMidBarButtonItem setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [self.likeMidBarButtonContainerView addSubview:likeMidBarButtonItem];
+    [self.likeMidBarButtonContainerView jsq_pinAllEdgesOfSubview:likeMidBarButtonItem];
+    [self setNeedsUpdateConstraints];
+    
+    _likeMidBarButtonItem = likeMidBarButtonItem;
+}
+
+////DXL-likeMidbar
+
+////DXL-cameraMidbar
+- (void)setCameraMidBarButtonItem:(UIButton *)cameraMidBarButtonItem
+{
+    
+    if (_cameraMidBarButtonItem) {
+        [_cameraMidBarButtonItem removeFromSuperview];
+    }
+    
+    if (!cameraMidBarButtonItem) {
+        _cameraMidBarButtonItem = nil;
+        return;
+    }
+    
+    if (CGRectEqualToRect(cameraMidBarButtonItem.frame, CGRectZero)) {
+        cameraMidBarButtonItem.frame = self.cameraMidBarButtonContainerView.bounds;
+    }
+    
+    [cameraMidBarButtonItem setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [self.cameraMidBarButtonContainerView addSubview:cameraMidBarButtonItem];
+    [self.cameraMidBarButtonContainerView jsq_pinAllEdgesOfSubview:cameraMidBarButtonItem];
+    [self setNeedsUpdateConstraints];
+    
+    _cameraMidBarButtonItem = cameraMidBarButtonItem;
+}
+
+////DXL-cameraMidbar
+
+
+////DXL-codeMidbar
+- (void)setCodeMidBarButtonItem:(UIButton *)codeMidBarButtonItem
+{
+    
+    if (_codeMidBarButtonItem) {
+        [_codeMidBarButtonItem removeFromSuperview];
+    }
+    
+    if (!codeMidBarButtonItem) {
+        _codeMidBarButtonItem = nil;
+        return;
+    }
+    
+    if (CGRectEqualToRect(codeMidBarButtonItem.frame, CGRectZero)) {
+        codeMidBarButtonItem.frame = self.codeMidBarButtonContainerView.bounds;
+    }
+    
+    [codeMidBarButtonItem setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [self.codeMidBarButtonContainerView addSubview:codeMidBarButtonItem];
+    [self.codeMidBarButtonContainerView jsq_pinAllEdgesOfSubview:codeMidBarButtonItem];
+    [self setNeedsUpdateConstraints];
+    
+    _codeMidBarButtonItem = codeMidBarButtonItem;
+}
+
+////DXL-codeaMidbar
 
 - (void)setLeftBarButtonItemWidth:(CGFloat)leftBarButtonItemWidth
 {

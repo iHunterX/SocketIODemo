@@ -12,7 +12,7 @@ import SocketIO
 class SocketIOManager: NSObject {
     static let sharedInstance = SocketIOManager()
     
-    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.1.134:5000")! as URL)
+    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.1.119:5000")! as URL)
     
     
     override init() {
@@ -50,14 +50,17 @@ class SocketIOManager: NSObject {
     func sendMessage(message: String, withNickname nickname: String) {
         socket.emit("chatMessage", nickname, message)
     }
+    func sendMessageJSQ(message: JSQMessage) {
+        socket.emit("chatMessage", message.senderDisplayName ,message.text)
+    }
     
     
-    func getChatMessage(completionHandler: @escaping (_ messageInfo: [String: AnyObject]) -> Void) {
+    func getChatMessage(completionHandler: @escaping (_ messageInfo: [String: Any]) -> Void) {
         socket.on("newChatMessage") { (dataArray, socketAck) -> Void in
-            var messageDictionary = [String: AnyObject]()
-            messageDictionary["nickname"] = dataArray[0] as! String as AnyObject?
-            messageDictionary["message"] = dataArray[1] as! String as AnyObject?
-            messageDictionary["date"] = dataArray[2] as! String as AnyObject?
+            var messageDictionary = [String: Any]()
+            messageDictionary["nickname"] = dataArray[0] as! String
+            messageDictionary["message"] = dataArray[1] as! String
+            messageDictionary["date"] = dataArray[2] as! String
             
             completionHandler(messageDictionary)
         }

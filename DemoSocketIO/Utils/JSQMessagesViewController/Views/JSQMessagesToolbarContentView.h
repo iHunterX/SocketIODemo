@@ -54,6 +54,47 @@ FOUNDATION_EXPORT const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingD
 @property (weak, nonatomic, nullable) UIButton *leftBarButtonItem;
 
 /**
+ *  A custom button item displayed on the likeButton of the toolbar content view.
+ *
+ *  @discussion The frame height of this button is ignored. When you set this property, the button
+ *  is fitted within a pre-defined default content view, the leftBarButtonContainerView,
+ *  whose height is determined by the height of the toolbar. However, the width of this button
+ *  will be preserved. You may specify a new width using `leftBarButtonItemWidth`.
+ *  If the frame of this button is equal to `CGRectZero` when set, then a default frame size will be used.
+ *  Set this value to `nil` to remove the button.
+ */
+@property (weak, nonatomic, nullable) UIButton *likeMidBarButtonItem;
+
+/**
+ *  A custom button item displayed on the codeButton of the toolbar content view.
+ *
+ *  @discussion The frame height of this button is ignored. When you set this property, the button
+ *  is fitted within a pre-defined default content view, the leftBarButtonContainerView,
+ *  whose height is determined by the height of the toolbar. However, the width of this button
+ *  will be preserved. You may specify a new width using `leftBarButtonItemWidth`.
+ *  If the frame of this button is equal to `CGRectZero` when set, then a default frame size will be used.
+ *  Set this value to `nil` to remove the button.
+ */
+@property (weak, nonatomic, nullable) UIButton *codeMidBarButtonItem;
+
+/**
+ *  A custom button item displayed on the cameraButton of the toolbar content view.
+ *
+ *  @discussion The frame height of this button is ignored. When you set this property, the button
+ *  is fitted within a pre-defined default content view, the leftBarButtonContainerView,
+ *  whose height is determined by the height of the toolbar. However, the width of this button
+ *  will be preserved. You may specify a new width using `leftBarButtonItemWidth`.
+ *  If the frame of this button is equal to `CGRectZero` when set, then a default frame size will be used.
+ *  Set this value to `nil` to remove the button.
+ */
+@property (weak, nonatomic, nullable) UIButton *cameraMidBarButtonItem;
+/**
+ *  Specifies the width of the leftBarButtonItem.
+ *
+ *  @discussion This property modifies the width of the leftBarButtonContainerView.
+ */
+@property (assign, nonatomic) CGFloat midBarButtonItemWidth;
+/**
  *  Specifies the width of the leftBarButtonItem.
  *
  *  @discussion This property modifies the width of the leftBarButtonContainerView.
@@ -112,6 +153,10 @@ FOUNDATION_EXPORT const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingD
  *  in your `JSQMessagesViewController` subclass.
  */
 @property (weak, nonatomic, readonly, nullable) UIView *rightBarButtonContainerView;
+
+@property (weak, nonatomic, readonly, nullable) UIView *likeMidBarButtonContainerView;
+@property (weak, nonatomic, readonly, nullable) UIView *codeMidBarButtonContainerView;
+@property (weak, nonatomic, readonly, nullable) UIView *cameraMidBarButtonContainerView;
 
 #pragma mark - Class methods
 

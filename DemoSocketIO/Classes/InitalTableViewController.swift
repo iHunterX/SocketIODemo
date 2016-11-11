@@ -14,6 +14,7 @@ class InitalTableViewController: UITableViewController {
     
     //MARK: - View lifecycle
     let springAnimation = SpringAnimation()
+    let socketSingleton = SocketIOManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()

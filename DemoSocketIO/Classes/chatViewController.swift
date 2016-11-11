@@ -8,7 +8,7 @@
 
 import UIKit
 
-class chatViewController: JSQMessagesViewController {
+class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate {
     
     
     //Properties
@@ -17,17 +17,25 @@ class chatViewController: JSQMessagesViewController {
     var conversation: Conversation?
     var incomingBubble: JSQMessagesBubbleImage!
     var outgoingBubble: JSQMessagesBubbleImage!
+    var textTimer: Timer! = nil
+    var stillTyping = false
+    var stoppedTyping = true {
+        didSet{
+            if stoppedTyping == true && stillTyping == false{
+                SocketIOManager.sharedInstance.sendStopTypingMessage(nickname: "sdfsdf")
+            }
+        }
+    }
     
-    @IBOutlet weak var animateView: SpringView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
         
         // Do any additional setup after loading the view.
         
         //Important
         ////////////////////////////////////////////////////////////////////////
+        addTapGestures()
         if defaults.bool(forKey: Setting.removeBubbleTails.rawValue) {
             // Make taillessBubbles
             incomingBubble = JSQMessagesBubbleImageFactory(bubble: UIImage.jsq_bubbleCompactTailless(), capInsets: UIEdgeInsets.zero, layoutDirection: UIApplication.shared.userInterfaceLayoutDirection).incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
@@ -55,20 +63,79 @@ class chatViewController: JSQMessagesViewController {
         
         automaticallyScrollsToMostRecentMessage = true
         
+        
         self.collectionView?.reloadData()
         self.collectionView?.layoutIfNeeded()
-        let bt =  UIButton()
-        bt.addTarget(self, action: #selector(self.ta), for: .touchUpInside)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleUserTypingNotification(notification:)), name: NSNotification.Name(rawValue: "userTypingNotification"), object: nil)
+    }
+    func handleUserTypingNotification(notification: NSNotification) {
+        if let typingUsersDictionary = notification.object as? [String: AnyObject] {
+            //var names = ""
+            //var totalTypingUsers = 0
+            // for (typingUser, _) in typingUsersDictionary {
+            //  if typingUser != nickname {
+            //      names = (names == "") ? typingUser : "\(names), \(typingUser)"
+            //      totalTypingUsers += 1
+            //  }
+            //}
+            
+            //  if totalTypingUsers > 0 {
+            //  let verb = (totalTypingUsers == 1) ? "is" : "are"
+            //
+            //lblOtherUserActivityStatus.text = "\(names) \(verb) now typing a message..."
+            // lblOtherUserActivityStatus.hidden = false
+            // }
+            // else {
+            //lblOtherUserActivityStatus.hidden = true
+            // }
+            
+            
+        }
+        self.showTypingIndicator = true
+        
+    }
+    override func textViewDidChange(_ textView: UITextView) {
+        if textView == self.inputToolbar.contentView?.textView{
+            textTimer?.invalidate()
+            textTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.textFieldStopEditing(sender:)), userInfo: nil, repeats: false)
+            if stillTyping != true{
+                SocketIOManager.sharedInstance.sendStartTypingMessage(nickname: "sdfsdf")
+                stillTyping = true
+                stoppedTyping = false
+            }
+        }
+    }
+    func textFieldStopEditing(sender: Timer) {
+        SocketIOManager.sharedInstance.sendStopTypingMessage(nickname: "sdfsdf")
+        print("Stop typing")
+        stoppedTyping = true
+        stillTyping = false
+        
+    }
+    func gestureRecognizer(_: UIGestureRecognizer,
+                           shouldRecognizeSimultaneouslyWith shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    func addTapGestures() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapAndHideKeyboard(gesture:)))
+        gesture.delegate = self
+        self.collectionView?.addGestureRecognizer(gesture)
+    }
+    
+    func tapAndHideKeyboard(gesture: UITapGestureRecognizer) {
+        if(gesture.state == UIGestureRecognizerState.ended) {
+            if(self.inputToolbar.contentView?.textView?.isFirstResponder)! {
+                self.inputToolbar.contentView?.textView?.resignFirstResponder()
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    func ta (){
-        print("asdasda")
-    }
+    
     /*
      // MARK: - Navigation
      
@@ -80,7 +147,6 @@ class chatViewController: JSQMessagesViewController {
      */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
     }
     
     
@@ -95,15 +161,16 @@ class chatViewController: JSQMessagesViewController {
          *  2. Add new id<JSQMessageData> object to your data source
          *  3. Call `finishSendingMessage`
          */
-        
         let message = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
+        SocketIOManager.sharedInstance.sendMessageJSQ(message: message)
         self.messages.append(message)
         self.finishSendingMessage(animated: true)
     }
     
+    
     override func didPressAccessoryButton(_ sender: UIButton) {
-
-
+        
+        
         self.inputToolbar.contentView!.textView!.resignFirstResponder()
         
         let sheet = UIAlertController(title: "Media messages", message: nil, preferredStyle: .actionSheet)
@@ -235,7 +302,7 @@ class chatViewController: JSQMessagesViewController {
          *
          *  Show a timestamp for every 3rd message
          */
-        if (indexPath.item % 3 == 0) {
+        if (indexPath.item % 20 == 0) {
             let message = self.messages[indexPath.item]
             
             return JSQMessagesTimestampFormatter.shared().attributedTimestamp(for: message.date)
@@ -275,7 +342,7 @@ class chatViewController: JSQMessagesViewController {
          *
          *  Show a timestamp for every 3rd message
          */
-        if indexPath.item % 3 == 0 {
+        if indexPath.item % 20 == 0 {
             return kJSQMessagesCollectionViewCellLabelHeightDefault
         }
         
@@ -310,5 +377,6 @@ class chatViewController: JSQMessagesViewController {
         
         return kJSQMessagesCollectionViewCellLabelHeightDefault;
     }
+    
 }
 

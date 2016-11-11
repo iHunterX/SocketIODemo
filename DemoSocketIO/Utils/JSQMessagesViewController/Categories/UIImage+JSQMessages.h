@@ -89,6 +89,12 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion This is the default icon for the message accessory button.
  */
 + (UIImage *)jsq_shareActionImage;
+/**
+ *  @return The default like icon image.
+ */
++ (UIImage *)dxl_defaultLikeAccessoryImage;
++ (UIImage *)dxl_defaultCodeAccessoryImage;
++ (UIImage *)dxl_defaultCameraAccessoryImage;
 
 @end
 

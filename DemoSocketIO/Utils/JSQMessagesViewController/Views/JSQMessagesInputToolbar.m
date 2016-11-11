@@ -66,6 +66,10 @@ static void * kJSQMessagesInputToolbarKeyValueObservingContext = &kJSQMessagesIn
     JSQMessagesToolbarButtonFactory *toolbarButtonFactory = [[JSQMessagesToolbarButtonFactory alloc] initWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
     self.contentView.leftBarButtonItem = [toolbarButtonFactory defaultAccessoryButtonItem];
     self.contentView.rightBarButtonItem = [toolbarButtonFactory defaultSendButtonItem];
+    self.contentView.likeMidBarButtonItem = [toolbarButtonFactory defaultLikeButtonItem];
+    self.contentView.codeMidBarButtonItem = [toolbarButtonFactory defaultCodeButtonItem];
+    self.contentView.cameraMidBarButtonItem = [toolbarButtonFactory defaultCameraButtonItem];
+   
 
     [self updateSendButtonEnabledState];
 
@@ -122,10 +126,17 @@ static void * kJSQMessagesInputToolbarKeyValueObservingContext = &kJSQMessagesIn
     if (!self.enablesSendButtonAutomatically) {
         return;
     }
+    UIColor *randomRGBColor = [[UIColor alloc] initWithRed:arc4random()%256/256.0
+                                                      green:arc4random()%256/256.0
+                                                       blue:arc4random()%256/256.0
+                                                      alpha:1.0];
 
     BOOL enabled = [self.contentView.textView hasText];
     switch (self.sendButtonLocation) {
         case JSQMessagesInputSendButtonLocationRight:
+            
+            
+            self.contentView.rightBarButtonItem.titleLabel.textColor = randomRGBColor;
             self.contentView.rightBarButtonItem.enabled = enabled;
             break;
         case JSQMessagesInputSendButtonLocationLeft:
