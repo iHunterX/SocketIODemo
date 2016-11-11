@@ -77,7 +77,7 @@ class SocketIOManager: NSObject {
         }
         
         socket.on("userTypingUpdate") { (dataArray, socketAck) -> Void in
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "userTypingNotification"), object: dataArray[0] as? [String: AnyObject])
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "userTypingNotification"), object: dataArray )
         }
     }
     

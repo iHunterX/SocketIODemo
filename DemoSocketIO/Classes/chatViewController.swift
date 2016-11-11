@@ -36,6 +36,8 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
         //Important
         ////////////////////////////////////////////////////////////////////////
         addTapGestures()
+        SocketIOManager.sharedInstance.connectToServerWithNickname(nickname: "sdfsdf") { (userList) in
+        }
         if defaults.bool(forKey: Setting.removeBubbleTails.rawValue) {
             // Make taillessBubbles
             incomingBubble = JSQMessagesBubbleImageFactory(bubble: UIImage.jsq_bubbleCompactTailless(), capInsets: UIEdgeInsets.zero, layoutDirection: UIApplication.shared.userInterfaceLayoutDirection).incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
@@ -66,10 +68,10 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
         
         self.collectionView?.reloadData()
         self.collectionView?.layoutIfNeeded()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.handleUserTypingNotification(notification:)), name: NSNotification.Name(rawValue: "userTypingNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleUserTypingNotification), name: NSNotification.Name(rawValue: "userTypingNotification"), object: nil)
     }
     func handleUserTypingNotification(notification: NSNotification) {
-        if let typingUsersDictionary = notification.object as? [String: AnyObject] {
+        let typingUsersDictionary = notification.object as! NSNumber
             //var names = ""
             //var totalTypingUsers = 0
             // for (typingUser, _) in typingUsersDictionary {
@@ -77,7 +79,7 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
             //      names = (names == "") ? typingUser : "\(names), \(typingUser)"
             //      totalTypingUsers += 1
             //  }
-            //}
+            //}1
             
             //  if totalTypingUsers > 0 {
             //  let verb = (totalTypingUsers == 1) ? "is" : "are"
@@ -88,10 +90,17 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
             // else {
             //lblOtherUserActivityStatus.hidden = true
             // }
-            
-            
-        }
-        self.showTypingIndicator = true
+            //  if typingUsersDictionary == true{
+            //      self.showTypingIndicator = true
+            //  }
+            //   else{
+            //     self.showTypingIndicator = false
+            //
+            print(typingUsersDictionary)
+    
+        
+        
+        
         
     }
     override func textViewDidChange(_ textView: UITextView) {
