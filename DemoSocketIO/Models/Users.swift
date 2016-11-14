@@ -47,7 +47,7 @@ let AvatarIdCook = "468-768355-23123"
 let AvatarIdJobs = "707-8956784-57"
 let AvatarIdWoz = "309-41802-93823"
 
-let AvatarLeonard = JSQMessagesAvatarImageFactory().avatarImage(withUserInitials: "DL", backgroundColor: UIColor.jsq_messageBubbleGreen(), textColor: UIColor.white, font: UIFont.systemFont(ofSize: 12))
+let AvatarLeonard = JSQMessagesAvatarImageFactory().avatarImage(withUserInitials: "DL", backgroundColor: UIColor.jsq_messageBubbleLightGray(), textColor: UIColor.white, font: UIFont.systemFont(ofSize: 12))
 
 let AvatarCook = JSQMessagesAvatarImageFactory().avatarImage(withUserInitials: "TC", backgroundColor: UIColor.gray, textColor: UIColor.white, font: UIFont.systemFont(ofSize: 12))
 
@@ -60,19 +60,23 @@ let AvatarSquires = JSQMessagesAvatarImageFactory().avatarImage(withUserInitials
 
 // Helper Method for getting an avatar for a specific User.
 func getAvatar(_ id: String) -> JSQMessagesAvatarImage{
-    let user = User(rawValue: id)!
     
-    switch user {
-    case .Leonard:
+    if let user = User(rawValue: id) {
+        switch user {
+        case .Leonard:
+            return AvatarLeonard
+        case .Squires:
+            return AvatarSquires
+        case .Cook:
+            return AvatarCook
+        case .Wozniak:
+            return AvatarWoz
+        case .Jobs:
+            return AvatarJobs
+        }
+    }
+    else {
         return AvatarLeonard
-    case .Squires:
-        return AvatarSquires
-    case .Cook:
-        return AvatarCook
-    case .Wozniak:
-        return AvatarWoz
-    case .Jobs:
-        return AvatarJobs
     }
 }
 

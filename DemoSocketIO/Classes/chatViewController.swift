@@ -13,6 +13,13 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
     
     //Properties
     var messages = [JSQMessage]()
+    var senderID:String = ""
+    var nickName:String = "Anonymous"{
+        didSet{
+            senderID = nickName + String(randomStringWithLength(len: 9))
+        }
+    }
+    
     let defaults = UserDefaults.standard
     var conversation: Conversation?
     var incomingBubble: JSQMessagesBubbleImage!
@@ -22,7 +29,7 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
     var stoppedTyping = true {
         didSet{
             if stoppedTyping == true && stillTyping == false{
-                SocketIOManager.sharedInstance.sendStopTypingMessage(nickname: "sdfsdf")
+                SocketIOManager.sharedInstance.sendStopTypingMessage(nickname: nickName)
             }
         }
     }
@@ -36,7 +43,7 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
         //Important
         ////////////////////////////////////////////////////////////////////////
         addTapGestures()
-        SocketIOManager.sharedInstance.connectToServerWithNickname(nickname: "sdfsdf") { (userList) in
+        SocketIOManager.sharedInstance.connectToServerWithNickname(nickname: nickName) { (userList) in
         }
         if defaults.bool(forKey: Setting.removeBubbleTails.rawValue) {
             // Make taillessBubbles
@@ -71,8 +78,21 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
         NotificationCenter.default.addObserver(self, selector: #selector(self.handleUserTypingNotification), name: NSNotification.Name(rawValue: "userTypingNotification"), object: nil)
     }
     func handleUserTypingNotification(notification: NSNotification) {
-        let typingUsersDictionary = notification.object as! NSNumber
-            //var names = ""
+        if let typingData = notification.object as? [String:AnyObject]{
+            var names = ""
+            print(typingData)
+            guard let isTyping = typingData["isTyping"] as? Bool else {return}
+            guard let nickName = typingData["nickName"] as? String else {return}
+            
+            if nickName != self.senderDisplayName() {
+                switch isTyping {
+                case true:
+                    self.showTypingIndicator = true
+                default:
+                    self.showTypingIndicator = false
+                }
+                
+            }
             //var totalTypingUsers = 0
             // for (typingUser, _) in typingUsersDictionary {
             //  if typingUser != nickname {
@@ -95,32 +115,41 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
             //  }
             //   else{
             //     self.showTypingIndicator = false
-            //
-            print(typingUsersDictionary)
-    
-        
-        
-        
+//            switch typingData[""] {
+//            case true:
+//                if
+//                self.showTypingIndicator = true
+//            default:
+//                self.showTypingIndicator = false
+//            }
+        }
         
     }
     override func textViewDidChange(_ textView: UITextView) {
+        
+    }
+    override func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if textView == self.inputToolbar.contentView?.textView{
+            print("Start typing")
             textTimer?.invalidate()
             textTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.textFieldStopEditing(sender:)), userInfo: nil, repeats: false)
             if stillTyping != true{
-                SocketIOManager.sharedInstance.sendStartTypingMessage(nickname: "sdfsdf")
+                SocketIOManager.sharedInstance.sendStartTypingMessage(nickname: nickName)
                 stillTyping = true
                 stoppedTyping = false
             }
         }
+        return true
     }
+    
     func textFieldStopEditing(sender: Timer) {
-        SocketIOManager.sharedInstance.sendStopTypingMessage(nickname: "sdfsdf")
+        SocketIOManager.sharedInstance.sendStopTypingMessage(nickname: nickName)
         print("Stop typing")
         stoppedTyping = true
         stillTyping = false
         
     }
+    
     func gestureRecognizer(_: UIGestureRecognizer,
                            shouldRecognizeSimultaneouslyWith shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer) -> Bool {
         return true
@@ -279,11 +308,11 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
     //MARK: JSQMessages CollectionView DataSource
     
     override func senderId() -> String {
-        return User.Wozniak.rawValue
+        return senderID
     }
     
     override func senderDisplayName() -> String {
-        return getName(.Wozniak)
+        return nickName
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -56,9 +56,15 @@ class ViewController: BaseViewController, UITextFieldDelegate{
     func addTextFieldRules(){
         self.validationRuleSetUserName?.add(rule: UserName)
         self.validationRuleSetUserName?.add(rule: rangeLengthRule)
-        self.validationRuleSetUserName?.add(rule: ValidationRuleRequired<String>(failureError: ValidationError(message: "😫")))
         userNameTextField.validationRuleSet = validationRuleSetUserName
         userNameTextField.validateOnInputChange(validationEnabled: true)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "logInSegue" {
+            if let destination = segue.destination as? InitalTableViewController {
+                destination.nickName = self.userNameTextField.text!
+            }
+        }
     }
     
     

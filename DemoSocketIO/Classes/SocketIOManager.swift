@@ -12,7 +12,7 @@ import SocketIO
 class SocketIOManager: NSObject {
     static let sharedInstance = SocketIOManager()
     
-    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.1.119:5000")! as URL)
+    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://192.168.1.101:5000")! as URL)
     
     
     override init() {
@@ -31,8 +31,8 @@ class SocketIOManager: NSObject {
     
     
     func connectToServerWithNickname(nickname: String, completionHandler: @escaping (_ userList: [[String: AnyObject]]?) -> Void) {
+    
         socket.emit("connectUser", nickname)
-        
         socket.on("userList") { ( dataArray, ack) -> Void in
             completionHandler(dataArray[0] as? [[String: AnyObject]])
         }
@@ -77,7 +77,7 @@ class SocketIOManager: NSObject {
         }
         
         socket.on("userTypingUpdate") { (dataArray, socketAck) -> Void in
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "userTypingNotification"), object: dataArray )
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "userTypingNotification"), object: dataArray[0] as! [String:Any] )
         }
     }
     

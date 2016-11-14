@@ -15,6 +15,7 @@ class InitalTableViewController: UITableViewController {
     //MARK: - View lifecycle
     let springAnimation = SpringAnimation()
     let socketSingleton = SocketIOManager.sharedInstance
+    var nickName:String = "Anonymous"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,9 +108,10 @@ class InitalTableViewController: UITableViewController {
             case 0:
                 let chatView = chatViewController()
                 chatView.title = titleVC
+                chatView.nickName = self.nickName
                 if let thisView  = self.view{
                     if let thisNavController = self.navigationController{
-                        thisView.transitionType(navigationController: thisNavController, pushTo: chatView, transType: .push, animationType: kCATransitionPush,animationSubType: kCATransitionFromBottom , duration: 0.5, animated: false)
+                        thisView.transitionType(navigationController: thisNavController, pushTo: chatView, transType: .push, animationType: kCATransitionReveal,animationSubType: nil , duration: 0.5, animated: false)
                     }
                 }
 
@@ -117,6 +119,7 @@ class InitalTableViewController: UITableViewController {
 //                    self.navigationController?.pushViewController(chatView, animated: true)
             default:
                 let chatView = chatViewController()
+                chatView.nickName = self.nickName
                 chatView.title = titleVC
                 if let thisView  = self.view{
                     if let thisNavController = self.navigationController{
