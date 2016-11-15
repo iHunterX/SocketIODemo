@@ -44,7 +44,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2R-oy-B65">
                                 <state key="normal" title="Join Chat"/>
                                 <connections>
-                                    <segue destination="7st-TA-ZCM" kind="show" identifier="logInSegue" id="xJt-L8-1Xl"/>
+                                    <action selector="JoinChatAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fTO-1r-m3Z"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iSpam" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a1-kN-a6P">
@@ -92,6 +92,7 @@
                     <connections>
                         <outlet property="connectButton" destination="Q2R-oy-B65" id="51s-gv-xVT"/>
                         <outlet property="userNameTextField" destination="xiI-qD-pfp" id="G1J-BZ-f9e"/>
+                        <segue destination="7st-TA-ZCM" kind="show" identifier="logInSegue" id="8Mz-AS-hye"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

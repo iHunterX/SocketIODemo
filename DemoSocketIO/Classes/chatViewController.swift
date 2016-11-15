@@ -72,27 +72,26 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
         
         automaticallyScrollsToMostRecentMessage = true
         
-        
         self.collectionView?.reloadData()
         self.collectionView?.layoutIfNeeded()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.handleUserTypingNotification), name: NSNotification.Name(rawValue: "userTypingNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleUserTypingNotificationGroup), name: NSNotification.Name(rawValue: "userTypingNotification"), object: nil)
     }
-    func handleUserTypingNotification(notification: NSNotification) {
+    func handleUserTypingNotificationGroup(notification: NSNotification) {
         if let typingData = notification.object as? [String:AnyObject]{
             var names = ""
             print(typingData)
             guard let isTyping = typingData["isTyping"] as? Bool else {return}
             guard let nickName = typingData["nickName"] as? String else {return}
             
-            if nickName != self.senderDisplayName() {
-                switch isTyping {
-                case true:
-                    self.showTypingIndicator = true
-                default:
-                    self.showTypingIndicator = false
-                }
-                
-            }
+//            if nickName != self.senderDisplayName() {
+//                switch isTyping {
+//                case true:
+//                    self.showTypingIndicator = true
+//                default:
+//                    self.showTypingIndicator = false
+//                }
+//                
+//            }
             //var totalTypingUsers = 0
             // for (typingUser, _) in typingUsersDictionary {
             //  if typingUser != nickname {
@@ -123,9 +122,6 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
 //                self.showTypingIndicator = false
 //            }
         }
-        
-    }
-    override func textViewDidChange(_ textView: UITextView) {
         
     }
     override func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -328,10 +324,10 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
         return messages[indexPath.item].senderId == self.senderId() ? outgoingBubble : incomingBubble
     }
     
-    override func collectionView(_ collectionView: JSQMessagesCollectionView, avatarImageDataForItemAt indexPath: IndexPath) -> JSQMessageAvatarImageDataSource? {
-        let message = messages[indexPath.item]
-        return getAvatar(message.senderId)
-    }
+//    override func collectionView(_ collectionView: JSQMessagesCollectionView, avatarImageDataForItemAt indexPath: IndexPath) -> JSQMessageAvatarImageDataSource? {
+//        let message = messages[indexPath.item]
+//        return getAvatar(message.senderId)
+//    }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView, attributedTextForCellTopLabelAt indexPath: IndexPath) -> NSAttributedString? {
         /**

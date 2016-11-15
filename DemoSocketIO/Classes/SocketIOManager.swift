@@ -31,7 +31,7 @@ class SocketIOManager: NSObject {
     
     
     func connectToServerWithNickname(nickname: String, completionHandler: @escaping (_ userList: [[String: AnyObject]]?) -> Void) {
-    
+        
         socket.emit("connectUser", nickname)
         socket.on("userList") { ( dataArray, ack) -> Void in
             completionHandler(dataArray[0] as? [[String: AnyObject]])
@@ -39,6 +39,28 @@ class SocketIOManager: NSObject {
         
         listenForOtherMessages()
     }
+    
+    func registerWithNickname(nickname:String, completionHandler: @escaping (_ user:User?, _ error:String?)->Void){
+        var userIn:User?
+        socket.emitWithAck("registerWithUserName", nickname).timingOut(after: 4) { (data) in
+            guard let regInfo = data[0] as? [String:Any] else {return}
+            
+            var isError:String?
+            if let isErrorParse = regInfo["error"] as? String{
+                isError = isErrorParse
+            }
+            if isError != nil{
+                guard let info = regInfo["info"] as? [String:Any] else {return}
+                if let userParse = User(data: info){
+                    userIn = userParse
+                }
+            }
+            print(isError,userIn)
+            completionHandler(userIn,isError)
+        }
+        
+    }
+    
     
     
     func exitChatWithNickname(nickname: String, completionHandler: () -> Void) {

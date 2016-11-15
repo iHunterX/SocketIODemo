@@ -60,6 +60,8 @@
 		532FEA551DCB0CA2008F5D92 /* JSQMessagesTypingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 532FEA281DCB0CA2008F5D92 /* JSQMessagesTypingView.m */; };
 		532FEA5E1DCB1508008F5D92 /* InitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532FEA5D1DCB1508008F5D92 /* InitalTableViewController.swift */; };
 		532FEA601DCB15E3008F5D92 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532FEA5F1DCB15E3008F5D92 /* SettingsTableViewController.swift */; };
+		53316CE71DDAB8BB009A5D53 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53316CE61DDAB8BB009A5D53 /* Messages.swift */; };
+		53316CE91DDB1EB0009A5D53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53316CE81DDB1EB0009A5D53 /* User.swift */; };
 		5366B8EA1DC1AA2000F642DC /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366B8D41DC1AA2000F642DC /* IQNSArray+Sort.swift */; };
 		5366B8EB1DC1AA2000F642DC /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366B8D51DC1AA2000F642DC /* IQUIScrollView+Additions.swift */; };
 		5366B8EC1DC1AA2000F642DC /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366B8D61DC1AA2000F642DC /* IQUITextFieldView+Additions.swift */; };
@@ -282,6 +284,8 @@
 		532FEA561DCB0CED008F5D92 /* JSQMessagesViewController-umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSQMessagesViewController-umbrella.h"; sourceTree = "<group>"; };
 		532FEA5D1DCB1508008F5D92 /* InitalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitalTableViewController.swift; sourceTree = "<group>"; };
 		532FEA5F1DCB15E3008F5D92 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		53316CE61DDAB8BB009A5D53 /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		53316CE81DDB1EB0009A5D53 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5366B8D41DC1AA2000F642DC /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		5366B8D51DC1AA2000F642DC /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		5366B8D61DC1AA2000F642DC /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
@@ -798,6 +802,8 @@
 			children = (
 				53B24F731DCB2F2F007C9552 /* Conversation.swift */,
 				53B24F781DCB3398007C9552 /* Users.swift */,
+				53316CE61DDAB8BB009A5D53 /* Messages.swift */,
+				53316CE81DDB1EB0009A5D53 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1186,6 +1192,7 @@
 				532FEA501DCB0CA2008F5D92 /* JSQMessagesMediaPlaceholderView.m in Sources */,
 				532FEA3E1DCB0CA2008F5D92 /* JSQMediaItem.m in Sources */,
 				53A5E57E1DC7667A0060CE93 /* M13CheckboxStrokeController.swift in Sources */,
+				53316CE91DDB1EB0009A5D53 /* User.swift in Sources */,
 				5388F31E1DBDDCC000B80A2B /* TextFieldsEffects.swift in Sources */,
 				53A5E5821DC7667A0060CE93 /* M13CheckboxPathGenerator.swift in Sources */,
 				80B114481DB9FD8300417B6D /* Validatable.swift in Sources */,
@@ -1217,6 +1224,7 @@
 				532FEA5E1DCB1508008F5D92 /* InitalTableViewController.swift in Sources */,
 				532FEA491DCB0CA2008F5D92 /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
 				5366B8ED1DC1AA2000F642DC /* IQUIView+Hierarchy.swift in Sources */,
+				53316CE71DDAB8BB009A5D53 /* Messages.swift in Sources */,
 				80D6C0C71DC3B3FA00DA74F2 /* PAPhotoLibraryPermissionsCheck.swift in Sources */,
 				53A5E5771DC7667A0060CE93 /* M13CheckboxBounceController.swift in Sources */,
 				532FEA351DCB0CA2008F5D92 /* JSQMessagesToolbarButtonFactory.m in Sources */,

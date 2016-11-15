@@ -59,6 +59,21 @@ class ViewController: BaseViewController, UITextFieldDelegate{
         userNameTextField.validationRuleSet = validationRuleSetUserName
         userNameTextField.validateOnInputChange(validationEnabled: true)
     }
+    
+    @IBAction func JoinChatAction(_ sender: AnyObject) {
+        let nickName = self.userNameTextField.text!
+        SocketIOManager.sharedInstance.registerWithNickname(nickname: nickName) { (isOK, error) in
+            print(isOK)
+//            if error != nil{
+//                print(error)
+//            }else{
+////                if isOK{
+////                    self.performSegue(withIdentifier: "logInSegue", sender: sender)
+////                }
+//            }
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "logInSegue" {
             if let destination = segue.destination as? InitalTableViewController {
@@ -66,8 +81,7 @@ class ViewController: BaseViewController, UITextFieldDelegate{
             }
         }
     }
-    
-    
+
 }
 
 extension ViewController: TextFieldEffectsDelegate{
