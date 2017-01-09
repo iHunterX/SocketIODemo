@@ -9,14 +9,14 @@
 import Foundation
 
 
-struct User {
+public struct User {
     var userName:String
     var userID:String
     var created:Bool
     var isConnected:Bool? = false
     
     init?(data:[String:Any]) {
-        guard let userName = data["username"] as? String else {return nil}
+        guard let userName = data["nickname"] as? String else {return nil}
         
         guard let userID = data["id"] as? String else {return nil}
         

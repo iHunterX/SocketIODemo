@@ -22,6 +22,8 @@ class ViewController: BaseViewController, UITextFieldDelegate{
 
     var lastControllerRotationStatus: Bool?
     
+    var userInfo:User?
+    
     
     
     var validationRuleSetUserName: ValidationRuleSet<String>? = ValidationRuleSet<String>()
@@ -62,22 +64,23 @@ class ViewController: BaseViewController, UITextFieldDelegate{
     
     @IBAction func JoinChatAction(_ sender: AnyObject) {
         let nickName = self.userNameTextField.text!
-        SocketIOManager.sharedInstance.registerWithNickname(nickname: nickName) { (isOK, error) in
-            print(isOK)
-//            if error != nil{
-//                print(error)
-//            }else{
-////                if isOK{
-////                    self.performSegue(withIdentifier: "logInSegue", sender: sender)
-////                }
-//            }
+        SocketIOManager.sharedInstance.registerWithNickname(nickname: nickName) { (userInfo, error) in
+            print(userInfo)
+            if error != nil{
+                print(error)
+            }else{
+                if userInfo != nil {
+                    self.userInfo = userInfo
+                    self.performSegue(withIdentifier: "logInSegue", sender: sender)
+                }
+            }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "logInSegue" {
             if let destination = segue.destination as? InitalTableViewController {
-                destination.nickName = self.userNameTextField.text!
+                destination.userInfo = self.userInfo!
             }
         }
     }

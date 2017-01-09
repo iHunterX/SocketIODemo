@@ -90,12 +90,13 @@ import UIKit
     private let activeBorderLayer = CALayer()
     private var activePlaceholderPoint: CGPoint = CGPoint.zero
     private let checkbox:M13Checkbox =  M13Checkbox()
+    private var checkBoxHeight:CGFloat = 25
     
     
     // MARK: - iHunterX's TextField-underline
     override open func drawViewsForRect(_ rect: CGRect) {
         autoresizesSubviews = true
-        let checkBoxHeight = self.frame.size.height - 20
+        checkBoxHeight = self.frame.size.height - 20
         self.rightViewMode = .always
         let frame = CGRect(origin: CGPoint.zero, size: CGSize(width: rect.size.width, height: rect.size.height))
         
@@ -105,14 +106,14 @@ import UIKit
         setupErrorLabel(rect)
         updateBorder()
         updatePlaceholder()
-        setupCheckBox(checkBoxHeight)
+        
         
         layer.addSublayer(inactiveBorderLayer)
         layer.addSublayer(activeBorderLayer)
         addSubview(placeholderLabel)
         
     }
-//    iHunter'sTextField
+    //    iHunter'sTextField
     func setupErrorLabel(_ rect: CGRect){
         textfieldErrors.textColor = borderInvalidColor
         textfieldErrors.lineBreakMode = .byWordWrapping
@@ -133,8 +134,9 @@ import UIKit
         NSLayoutConstraint.activate([height,topRightViewTrailing,topRightViewTopConstraint])
         textfieldErrors.translatesAutoresizingMaskIntoConstraints = false
     }
-
+    
     func setupCheckBox(_ checkBoxHeight:CGFloat = 25){
+        rightView = nil
         checkbox.isUserInteractionEnabled = false
         checkbox.frame = (frame: CGRect(x: 0.0, y: 0.0, width: checkBoxHeight, height: checkBoxHeight))
         checkbox.animationDuration = 0.5
@@ -143,7 +145,6 @@ import UIKit
         checkbox.stateChangeAnimation = .spiral
         checkbox.tintColor = borderValidColor
         rightView = checkbox
-        rightView?.contentMode = .bottom
     }
     
     
@@ -188,14 +189,16 @@ import UIKit
         }
     }
     
-    override open func animateForErrorDisplay(isError:Bool, errorMessage:[String]?) {    
+    override open func animateForErrorDisplay(isError:Bool, errorMessage:[String]?) {
         if isError{
             var errorFormatted:String = ""
-            for errorTxt in errorMessage! {
-                if (errorMessage?.count)! > 1{
-                    errorFormatted.append(errorTxt + "\n")
-                }else{
-                    errorFormatted = errorTxt
+            if errorMessage != nil{
+                for errorTxt in errorMessage! {
+                    if (errorMessage?.count)! > 1{
+                        errorFormatted.append(errorTxt + "\n")
+                    }else{
+                        errorFormatted = errorTxt
+                    }
                 }
             }
             textfieldErrors.text = errorFormatted
@@ -212,6 +215,7 @@ import UIKit
     // MARK: - Private
     
     override open func updateBorder() {
+        setupCheckBox(checkBoxHeight)
         switch valid {
         case 1:
             animateForErrorDisplay(isError: false, errorMessage: failureMsgs)
@@ -314,5 +318,5 @@ import UIKit
         let rightBounds = CGRect(x: x, y: y ,width: checkbox.frame.size.width, height:checkbox.frame.size.height)
         return rightBounds
     }
-//
+    //
 }

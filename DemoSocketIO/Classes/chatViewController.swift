@@ -11,15 +11,18 @@ import UIKit
 class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate {
     
     
+    let app = UIApplication.shared.delegate as! AppDelegate
+    
+    
     //Properties
     var messages = [JSQMessage]()
-    var senderID:String = ""
-    var nickName:String = "Anonymous"{
-        didSet{
-            senderID = nickName + String(randomStringWithLength(len: 9))
-        }
-    }
-    
+//    var senderID:String = ""
+//    var nickName:String = "Anonymous"{
+//        didSet{
+//            senderID = nickName + String(randomStringWithLength(len: 9))
+//        }
+//    }
+    var userInfo:User!
     let defaults = UserDefaults.standard
     var conversation: Conversation?
     var incomingBubble: JSQMessagesBubbleImage!
@@ -29,7 +32,7 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
     var stoppedTyping = true {
         didSet{
             if stoppedTyping == true && stillTyping == false{
-                SocketIOManager.sharedInstance.sendStopTypingMessage(nickname: nickName)
+                SocketIOManager.sharedInstance.sendStopTypingMessage(nickname: userInfo.userName)
             }
         }
     }
@@ -37,13 +40,13 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        app.keyboardSingleton.enable = false
         // Do any additional setup after loading the view.
         
         //Important
         ////////////////////////////////////////////////////////////////////////
         addTapGestures()
-        SocketIOManager.sharedInstance.connectToServerWithNickname(nickname: nickName) { (userList) in
+        SocketIOManager.sharedInstance.connectToServerWithNickname(nickname: userInfo.userName) { (userList) in
         }
         if defaults.bool(forKey: Setting.removeBubbleTails.rawValue) {
             // Make taillessBubbles
@@ -74,7 +77,7 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
         
         self.collectionView?.reloadData()
         self.collectionView?.layoutIfNeeded()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.handleUserTypingNotificationGroup), name: NSNotification.Name(rawValue: "userTypingNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleUserTypingNotificationGroup), name: NSNotification.Name(rawValue: "usersTypingNotification"), object: nil)
     }
     func handleUserTypingNotificationGroup(notification: NSNotification) {
         if let typingData = notification.object as? [String:AnyObject]{
@@ -130,7 +133,7 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
             textTimer?.invalidate()
             textTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.textFieldStopEditing(sender:)), userInfo: nil, repeats: false)
             if stillTyping != true{
-                SocketIOManager.sharedInstance.sendStartTypingMessage(nickname: nickName)
+                SocketIOManager.sharedInstance.sendStartTypingMessage(nickname: userInfo.userName)
                 stillTyping = true
                 stoppedTyping = false
             }
@@ -139,7 +142,7 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
     }
     
     func textFieldStopEditing(sender: Timer) {
-        SocketIOManager.sharedInstance.sendStopTypingMessage(nickname: nickName)
+        SocketIOManager.sharedInstance.sendStopTypingMessage(nickname: userInfo.userName)
         print("Stop typing")
         stoppedTyping = true
         stillTyping = false
@@ -195,15 +198,17 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
          *  2. Add new id<JSQMessageData> object to your data source
          *  3. Call `finishSendingMessage`
          */
+//        let message = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
+//        SocketIOManager.sharedInstance.sendMessageJSQ(message: message)
         let message = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
-        SocketIOManager.sharedInstance.sendMessageJSQ(message: message)
+        
+        SocketIOManager.sharedInstance.sendMessageJSQ2(message: message)
         self.messages.append(message)
         self.finishSendingMessage(animated: true)
     }
     
     
     override func didPressAccessoryButton(_ sender: UIButton) {
-        
         
         self.inputToolbar.contentView!.textView!.resignFirstResponder()
         
@@ -304,11 +309,11 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
     //MARK: JSQMessages CollectionView DataSource
     
     override func senderId() -> String {
-        return senderID
+        return userInfo.userID
     }
     
     override func senderDisplayName() -> String {
-        return nickName
+        return userInfo.userName
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -324,10 +329,11 @@ class chatViewController: JSQMessagesViewController,UIGestureRecognizerDelegate 
         return messages[indexPath.item].senderId == self.senderId() ? outgoingBubble : incomingBubble
     }
     
-//    override func collectionView(_ collectionView: JSQMessagesCollectionView, avatarImageDataForItemAt indexPath: IndexPath) -> JSQMessageAvatarImageDataSource? {
-//        let message = messages[indexPath.item]
+    override func collectionView(_ collectionView: JSQMessagesCollectionView, avatarImageDataForItemAt indexPath: IndexPath) -> JSQMessageAvatarImageDataSource? {
+        let message = messages[indexPath.item]
 //        return getAvatar(message.senderId)
-//    }
+        return JSQMessagesAvatarImageFactory().avatarImage(withUserInitials: "DL", backgroundColor: UIColor.jsq_messageBubbleLightGray(), textColor: UIColor.white, font: UIFont.systemFont(ofSize: 12))
+    }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView, attributedTextForCellTopLabelAt indexPath: IndexPath) -> NSAttributedString? {
         /**

@@ -25,7 +25,8 @@ extension String {
  A TextFieldEffects object is a control that displays editable text and contains the boilerplates to setup unique animations for text entrey and display. You typically use this class the same way you use UITextField.
  */
 open class TextFieldEffects : UITextField {
-   
+    
+    
     weak open var tfdelegate:TextFieldEffectsDelegate?
     internal var valid = -1
     internal var failureMsgs:[String]? = nil
@@ -33,11 +34,28 @@ open class TextFieldEffects : UITextField {
         failureMsgs = nil
         switch result {
         case .valid:
-            valid = 1
-            print("valid")
-            tfdelegate?.validTextField?(valid: true)
-            animateViewsForTextEntry()
-  
+            findUsernameAvailable(completionHandler: { (resultUserFinding,isErrorStr) in
+                if isErrorStr == nil {
+                    if resultUserFinding == true {
+                        self.valid = 1
+                        print("valid")
+                        self.tfdelegate?.validTextField?(valid: true)
+                        self.animateViewsForTextEntry()
+                    }else{
+                        print(resultUserFinding)
+                        self.valid = 0
+                        self.failureMsgs = ["Not Available"]
+                        self.tfdelegate?.validTextField?(valid: false)
+                        self.animateViewsForTextEntry()
+                    }
+                }
+                else {
+                    self.valid = 0
+                    self.failureMsgs = [isErrorStr!]
+                    self.tfdelegate?.validTextField?(valid: false)
+                    self.animateViewsForTextEntry()
+                }
+            })
         case .invalid(let failures):
             let messages = failures.map { $0.message }
             failureMsgs = messages
@@ -47,7 +65,48 @@ open class TextFieldEffects : UITextField {
             animateViewsForTextEntry()
         }
     }
-
+    
+    open func findUsernameAvailable(completionHandler: @escaping (_ isAvailable:Bool,_ isErrorString:String?) -> Void){
+        var isAvail:Bool = false
+        let nickName = self.text!
+        self.rightViewMode = .always
+        self.rightView = spinningIndicator
+        
+        toggleAnimatingLoading(on: true)
+        SocketIOManager.sharedInstance.findUserWithNickName(nickname: nickName) { (isAvailable,isErrorString) -> Void in
+            if isErrorString == nil{
+                isAvail = isAvailable
+                self.toggleAnimatingLoading(on: false)
+                completionHandler(isAvail,isErrorString)
+            }else {
+                isAvail = isAvailable
+                self.toggleAnimatingLoading(on: false)
+                completionHandler(isAvail,isErrorString)
+            }
+        }
+    }
+    
+    func toggleAnimatingLoading(on:Bool) {
+        if on {
+            if spinningIndicator.isAnimating {
+                spinningIndicator.stopAnimating()
+                spinningIndicator.startAnimating()
+            }else{
+                spinningIndicator.startAnimating()
+            }
+        }
+        else{
+            if spinningIndicator.isAnimating {
+                spinningIndicator.stopAnimating()
+//                spinningIndicator.removeFromSuperview()
+                self.rightView = nil
+            }else{
+//                spinningIndicator.removeFromSuperview()
+                self.rightView = nil
+            }
+        }
+    }
+    
     /**
      The type of animatino a TextFieldEffect can perform.
      
@@ -58,6 +117,9 @@ open class TextFieldEffects : UITextField {
         case textEntry
         case textDisplay
     }
+    
+    
+    open let spinningIndicator:SWActivityIndicatorView = SWActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
     
     /**
      Closure executed when an animation has been completed.
@@ -151,7 +213,7 @@ open class TextFieldEffects : UITextField {
     open func textFieldDidBeginEditing() {
         self.validationHandler = {result in self.updateValidationState(result: result)}
         animateViewsForTextEntry()
-       
+        
     }
     open func changing() {
         self.validationHandler = {result in self.updateValidationState(result: result)}

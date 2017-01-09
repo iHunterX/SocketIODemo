@@ -51,6 +51,8 @@ NS_ASSUME_NONNULL_BEGIN
  *  If `NO`, the message contains text. If `YES`, the message contains media.
  *  The value of this property depends on how the object was initialized.
  */
+
+
 @property (assign, nonatomic, readonly) BOOL isMediaMessage;
 
 /**
