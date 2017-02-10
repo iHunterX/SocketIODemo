@@ -1,29 +1,12 @@
 PODS:
-  - AsyncDisplayKit (1.9.91):
-    - AsyncDisplayKit/PINRemoteImage (= 1.9.91)
-  - AsyncDisplayKit/ASDealloc2MainObject (1.9.91)
-  - AsyncDisplayKit/Core (1.9.91):
-    - AsyncDisplayKit/ASDealloc2MainObject
-  - AsyncDisplayKit/PINRemoteImage (1.9.91):
-    - AsyncDisplayKit/Core
-    - PINRemoteImage/iOS (= 3.0.0-beta.3)
-  - PINCache (3.0.1-beta)
-  - PINRemoteImage/Core (3.0.0-beta.3):
-    - PINCache (>= 3.0.0-beta)
-  - PINRemoteImage/iOS (3.0.0-beta.3):
-    - PINRemoteImage/Core
-  - Socket.IO-Client-Swift (8.1.1)
+  - Socket.IO-Client-Swift (8.2.0)
 
 DEPENDENCIES:
-  - AsyncDisplayKit
   - Socket.IO-Client-Swift
 
 SPEC CHECKSUMS:
-  AsyncDisplayKit: 96b6939ccc95d18ce1ac9bcaddecfba3f8b4f4af
-  PINCache: 6911fe422a633e18b3d3ddf2bd4f0e55e36e2892
-  PINRemoteImage: 308731aa6534500e58fc211b9cc2bb7252df25ba
-  Socket.IO-Client-Swift: 5c18fa2af9df8a19d20e4df815141103c1f7079b
+  Socket.IO-Client-Swift: 900cf511777045c80d1ce1f11f71261e87765dd1
 
-PODFILE CHECKSUM: 51d9fc017da5b88dccbb4b69de0ce95e69654ffd
+PODFILE CHECKSUM: 451e2dab91974ef215654e156953dad6bc984d3a
 
 COCOAPODS: 1.1.1

@@ -65,7 +65,7 @@ public final class SocketIOClient : NSObject, SocketEngineClient, SocketParsable
     var waitingPackets = [SocketPacket]()
     
     public var sid: String? {
-        return nsp + "#" + (engine?.sid ?? "")
+        return engine?.sid
     }
     
     /// Type safe way to create a new SocketIOClient. opts can be omitted
@@ -253,7 +253,7 @@ public final class SocketIOClient : NSObject, SocketEngineClient, SocketParsable
     }
 
     public func engineDidClose(reason: String) {
-        parseQueue.sync {
+        parseQueue.async {
             self.waitingPackets.removeAll()
         }
         

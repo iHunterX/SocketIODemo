@@ -1418,7 +1418,7 @@
 				INFOPLIST_FILE = DemoSocketIO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dxloc.DemoSocketIO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dxloc.DemoSocketIONew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/DemoSocketIO/Utils/JSQMessagesViewController/JSQMessagesViewController-umbrella.h";
@@ -1439,7 +1439,7 @@
 				INFOPLIST_FILE = DemoSocketIO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dxloc.DemoSocketIO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dxloc.DemoSocketIONew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/DemoSocketIO/Utils/JSQMessagesViewController/JSQMessagesViewController-umbrella.h";
